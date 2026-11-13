@@ -1,12 +1,15 @@
 {
-"versionName": "1.10.42",
-  "versionCode": 79,
-  "apkUrl": "https://github.com/szotsy/Orfeusz-Gateway-Updates/releases/download/1.10.42/Orfeusz.Gateway_v1.10.42.apk",
+  "versionName": "1.10.44",
+  "versionCode": 81,
+  "apkUrl": "https://github.com/szotsy/Orfeusz-Gateway-Updates/releases/download/1.10.44/Orfeusz.Gateway_v1.10.44.apk",
   "releaseNotes": [
-    "HU: Megújult főképernyő és gombdizájn. Javított kapuleállítás.",
-    "EN: Redesigned main screen and buttons. Improved gateway shutdown.",
-    "DE: Modernisierte Hauptoberfläche und Schaltflächen. Verbesserte Gateway-Abschaltung.",
-    "RU: Обновлённый главный экран и кнопки. Улучшена остановка шлюза.",
-    "A rádióvezérlés és az FTDI kommunikáció változatlan."
+    "HU: Frissítési tesztverzió. A GitHub-alapú frissítés, az APK-letöltés és a hibajelzések ellenőrzése.",
+    "EN: Update test release. Verification of GitHub-based updates, APK downloads, and error reporting.",
+    "DE: Update-Testversion. Überprüfung von GitHub-Updates, APK-Downloads und Fehlermeldungen.",
+    "RU: Тестовая версия обновления. Проверка обновлений через GitHub, загрузки APK и сообщений об ошибках.",
+    "A rádióvezérlés és az FTDI-kommunikáció változatlan.",
+    "Radio control and FTDI communication remain unchanged.",
+    "Funksteuerung und FTDI-Kommunikation bleiben unverändert.",
+    "Управление радиостанцией и связь FTDI остаются без изменений."
   ]
 }
