@@ -1,11 +1,11 @@
-
-{
-  "versionName": "1.10.41",
-  "versionCode": 78,
-  "apkUrl": "",
+"versionName": "1.10.42",
+  "versionCode": 79,
+  "apkUrl": "https://github.com/szotsy/Orfeusz-Gateway-Updates/releases/download/1.10.42/Orfeusz.Gateway_v1.10.42.apk",
   "releaseNotes": [
-    "GitHub-alapú frissítéskezelés.",
-    "Frissítési információk lekérése GitHub Raw tárhelyről.",
+    "HU: Megújult főképernyő és gombdizájn. Javított kapuleállítás.",
+    "EN: Redesigned main screen and buttons. Improved gateway shutdown.",
+    "DE: Modernisierte Hauptoberfläche und Schaltflächen. Verbesserte Gateway-Abschaltung.",
+    "RU: Обновлённый главный экран и кнопки. Улучшена остановка шлюза.",
     "A rádióvezérlés és az FTDI kommunikáció változatlan."
   ]
 }
