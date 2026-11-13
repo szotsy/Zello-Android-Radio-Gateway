@@ -1,2 +1,2 @@
-# Orfeusz-Gatevay-Updates
+# Orfeusz-Gateway-Updates
 Orfeusz Gateway Android application updates
