@@ -1,15 +1,15 @@
 {
-  "versionName": "1.10.44",
-  "versionCode": 81,
-  "apkUrl": "https://github.com/szotsy/Orfeusz-Gateway-Updates/releases/download/1.10.44/Orfeusz.Gateway_v1.10.44.apk",
+  "versionName": "1.10.45",
+  "versionCode": 82,
+  "apkUrl": "https://github.com/szotsy/Orfeusz-Gateway-Updates/releases/download/1.10.45/Orfeusz.Gateway_v1.10.45.apk",
   "releaseNotes": [
-    "HU: Frissítési tesztverzió. A GitHub-alapú frissítés, az APK-letöltés és a hibajelzések ellenőrzése.",
-    "EN: Update test release. Verification of GitHub-based updates, APK downloads, and error reporting.",
-    "DE: Update-Testversion. Überprüfung von GitHub-Updates, APK-Downloads und Fehlermeldungen.",
-    "RU: Тестовая версия обновления. Проверка обновлений через GitHub, загрузки APK и сообщений об ошибках.",
+    "Javítva a kezdő figyelmeztető ablak ismételt megjelenése. Az ÉRTETTEM gomb elmenti a jóváhagyást. Képernyő elforgatásakor és az alkalmazás újraindításakor a figyelmeztetés nem jelenik meg újra.",
+    "Fixed the repeated appearance of the startup warning dialog. The I UNDERSTAND button saves the acknowledgement. The warning no longer appears again after screen rotation or application restart.",
+    "Das wiederholte Anzeigen des Start-Warnfensters wurde behoben. Die Schaltfläche VERSTANDEN speichert die Bestätigung. Nach einer Bildschirmdrehung oder einem Neustart der Anwendung erscheint die Warnung nicht erneut.",
+    "Исправлено повторное появление стартового предупреждения. Кнопка ПОНЯТНО сохраняет подтверждение. После поворота экрана или перезапуска приложения предупреждение больше не появляется.",
     "A rádióvezérlés és az FTDI-kommunikáció változatlan.",
     "Radio control and FTDI communication remain unchanged.",
-    "Funksteuerung und FTDI-Kommunikation bleiben unverändert.",
-    "Управление радиостанцией и связь FTDI остаются без изменений."
+    "Die Funksteuerung und die FTDI-Kommunikation bleiben unverändert.",
+    "Управление радиостанцией и связь через FTDI остались без изменений."
   ]
-}
+} 
