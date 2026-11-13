@@ -1,7 +1,7 @@
 {
   "versionName": "1.10.46",
   "versionCode": 83,
-  "apkUrl": "https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.46/Orfeusz.Gateway_v1.10.46.apk,
+  "apkUrl": "https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.46/Orfeusz.Gateway_v1.10.46.apk
   "releaseNotes": [
     "A frissítéskeresés mostantól közvetlenül a GitHub Releases API-n keresztül működik. Az alkalmazás automatikusan felismeri a legújabb kiadást és megkeresi a hozzá tartozó APK-fájlt.",
     "Update checking now works directly through the GitHub Releases API. The application automatically detects the latest release and locates its associated APK file.",
