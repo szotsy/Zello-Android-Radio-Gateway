@@ -1,15 +1,15 @@
 {
-  "versionName": "1.10.45",
-  "versionCode": 82,
-  "apkUrl": "https://github.com/szotsy/Orfeusz-Gateway-Updates/releases/download/1.10.45/Orfeusz.Gateway_v1.10.45.apk",
+  "versionName": "1.10.46",
+  "versionCode": 83,
+  "apkUrl": "https://github.com/szotsy/Orfeusz-Gateway-Updates/releases/download/1.10.46/Orfeusz.Gateway_v1.10.46.apk",
   "releaseNotes": [
-    "Javítva a kezdő figyelmeztető ablak ismételt megjelenése. Az ÉRTETTEM gomb elmenti a jóváhagyást. Képernyő elforgatásakor és az alkalmazás újraindításakor a figyelmeztetés nem jelenik meg újra.",
-    "Fixed the repeated appearance of the startup warning dialog. The I UNDERSTAND button saves the acknowledgement. The warning no longer appears again after screen rotation or application restart.",
-    "Das wiederholte Anzeigen des Start-Warnfensters wurde behoben. Die Schaltfläche VERSTANDEN speichert die Bestätigung. Nach einer Bildschirmdrehung oder einem Neustart der Anwendung erscheint die Warnung nicht erneut.",
-    "Исправлено повторное появление стартового предупреждения. Кнопка ПОНЯТНО сохраняет подтверждение. После поворота экрана или перезапуска приложения предупреждение больше не появляется.",
+    "A frissítéskeresés mostantól közvetlenül a GitHub Releases API-n keresztül működik. Az alkalmazás automatikusan felismeri a legújabb kiadást és megkeresi a hozzá tartozó APK-fájlt.",
+    "Update checking now works directly through the GitHub Releases API. The application automatically detects the latest release and locates its associated APK file.",
+    "Die Update-Prüfung erfolgt ab sofort direkt über die GitHub Releases API. Die Anwendung erkennt automatisch die neueste Version und findet die zugehörige APK-Datei.",
+    "Проверка обновлений теперь выполняется напрямую через GitHub Releases API. Приложение автоматически определяет последнюю версию и находит соответствующий APK-файл.",
     "A rádióvezérlés és az FTDI-kommunikáció változatlan.",
     "Radio control and FTDI communication remain unchanged.",
     "Die Funksteuerung und die FTDI-Kommunikation bleiben unverändert.",
     "Управление радиостанцией и связь через FTDI остались без изменений."
   ]
-} 
+}
