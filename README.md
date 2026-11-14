@@ -28,6 +28,20 @@ Orfeusz Gateway is an Android-based alternative to legacy radio gateways built a
 
 This lets you continue using your previously built radio system without relying on the PC-based Zello client, provided that its radio and interface hardware are compatible. **Important:** direct reuse depends on the existing hardware design; the application has currently been tested with a modified Baofeng UV-5R or BF-888S radio and the verified FTDI FT232R USB–UART adapter.
 
+## Compact, self-contained mobile gateway – no PC required
+
+One of the key advantages of Orfeusz Gateway is that the gateway does not require a separate laptop or desktop computer for operation. **The Android phone itself runs the application and performs the gateway's computing, networking and control tasks.** The radio interface and a compatible radio are connected to the phone; a suitable power source and internet connection are still required.
+
+This makes it possible to build a simpler, compact mobile gateway. The host computer, display, battery and mobile network connection are already integrated into a single device. Compared with a Raspberry Pi-based setup, this can reduce the number of separate computer components and accessories that need to be assembled. This does not mean it is physically smaller than every Raspberry Pi: for example, the Raspberry Pi Zero 2 W is itself extremely small. The advantage is the integration of these functions into the phone and the simpler overall setup.
+
+The mobile design supports several practical deployment scenarios:
+
+- **Vehicle-mounted gateway:** during field deployments or events, the gateway can remain in a vehicle, turning it into a mobile communications node.
+- **Portable unit:** the phone, radio and interface can be installed in a compact, properly secured and protected enclosure.
+- **Temporary field deployment:** during hikes, operations across large areas or events, the gateway can be placed at a suitable location where stable power, internet access and radio coverage are available.
+
+For field use, the equipment must be protected against rain, dust, overheating and mechanical damage. The phone-based design simplifies deployment, but it does not replace a suitable radio antenna, reliable power and an internet connection at the operating location.
+
 ## Required hardware and upcoming documentation
 
 - Modified Baofeng UV-5R or BF-888S radio.
