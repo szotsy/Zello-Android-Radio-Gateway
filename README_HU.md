@@ -107,6 +107,17 @@ A release tag és az APK neve egyezzen a kiadás verziójával. Például az 1.1
 
 `Orfeusz.Gateway_v1.10.50.apk`
 
+## Tesztelt készülékek
+
+Az alkalmazást az alábbi Android-eszközökön teszteltem:
+
+| Készülék | Tesztállapot |
+|---|---|
+| Samsung Galaxy S23 | Tesztelve |
+| Samsung Galaxy Tab A7 | Tesztelve |
+
+A felsorolás a ténylegesen tesztelt készülékeket tartalmazza. Más készülékeken és Android-verziókon a működés nincs automatikusan igazolva.
+
 ## Hardverkompatibilitás
 
 **Igazolt adapter: FTDI FT232R – VID: 0403, PID: 6001.**
