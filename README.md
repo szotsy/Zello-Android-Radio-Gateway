@@ -109,6 +109,17 @@ For a release tag such as `1.10.50`, the APK asset must be named exactly:
 
 The release tag and APK asset filename are separate values and both must match the intended release.
 
+## Tested devices
+
+I have tested the application on the following Android devices:
+
+| Device | Test status |
+|---|---|
+| Samsung Galaxy S23 | Tested |
+| Samsung Galaxy Tab A7 | Tested |
+
+This list includes devices that have actually been tested. Compatibility with other devices and Android versions is not implied.
+
 ## Hardware compatibility
 
 ### 🇭🇺 Magyar
