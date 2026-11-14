@@ -18,6 +18,12 @@ Orfeusz Gateway therefore **combines the simplicity of conventional radio with t
 
 > **Important – additional radio hardware required:** a stock Baofeng radio and a simple connection cable are not sufficient. The setup requires a **modified Baofeng UV-5R or BF-888S radio**, a separate radio interface, and a USB–UART adapter connected to that interface. The verified USB–UART adapter is the **FTDI FT232R (VID: 0403, PID: 6001)**. I will publish the wiring diagrams and photos of the completed hardware soon.
 
+## Replacing legacy PC-based Zello gateways
+
+Orfeusz Gateway is an Android-based alternative to legacy radio gateways built around the PC version of the Zello client. With the retirement of the old PC client, you do not necessarily have to abandon a radio gateway you already own: Orfeusz Gateway can bring a compatible existing setup back into service by moving the gateway operation to an Android device.
+
+This lets you continue using your previously built radio system without relying on the PC-based Zello client, provided that its radio and interface hardware are compatible. **Important:** direct reuse depends on the existing hardware design; the application has currently been tested with a modified Baofeng UV-5R or BF-888S radio and the verified FTDI FT232R USB–UART adapter.
+
 ## Required hardware and upcoming documentation
 
 - Modified Baofeng UV-5R or BF-888S radio.
