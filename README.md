@@ -40,6 +40,15 @@ This lets you continue using your previously built radio system without relying 
 **Default branch:** `main`  
 **Package:** `com.videotourzala.zellogateway`
 
+
+## Hardware gallery
+
+The following images are visual concepts of the Orfeusz Gateway system. **They are AI-generated illustrations, not authentic documentary photographs of the actual circuit or wiring.** The wiring diagrams and original hardware photographs remain the authoritative documentation of the real components and construction.
+
+| Complete system | Radio interface | Internal electronics detail |
+|---|---|---|
+| ![Orfeusz Gateway complete system concept](images/Gateway-system-illustration.png) | ![Radio interface concept](images/Radio-interface-illustration.png) | ![Radio interface internal detail concept](images/Radio-interface-detail-illustration.png) |
+
 ## Screenshots
 
 The following screenshots show the Orfeusz Gateway interface and its radio/FTDI status indicators.
