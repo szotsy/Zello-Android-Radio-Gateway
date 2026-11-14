@@ -1,5 +1,7 @@
 # Orfeusz Gateway
 
+![Orfeusz Gateway – Android, Zello és rádió](images/Orfeuszbanner.png)
+
 Android-based two-way Zello ↔ radio gateway application.
 
 ## What is Orfeusz Gateway for?
