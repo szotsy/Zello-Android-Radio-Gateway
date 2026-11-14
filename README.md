@@ -45,7 +45,7 @@ This lets you continue using your previously built radio system without relying 
 
 ## Hardware gallery
 
-The following images are visual concepts of the Orfeusz Gateway system. **They are AI-generated illustrations, not authentic documentary photographs of the actual circuit or wiring.** The wiring diagrams and original hardware photographs remain the authoritative documentation of the real components and construction.
+The following presentation images were AI-re-rendered from photographs of the original Orfeusz Gateway system. They illustrate the appearance and general layout of the real system; however, due to the AI re-rendering, **the electrical circuit, wiring and small electronic details may not be accurate**. Preparation and upload of the exact schematics and technical documentation are in progress; those documents will be the authoritative reference for building the hardware.
 
 | Complete system | Radio interface | Internal electronics detail |
 |---|---|---|
