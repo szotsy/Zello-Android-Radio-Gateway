@@ -151,3 +151,10 @@ Az alkalmazás jelenleg kizárólag az FTDI FT232R USB–UART adapterrel tesztel
 - Az alkalmazás verzióját a kód a Gradle által generált BuildConfig adatokból olvassa.
 - A forrásjelölt AndroidIDE-ben történő buildelése és tesztelése kötelező a publikálás előtt.
 - A teljes AndroidIDE-forrásprojekt külön, verziószámmal elnevezett ZIP-csomagban készül.
+
+
+## Védjegynyilatkozat és függetlenség
+
+Az **Orfeusz Gateway független, külső fejlesztésű projekt**, amelyet ingyenesen terjesztek. Az alkalmazásért nem kérek vételárat vagy licencdíjat. A projekt nem áll kapcsolatban a Zello, Inc. vállalattal, nem annak hivatalos terméke, és nem rendelkezik a Zello hivatalos támogatásával, szponzorációjával vagy jóváhagyásával.
+
+A **Zello** név és a kapcsolódó védjegyek jogosultja a Zello, Inc. A megnevezést kizárólag a kompatibilitás és a kapcsolódó funkcionalitás tényszerű leírására használom. Az Orfeusz Gateway név, arculat és projekt önálló; a megjelenítés nem sugall hivatalos partnerséget vagy jóváhagyást.
