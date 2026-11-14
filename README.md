@@ -2,6 +2,20 @@
 
 Android-based two-way Zello ↔ radio gateway application.
 
+## What is Orfeusz Gateway for?
+
+**Orfeusz Gateway** is an Android-based radio gateway application that enables two-way communication between conventional radio traffic and the Zello network.
+
+Radio transmissions received from a conventional radio can be forwarded to Zello users, while audio coming from Zello can be transmitted through the connected radio. This allows users of the two different communication systems to communicate with one another.
+
+It also means that people who do not own a handheld radio can take part in radio communication: all they need is an internet-connected smartphone running the Zello app.
+
+And the possibilities do not stop there. If another Zello gateway is operating in a different location, the two gateways can carry conventional radio traffic across enormous distances – potentially to the other side of the world.
+
+**The more gateway stations connected to the same Zello channel, the more locations your transmission can reach.** Imagine sitting on your sofa at home, holding your little handheld radio, and reaching radio users in another city, another country or even another continent – provided that a suitably configured gateway is operating there too.
+
+Orfeusz Gateway therefore **combines the simplicity of conventional radio with the geographical reach of the internet**, creating a genuine two-way communication link between radio and Zello.
+
 > **Important – additional radio hardware required:** a stock Baofeng radio and a simple connection cable are not sufficient. The setup requires a **modified Baofeng UV-5R or BF-888S radio**, a separate radio interface, and a USB–UART adapter connected to that interface. The verified USB–UART adapter is the **FTDI FT232R (VID: 0403, PID: 6001)**. I will publish the wiring diagrams and photos of the completed hardware soon.
 
 ## Required hardware and upcoming documentation
