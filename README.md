@@ -170,3 +170,10 @@ Die Anwendung wurde ausschließlich mit dem FTDI FT232R USB–UART-Adapter getes
 ## Development notes
 
 The AndroidIDE source project is prepared separately as a versioned ZIP package. A source candidate must be synchronized, built and tested in AndroidIDE before its APK is published as a GitHub Release. Keep the Gradle `versionName`, `versionCode`, in-app version display, diagnostic output and release notes synchronized.
+
+
+## Trademark disclaimer and independence
+
+**Orfeusz Gateway is an independent third-party project**, distributed free of charge. No purchase price or licence fee is charged for the application. The project is not affiliated with Zello, Inc., is not an official Zello product, and is not sponsored, endorsed or officially supported by Zello.
+
+The **Zello** name and related trademarks are the property of Zello, Inc. The name is used solely to describe compatibility and related functionality accurately. The Orfeusz Gateway name, branding and project are independent and do not imply an official partnership or endorsement.
