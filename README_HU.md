@@ -45,7 +45,7 @@ Az Orfeusz Gateway a korábbi, PC-n futó Zello-kliensre épülő rádiós kapu�
 
 ## Hardvergaléria
 
-A következő képek az Orfeusz Gateway rendszerének látványtervei. **AI-val készített illusztrációk, nem dokumentációs célú, hiteles fényképek a tényleges áramköri kialakításról.** A pontos bekötést és az alkatrészeket a kapcsolási rajzok, illetve az eredeti hardverfotók dokumentálják.
+A következő képek az eredeti Orfeusz Gateway rendszerről készült fényképek alapján, AI segítségével újrarenderelt bemutatóképek. A képek az eredeti rendszer megjelenését és felépítését szemléltetik, azonban az újrarenderelés miatt **az elektromos kapcsolás, a bekötések és az apró elektronikai részletek nem feltétlenül pontosak**. A pontos kapcsolási rajzok és műszaki dokumentáció összeállítása és feltöltése folyamatban van; ezek lesznek a hiteles hivatkozási alapok a hardver megépítéséhez.
 
 | A teljes rendszer | A rádióinterfész | Belső elektronikai részlet |
 |---|---|---|
