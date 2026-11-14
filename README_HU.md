@@ -28,6 +28,20 @@ Az Orfeusz Gateway a korábbi, PC-n futó Zello-kliensre épülő rádiós kapu�
 
 Így a korábban kiépített rádiós rendszered – megfelelő, kompatibilis rádióval és interfésszel – tovább használható, PC-s Zello-kliens nélkül. **Fontos:** a meglévő hardver közvetlen újrahasználhatósága a kialakításától függ; az alkalmazás jelenleg az átalakított Baofeng UV-5R vagy BF-888S rádióval és az igazolt FTDI FT232R USB–UART adapterrel tesztelt.
 
+## Kompakt, önálló mobil kapuállomás – számítógép nélkül
+
+Az Orfeusz Gateway egyik legnagyobb előnye, hogy a kapuállomás vezérléséhez nincs szükség külön laptopra vagy asztali számítógépre. **Maga az Androidos telefon futtatja az alkalmazást és látja el a gateway számítási, hálózati és vezérlési feladatait.** A telefonhoz a rádióinterfészt és a megfelelő rádiót kell csatlakoztatni; a működéshez természetesen tápellátásra és internetkapcsolatra is szükség van.
+
+Ezzel egy egyszerűbb, kompakt mobil kapuállomás építhető, amelynél a központi számítógép, a kijelző, az akkumulátor és a mobil adatkapcsolat egyetlen készülékben rendelkezésre áll. Egy Raspberry Pi-alapú megoldáshoz képest így kevesebb különálló számítógépes alkatrészt és kiegészítőt kell összeállítani. Ez nem jelenti azt, hogy minden Raspberry Pi-nél fizikailag kisebb: például a Raspberry Pi Zero 2 W önmagában is rendkívül apró. Az előny a telefonba integrált funkciókban és az egyszerűbb rendszer-összeállításban rejlik.
+
+A mobil kialakítás többféle felhasználást tesz lehetővé:
+
+- **Járműbe telepítve:** kitelepülés vagy rendezvény idején a kapuállomás az autóban maradhat, így a jármű mobil kommunikációs csomópontként működhet.
+- **Hordozható egységként:** a telefon, a rádió és az interfész egy kompakt, megfelelően rögzített és védett dobozba építhető.
+- **Ideiglenes terepi telepítésként:** túrák, nagy kiterjedésű területek bejárása vagy rendezvények során a kapuállomás egy alkalmas helyen kihelyezhető, ha ott biztosítható a stabil tápellátás, az internetkapcsolat és a rádiós lefedettség.
+
+A terepi használatnál a készülékeket védeni kell az esőtől, portól, túlmelegedéstől és mechanikai sérülésektől. A mobiltelefonos kialakítás egyszerűsíti a kapuállomás telepítését, de nem helyettesíti a megfelelő rádiós antennát, a stabil tápellátást és a használati helyen elérhető internetkapcsolatot.
+
 ## Szükséges hardver és dokumentáció
 
 - Átalakított Baofeng UV-5R vagy BF-888S rádió.
