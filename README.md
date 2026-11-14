@@ -46,10 +46,10 @@ The following screenshots show the Orfeusz Gateway interface and its radio/FTDI 
 
 ## Current release and source status
 
-- Latest published GitHub Release currently present in this repository: **1.10.47**.
-- The latest locally prepared AndroidIDE source project is **1.10.50** (versionCode **87**). It is a source candidate and is **not a published APK release** until it has been built and tested in AndroidIDE.
-- Do not create a GitHub Release for a source candidate before the APK has been built and verified.
-- Release APKs and release notes are published on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases).
+- Latest published GitHub Release: **1.10.50**.
+- Version Code: **87**.
+- The 1.10.50 APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/tag/1.10.50).
+- Publish a new GitHub Release only after the APK has been built and verified.
 
 ## Update architecture
 
@@ -67,9 +67,9 @@ Newer app versions do not need `update.json` to discover subsequent releases. Th
 
 ## Release asset naming
 
-For a release tag such as `1.10.47`, the APK asset must be named exactly:
+For a release tag such as `1.10.50`, the APK asset must be named exactly:
 
-`Orfeusz.Gateway_v1.10.47.apk`
+`Orfeusz.Gateway_v1.10.50.apk`
 
 The release tag and APK asset filename are separate values and both must match the intended release.
 
