@@ -2,16 +2,15 @@
 
 Androidos, kétirányú Zello–rádió kapuállomás.
 
-> **Fontos – szükséges rádiós hardver:** az alkalmazás önmagában nem elegendő a rádió csatlakoztatásához. Szükség van egy **Baofeng UV-5R vagy BF-888S rádióhoz való csatlakozó/átalakító kábelre**, valamint egy **megfelelő rádióinterfészre** és az interfészhez illeszkedő USB–UART adapterre. Az igazolt USB–UART adapter típusa: **FTDI FT232R (VID: 0403, PID: 6001)**. A pontos bekötést és az összeállítás fényképeit hamarosan közzétesszük.
+> **Fontos – szükséges rádiós hardver:** az alkalmazás használatához nem elegendő egy gyári Baofeng rádió és egy egyszerű csatlakozókábel. **Átalakított Baofeng UV-5R vagy BF-888S rádió szükséges**, továbbá egy külön rádióinterfész és az interfészhez csatlakozó USB–UART adapter. Az igazolt USB–UART adapter típusa: **FTDI FT232R (VID: 0403, PID: 6001)**. A kapcsolási rajzokat és a megépített rendszer fényképeit hamarosan közzétesszük.
 
 ## Szükséges hardver és dokumentáció
 
-- Baofeng UV-5R vagy BF-888S rádió.
-- A rádió típusának megfelelő csatlakozó/átalakító kábel.
-- Rádióinterfész a rádió és az USB–UART adapter közé.
+- Átalakított Baofeng UV-5R vagy BF-888S rádió.
+- Külön rádióinterfész.
 - Igazolt USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).
 
-**Hamarosan:** feltöltjük a rádióinterfész kapcsolási rajzait, valamint a kábelezésről és a kész összeállításról készült fényképeket. A dokumentáció megjelenéséig ne építsd meg találgatás alapján a bekötést.
+**Hamarosan:** feltöltjük az átalakított rádió és a rádióinterfész kapcsolási rajzait, valamint a megépített hardverről készült fényképeket.
 
 - Csomagnév: `com.videotourzala.zellogateway`
 - GitHub-repó: `szotsy/Zello-Android-Radio-Gateway`
