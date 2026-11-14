@@ -50,11 +50,28 @@ The following screenshots show the Orfeusz Gateway interface and its radio/FTDI 
 |---|---|
 | ![Radio receiving](docs/screenshots/Screenshot_20261114_134721.jpg) | ![Radio transmitting](docs/screenshots/Screenshot_20261114_134735.jpg) |
 
+## Android security warnings and permissions
+
+### If Android displays a security warning
+
+Orfeusz Gateway is distributed through GitHub Releases rather than the Google Play Store. For that reason, Android or Google Play Protect may display a security notice during installation or request an additional scan. **Such a notice alone does not prove that an application is malicious.**
+
+I develop this app specifically to provide two-way audio communication between Zello and a connected radio, and to control the FTDI radio interface. It is not designed to damage the device or deceive the user. Before installing, make sure you downloaded the APK from the project's official [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest). I do not recommend installing renamed, modified or third-party APK files. If Android identifies a specific threat, do not dismiss the alert automatically; verify the file's origin and the authenticity of the release.
+
+### Required Android permissions
+
+For the application to work correctly, grant the Android permissions that it actually requests. Denying or later revoking permissions may restrict certain functions, such as audio handling or background operation, and can prevent the Zello-to-radio connection from working as intended.
+
+- On first launch, review the Android permission prompts and grant the permissions requested for the app's operation.
+- When connecting the FTDI USB adapter, also allow the USB-device access prompt displayed by Android.
+- If you previously denied a permission, review it under **Android Settings → Apps → Orfeusz Gateway → Permissions**. Menu names may vary by Android version and device manufacturer.
+- Grant permissions only to the official app, and approve only prompts that Android actually displays.
+
 ## Current release and source status
 
-- Latest published GitHub Release: **1.10.50**.
-- Version Code: **87**.
-- The 1.10.50 APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
+- Latest published GitHub Release: **1.10.54**.
+- Version Code: **91**.
+- The 1.10.54 APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Publish a new GitHub Release only after the APK has been built and verified.
 
 ## Update architecture
