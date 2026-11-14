@@ -25,6 +25,11 @@
     .gallery img{width:100%;height:auto;border-radius:9px;border:1px solid var(--line)}
     .note{border-left:3px solid var(--orange);padding:10px 15px;background:#1b1b1b;color:#ddd}
     footer{padding:28px 0 45px;color:var(--muted);font-size:.92rem}
+    .site-header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .language-switch{display:flex;gap:6px;padding:4px;border:1px solid var(--line);border-radius:999px;background:#1b1b1b}
+    .lang-button{min-width:48px;padding:7px 13px;border:0;border-radius:999px;background:transparent;color:var(--muted);font:700 14px system-ui;cursor:pointer}
+    .lang-button.active{background:var(--orange);color:#111}
+    [hidden]{display:none!important}
     @media(max-width:600px){.hero{padding-top:12px}.actions .btn{width:100%;text-align:center}}
   </style>
   <script type="application/ld+json">
@@ -44,7 +49,14 @@
 </head>
 <body>
   <div class="wrap">
-    <header><a class="brand" href="./">ORFEUSZ GATEWAY</a></header>
+    <header class="site-header">
+      <a class="brand" href="./">ORFEUSZ GATEWAY</a>
+      <nav class="language-switch" aria-label="Language selector">
+        <button type="button" class="lang-button active" id="lang-hu" aria-pressed="true" onclick="setLanguage('hu')">HU</button>
+        <button type="button" class="lang-button" id="lang-en" aria-pressed="false" onclick="setLanguage('en')">EN</button>
+      </nav>
+    </header>
+    <div id="content-hu">
     <main>
       <div class="hero">
         <img src="https://raw.githubusercontent.com/szotsy/Zello-Android-Radio-Gateway/main/images/Orfeuszbanner.png" alt="Orfeusz Gateway – Android, Zello és rádió">
@@ -100,16 +112,77 @@
         </div>
       </section>
 
-      <section>
-        <h2>English</h2>
-        <p>Orfeusz Gateway is an Android-based, bidirectional Zello-to-radio gateway. It bridges conventional radio communications with the Zello network without requiring a separate PC. The connected radio interface, compatible radio hardware, power and internet access are required.</p>
-        <a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/blob/main/README.md">Read the English documentation</a>
-      </section>
     </main>
+    </div>
+    <div id="content-en" hidden>
+      <main>
+        <div class="hero">
+          <img src="https://raw.githubusercontent.com/szotsy/Zello-Android-Radio-Gateway/main/images/Orfeuszbanner.png" alt="Orfeusz Gateway – Android, Zello and radio">
+          <h1>Orfeusz <span>Gateway</span></h1>
+          <p class="lead">An Android-based, bidirectional Zello-to-radio gateway. It connects conventional radio communications to the Zello network without a separate laptop or desktop computer.</p>
+          <div class="actions">
+            <a class="btn" href="https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest">Download the latest APK</a>
+            <a class="btn secondary" href="https://github.com/szotsy/Zello-Android-Radio-Gateway">Open GitHub project</a>
+          </div>
+          <div class="badges">
+            <img src="https://img.shields.io/badge/ANDROID-3D3D3D?style=for-the-badge&logo=android&logoColor=white" alt="Android">
+            <img src="https://img.shields.io/badge/ZELLO-F36C21?style=for-the-badge" alt="Zello">
+            <img src="https://img.shields.io/badge/RADIO_GATEWAY-171717?style=for-the-badge" alt="Radio Gateway">
+            <img src="https://img.shields.io/github/v/release/szotsy/Zello-Android-Radio-Gateway?display_name=tag&style=for-the-badge&label=VERSION&color=F36C21" alt="Latest version">
+          </div>
+        </div>
+        <section>
+          <h2>How does it work?</h2>
+          <div class="grid">
+            <article class="card"><h3>Radio → Zello</h3><p>Audio received by the connected conventional radio can be forwarded to users in the Zello channel.</p></article>
+            <article class="card"><h3>Zello → Radio</h3><p>Incoming audio from Zello can be transmitted through the gateway to the connected radio.</p></article>
+            <article class="card"><h3>Mobile deployment</h3><p>The Android phone runs the gateway application. No separate PC is required; power and internet access are still necessary.</p></article>
+          </div>
+        </section>
+        <section>
+          <h2>Required hardware</h2>
+          <ul>
+            <li>Modified Baofeng UV-5R or BF-888S radio.</li>
+            <li>Dedicated radio interface.</li>
+            <li>Verified USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).</li>
+          </ul>
+          <p class="note">A stock Baofeng radio and a simple USB cable are not sufficient. Verified circuit diagrams and detailed build documentation are being prepared separately.</p>
+        </section>
+        <section class="gallery">
+          <h2>System overview</h2>
+          <p>The following are illustrative images re-rendered with AI based on photographs of the original system. The electrical circuit and small details may not be exact. Only verified technical documentation should be used when building the hardware.</p>
+          <div class="grid">
+            <div class="card"><img src="https://raw.githubusercontent.com/szotsy/Zello-Android-Radio-Gateway/main/images/Gateway-system-illustration.png" alt="Orfeusz Gateway complete system illustration"><p>Complete system</p></div>
+            <div class="card"><img src="https://raw.githubusercontent.com/szotsy/Zello-Android-Radio-Gateway/main/images/Radio-interface-illustration.png" alt="Radio interface illustration"><p>Radio interface</p></div>
+            <div class="card"><img src="https://raw.githubusercontent.com/szotsy/Zello-Android-Radio-Gateway/main/images/Radio-interface-detail-illustration.png" alt="Internal radio interface detail illustration"><p>Internal electronics detail</p></div>
+          </div>
+        </section>
+        <section>
+          <h2>Project information</h2>
+          <div class="grid">
+            <article class="card"><h3>Latest published version</h3><p><strong>1.10.54</strong> · Version Code 91</p><a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/releases">View all releases</a></article>
+            <article class="card"><h3>Tested devices</h3><p>Samsung Galaxy S23<br>Samsung Galaxy Tab A7</p></article>
+            <article class="card"><h3>Documentation and source</h3><p>Project information, updates and source packages are available on GitHub.</p><a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/blob/main/README.md">English documentation</a></article>
+          </div>
+        </section>
+      </main>
+    </div>
     <footer>
       <p>Orfeusz Gateway · Android / Zello / Radio Gateway</p>
       <p><a href="https://github.com/szotsy/Zello-Android-Radio-Gateway">GitHub repository</a> · <a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest">Releases</a></p>
     </footer>
   </div>
+  <script>
+    function setLanguage(lang){
+      const hu=lang==="hu";
+      document.getElementById("content-hu").hidden=!hu;
+      document.getElementById("content-en").hidden=hu;
+      document.documentElement.lang=lang;
+      document.getElementById("lang-hu").classList.toggle("active",hu);
+      document.getElementById("lang-en").classList.toggle("active",!hu);
+      document.getElementById("lang-hu").setAttribute("aria-pressed",String(hu));
+      document.getElementById("lang-en").setAttribute("aria-pressed",String(!hu));
+    }
+  </script>
 </body>
 </html>
