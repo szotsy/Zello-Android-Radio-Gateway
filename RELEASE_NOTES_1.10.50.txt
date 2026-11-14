@@ -1,0 +1,32 @@
+Orfeusz Gateway 1.10.50
+
+🇭🇺 Magyar
+- Javítva a verzióazonosítás: a főképernyő, a frissítésellenőrzés és a diagnosztikai napló automatikusan a Gradle verzióadatait használja.
+- Javítva a korábbi APK-k letöltése Android 6–9 rendszereken: a nyilvános Letöltések mappához szükséges tárhelyengedélyt az alkalmazás bekéri.
+- A korábbi verziók letöltése továbbra is kézi jóváhagyással történik; telepítés előtt a jelenlegi alkalmazást el kell távolítani.
+- A Zello telepítettségi emlékeztető változatlan.
+- Az FTDI, RTS, CTS, PTT és hangfigyelési vezérlési logika változatlan.
+
+🇬🇧 English
+- Fixed version identification: the main screen, update checker and diagnostic log now use Gradle version metadata automatically.
+- Fixed previous APK downloads on Android 6–9 by requesting the storage permission required for the public Downloads folder.
+- Previous-version downloads remain manual; the current app must be uninstalled before installing an older version.
+- The Zello installation reminder is unchanged.
+- FTDI, RTS, CTS, PTT and audio-monitoring control logic remain unchanged.
+
+🇩🇪 Deutsch
+- Versionsanzeige korrigiert: Hauptbildschirm, Update-Prüfung und Diagnoseprotokoll verwenden jetzt automatisch die Gradle-Versionsdaten.
+- Download früherer APKs unter Android 6–9 korrigiert: Die erforderliche Speicherberechtigung für den öffentlichen Download-Ordner wird angefordert.
+- Downloads älterer Versionen bleiben manuell; vor der Installation muss die aktuelle App deinstalliert werden.
+- Der Hinweis zur installierten Zello-App bleibt unverändert.
+- FTDI-, RTS-, CTS-, PTT- und Audioüberwachungslogik bleiben unverändert.
+
+🇷🇺 Русский
+- Исправлено определение версии: главный экран, проверка обновлений и диагностический журнал автоматически используют данные версии Gradle.
+- Исправлена загрузка предыдущих APK на Android 6–9: приложение запрашивает разрешение на запись в общую папку «Загрузки».
+- Загрузка старых версий остаётся ручной; перед установкой необходимо удалить текущую версию приложения.
+- Напоминание об установленном Zello не изменено.
+- Логика FTDI, RTS, CTS, PTT и аудиомониторинга не изменена.
+
+Version: 1.10.50
+Version Code: 87
