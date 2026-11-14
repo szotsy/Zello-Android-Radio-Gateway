@@ -1,5 +1,7 @@
 # Orfeusz Gateway
 
+![Orfeusz Gateway – Android, Zello és rádió](images/Orfeuszbanner.png)
+
 Androidos, kétirányú Zello–rádió kapuállomás.
 
 ## Mire szolgál az Orfeusz Gateway?
