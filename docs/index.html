@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Orfeusz Gateway – Android-alapú, kétirányú Zello–rádió kapuállomás. Hagyományos rádióforgalom és Zello összekapcsolása külön PC nélkül.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#171717">
+  <link rel="canonical" href="https://szotsy.github.io/Zello-Android-Radio-Gateway/">
+  <title>Orfeusz Gateway – Android Zello Radio Gateway</title>
+  <style>
+    :root{color-scheme:dark;--bg:#111;--panel:#1b1b1b;--line:#303030;--text:#f3f3f3;--muted:#b7b7b7;--orange:#f36c21}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:#ff9a62;text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(1050px,92%);margin:auto}
+    header{padding:26px 0 12px}.brand{font-weight:800;letter-spacing:.04em;color:#fff;font-size:1.1rem}
+    .hero{padding:28px 0 38px}.hero img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+    h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.08;margin:26px 0 12px}h1 span{color:var(--orange)}
+    .lead{font-size:1.2rem;color:#ddd;max-width:780px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+    .btn{display:inline-block;padding:11px 18px;border-radius:8px;background:var(--orange);color:#111;font-weight:750}
+    .btn.secondary{background:#292929;color:#fff;border:1px solid #444}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.badges img{height:28px}
+    section{padding:30px 0;border-top:1px solid var(--line)}h2{font-size:1.65rem;margin:0 0 14px}p{color:#ddd}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+    .gallery img{width:100%;height:auto;border-radius:9px;border:1px solid var(--line)}
+    .note{border-left:3px solid var(--orange);padding:10px 15px;background:#1b1b1b;color:#ddd}
+    footer{padding:28px 0 45px;color:var(--muted);font-size:.92rem}
+    @media(max-width:600px){.hero{padding-top:12px}.actions .btn{width:100%;text-align:center}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"Orfeusz Gateway",
+    "applicationCategory":"CommunicationApplication",
+    "operatingSystem":"Android",
+    "description":"Android-alapú, kétirányú Zello–rádió kapuállomás hagyományos rádióforgalom és a Zello-hálózat összekapcsolására.",
+    "softwareVersion":"1.10.54",
+    "url":"https://szotsy.github.io/Zello-Android-Radio-Gateway/",
+    "downloadUrl":"https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest",
+    "codeRepository":"https://github.com/szotsy/Zello-Android-Radio-Gateway"
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header><a class="brand" href="./">ORFEUSZ GATEWAY</a></header>
+    <main>
+      <div class="hero">
+        <img src="../images/Orfeuszbanner.png" alt="Orfeusz Gateway – Android, Zello és rádió">
+        <h1>Orfeusz <span>Gateway</span></h1>
+        <p class="lead">Android-alapú, kétirányú Zello–rádió kapuállomás. Összekapcsolja a hagyományos rádióforgalmat a Zello-hálózattal – külön laptop vagy asztali számítógép nélkül.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest">Legfrissebb APK letöltése</a>
+          <a class="btn secondary" href="https://github.com/szotsy/Zello-Android-Radio-Gateway">GitHub-projekt megnyitása</a>
+        </div>
+        <div class="badges">
+          <img src="https://img.shields.io/badge/ANDROID-3D3D3D?style=for-the-badge&logo=android&logoColor=white" alt="Android">
+          <img src="https://img.shields.io/badge/ZELLO-F36C21?style=for-the-badge" alt="Zello">
+          <img src="https://img.shields.io/badge/RADIO_GATEWAY-171717?style=for-the-badge" alt="Radio Gateway">
+          <img src="https://img.shields.io/github/v/release/szotsy/Zello-Android-Radio-Gateway?display_name=tag&style=for-the-badge&label=VERSION&color=F36C21" alt="Legfrissebb verzió">
+        </div>
+      </div>
+
+      <section>
+        <h2>Hogyan működik?</h2>
+        <div class="grid">
+          <article class="card"><h3>Rádió → Zello</h3><p>A csatlakoztatott hagyományos rádión vett hang továbbítható a Zello-csoport felhasználói felé.</p></article>
+          <article class="card"><h3>Zello → rádió</h3><p>A Zello felől érkező hang a kapuállomáson keresztül továbbítható a csatlakoztatott rádióra.</p></article>
+          <article class="card"><h3>Mobil kialakítás</h3><p>Az Androidos telefon futtatja a gateway alkalmazást. Nincs szükség külön PC-re; tápellátás és internetkapcsolat továbbra is szükséges.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Szükséges hardver</h2>
+        <ul>
+          <li>Átalakított Baofeng UV-5R vagy BF-888S rádió.</li>
+          <li>Külön rádióinterfész.</li>
+          <li>Igazolt USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).</li>
+        </ul>
+        <p class="note">Egy gyári Baofeng rádió és egy egyszerű USB-kábel önmagában nem elegendő. A hardveres kapcsolási rajzok és a részletes építési dokumentáció külön készülnek.</p>
+      </section>
+
+      <section class="gallery">
+        <h2>A rendszer bemutatása</h2>
+        <p>Az alábbiak szemléltető, AI-val újrarenderelt képek az eredeti rendszerről készült fényképek alapján. Az elektromos kapcsolás és az apró részletek nem feltétlenül pontosak; építéshez kizárólag az ellenőrzött műszaki dokumentáció használható.</p>
+        <div class="grid">
+          <div class="card"><img src="../images/Gateway-system-illustration.png" alt="A teljes Orfeusz Gateway rendszer látványterve"><p>A teljes rendszer</p></div>
+          <div class="card"><img src="../images/Radio-interface-illustration.png" alt="A rádióinterfész látványterve"><p>Rádióinterfész</p></div>
+          <div class="card"><img src="../images/Radio-interface-detail-illustration.png" alt="A rádióinterfész belső részletének látványterve"><p>Belső elektronikai részlet</p></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projektinformációk</h2>
+        <div class="grid">
+          <article class="card"><h3>Legfrissebb publikált verzió</h3><p><strong>1.10.54</strong> · Version Code 91</p><a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/releases">Összes kiadás megtekintése</a></article>
+          <article class="card"><h3>Tesztelt készülékek</h3><p>Samsung Galaxy S23<br>Samsung Galaxy Tab A7</p></article>
+          <article class="card"><h3>Dokumentáció és forrás</h3><p>A projekt leírása, frissítései és forráscsomagjai a GitHubon érhetők el.</p><a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/blob/main/README_HU.md">Magyar dokumentáció</a></article>
+        </div>
+      </section>
+
+      <section>
+        <h2>English</h2>
+        <p>Orfeusz Gateway is an Android-based, bidirectional Zello-to-radio gateway. It bridges conventional radio communications with the Zello network without requiring a separate PC. The connected radio interface, compatible radio hardware, power and internet access are required.</p>
+        <a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/blob/main/README.md">Read the English documentation</a>
+      </section>
+    </main>
+    <footer>
+      <p>Orfeusz Gateway · Android / Zello / Radio Gateway</p>
+      <p><a href="https://github.com/szotsy/Zello-Android-Radio-Gateway">GitHub repository</a> · <a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest">Releases</a></p>
+    </footer>
+  </div>
+</body>
+</html>
