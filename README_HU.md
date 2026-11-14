@@ -46,9 +46,9 @@ Az alábbi képek az Orfeusz Gateway felületét, valamint a rádió és az FTDI
 
 ## Kiadási állapot
 
-- A repóban jelenleg elérhető legfrissebb publikált GitHub Release: **1.10.47**.
-- A legutóbb előkészített AndroidIDE-forrásjelölt: **1.10.50**, versionCode **87**.
-- Az 1.10.50 egyelőre forrásjelölt: APK-build és AndroidIDE-teszt nélkül nem tekinthető kiadott verziónak.
+- Legfrissebb publikált GitHub Release: **1.10.50**.
+- Version Code: **87**.
+- Az 1.10.50 APK letölthető a [GitHub Releases oldalról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/tag/1.10.50).
 - Új GitHub Release csak a ténylegesen lefordított és ellenőrzött APK-val készüljön.
 
 ## Frissítési rendszer
@@ -67,9 +67,9 @@ Az alkalmazás a GitHub Release tagjét a telepített Gradle-verzióval hasonlí
 
 ## APK-elnevezés
 
-A release tag és az APK neve egyezzen a kiadás verziójával. Például az 1.10.47 kiadás APK assetje:
+A release tag és az APK neve egyezzen a kiadás verziójával. Például az 1.10.50 kiadás APK assetje:
 
-`Orfeusz.Gateway_v1.10.47.apk`
+`Orfeusz.Gateway_v1.10.50.apk`
 
 ## Hardverkompatibilitás
 
