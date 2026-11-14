@@ -6,6 +6,18 @@ Android-based two-way Zello ↔ radio gateway application.
 **Default branch:** `main`  
 **Package:** `com.videotourzala.zellogateway`
 
+## Screenshots
+
+The following screenshots show the Orfeusz Gateway interface and its radio/FTDI status indicators.
+
+| FTDI disconnected | FTDI connected / standby |
+|---|---|
+| ![FTDI disconnected](docs/screenshots/Screenshot_20261114_134559.jpg) | ![FTDI connected](docs/screenshots/Screenshot_20261114_134649.jpg) |
+
+| Radio receiving | Radio transmitting |
+|---|---|
+| ![Radio receiving](docs/screenshots/Screenshot_20261114_134721.jpg) | ![Radio transmitting](docs/screenshots/Screenshot_20261114_134735.jpg) |
+
 ## Current release and source status
 
 - Latest published GitHub Release currently present in this repository: **1.10.47**.
