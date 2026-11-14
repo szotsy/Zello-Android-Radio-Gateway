@@ -48,7 +48,7 @@ The following screenshots show the Orfeusz Gateway interface and its radio/FTDI 
 
 - Latest published GitHub Release: **1.10.50**.
 - Version Code: **87**.
-- The 1.10.50 APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/tag/1.10.50).
+- The 1.10.50 APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Publish a new GitHub Release only after the APK has been built and verified.
 
 ## Update architecture
