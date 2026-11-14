@@ -2,7 +2,7 @@
 
 Android-based two-way Zello ↔ radio gateway application.
 
-> **Important – additional radio hardware required:** a stock Baofeng radio and a simple connection cable are not sufficient. The setup requires a **modified Baofeng UV-5R or BF-888S radio**, a separate radio interface, and a USB–UART adapter connected to that interface. The verified USB–UART adapter is the **FTDI FT232R (VID: 0403, PID: 6001)**. Wiring diagrams and photos of the completed hardware will be published soon.
+> **Important – additional radio hardware required:** a stock Baofeng radio and a simple connection cable are not sufficient. The setup requires a **modified Baofeng UV-5R or BF-888S radio**, a separate radio interface, and a USB–UART adapter connected to that interface. The verified USB–UART adapter is the **FTDI FT232R (VID: 0403, PID: 6001)**. Wiring diagrams and photos of the completed hardware I will publish them soon.
 
 ## Required hardware and upcoming documentation
 
@@ -10,7 +10,7 @@ Android-based two-way Zello ↔ radio gateway application.
 - Separate radio interface.
 - Verified USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).
 
-**Coming soon:** wiring diagrams for the modified radio and radio interface, plus photos of the completed hardware assembly.
+**Coming soon:** I will upload wiring diagrams for the modified radio and radio interface, plus photos of the completed hardware assembly.
 
 **Repository:** `szotsy/Zello-Android-Radio-Gateway`  
 **Default branch:** `main`  
