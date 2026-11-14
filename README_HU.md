@@ -40,6 +40,15 @@ Az Orfeusz Gateway a korábbi, PC-n futó Zello-kliensre épülő rádiós kapu�
 - GitHub-repó: `szotsy/Zello-Android-Radio-Gateway`
 - Alapértelmezett ág: `main`
 
+
+## Hardvergaléria
+
+A következő képek az Orfeusz Gateway rendszerének látványtervei. **AI-val készített illusztrációk, nem dokumentációs célú, hiteles fényképek a tényleges áramköri kialakításról.** A pontos bekötést és az alkatrészeket a kapcsolási rajzok, illetve az eredeti hardverfotók dokumentálják.
+
+| A teljes rendszer | A rádióinterfész | Belső elektronikai részlet |
+|---|---|---|
+| ![A teljes Orfeusz Gateway rendszer látványterve](images/Gateway-system-illustration.png) | ![A rádióinterfész látványterve](images/Radio-interface-illustration.png) | ![A rádióinterfész belső részletének látványterve](images/Radio-interface-detail-illustration.png) |
+
 ## Képernyőképek
 
 Az alábbi képek az Orfeusz Gateway felületét, valamint a rádió és az FTDI adapter állapotjelzéseit mutatják be.
