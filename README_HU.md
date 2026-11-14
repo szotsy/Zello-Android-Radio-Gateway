@@ -12,6 +12,8 @@ Androidos, kétirányú Zello–rádió kapuállomás.
 
 **Hamarosan:** feltöltöm az átalakított rádió és a rádióinterfész kapcsolási rajzait, valamint a megépített hardverről készült fényképeket.
 
+**Nem kell megijedni az építéstől!** Ha forrasztottál már korábban, a kapcsolási rajzok alapján minimális forrasztási és elektronikai ismerettel is meg tudod építeni. Nem szükséges hozzá komoly elektronikai szaktudás – egy kis türelem és alapvető kézügyesség elegendő.
+
 - Csomagnév: `com.videotourzala.zellogateway`
 - GitHub-repó: `szotsy/Zello-Android-Radio-Gateway`
 - Alapértelmezett ág: `main`
