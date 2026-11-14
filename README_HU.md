@@ -6,6 +6,18 @@ Androidos, kétirányú Zello–rádió kapuállomás.
 - GitHub-repó: `szotsy/Zello-Android-Radio-Gateway`
 - Alapértelmezett ág: `main`
 
+## Képernyőképek
+
+Az alábbi képek az Orfeusz Gateway felületét, valamint a rádió és az FTDI adapter állapotjelzéseit mutatják be.
+
+| FTDI nincs csatlakoztatva | FTDI csatlakoztatva / készenlét |
+|---|---|
+| ![FTDI nincs csatlakoztatva](docs/screenshots/Screenshot_20261114_134559.jpg) | ![FTDI csatlakoztatva](docs/screenshots/Screenshot_20261114_134649.jpg) |
+
+| Rádió vétel | Rádió adás |
+|---|---|
+| ![Rádió vétel](docs/screenshots/Screenshot_20261114_134721.jpg) | ![Rádió adás](docs/screenshots/Screenshot_20261114_134735.jpg) |
+
 ## Kiadási állapot
 
 - A repóban jelenleg elérhető legfrissebb publikált GitHub Release: **1.10.47**.
