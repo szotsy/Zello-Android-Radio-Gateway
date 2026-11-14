@@ -50,11 +50,28 @@ Az alábbi képek az Orfeusz Gateway felületét, valamint a rádió és az FTDI
 |---|---|
 | ![Rádió vétel](docs/screenshots/Screenshot_20261114_134721.jpg) | ![Rádió adás](docs/screenshots/Screenshot_20261114_134735.jpg) |
 
+## Android-biztonsági figyelmeztetések és engedélyek
+
+### Ha az Android figyelmeztet az alkalmazásra
+
+Az Orfeusz Gateway-t a GitHub Releases oldalról, a Google Play Áruházon kívül lehet letölteni és telepíteni. Emiatt az Android vagy a Google Play Protect a telepítéskor biztonsági figyelmeztetést jeleníthet meg, illetve külön ellenőrzést kérhet. **Egy ilyen figyelmeztetés önmagában nem bizonyítja, hogy az alkalmazás kártékony.**
+
+Az alkalmazást kifejezetten a Zello és a csatlakoztatott rádió közötti kétirányú hangkapcsolat, valamint az FTDI rádióinterfész vezérlésére fejlesztem. Nem célja a készülék károsítása vagy a felhasználó megtévesztése. A telepítés előtt mindig ellenőrizd, hogy az APK-t a projekt hivatalos [GitHub Releases oldaláról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest) töltötted-e le. Ismeretlen forrásból származó, átnevezett vagy módosított APK telepítését nem javaslom. Ha a rendszer konkrét kártevőt azonosít, ne hagyd figyelmen kívül a jelzést; ellenőrizd a fájl eredetét és a kiadás hitelességét.
+
+### Szükséges Android-engedélyek
+
+A hibátlan működéshez az alkalmazás által ténylegesen kért Android-engedélyeket meg kell adni. Az engedélyek megtagadása vagy későbbi visszavonása egyes funkciókat – például a hangkezelést vagy a háttérben történő működést – korlátozhatja, ezért a Zello és a rádió közötti kapcsolat nem feltétlenül fog megfelelően működni.
+
+- Első indításkor olvasd el az Android engedélykéréseit, és add meg az alkalmazás működéséhez kért engedélyeket.
+- USB-s FTDI adapter csatlakoztatásakor engedélyezd az Android által megjelenített USB-eszköz-hozzáférést is.
+- Ha korábban megtagadtál egy engedélyt, az Android **Beállítások → Alkalmazások → Orfeusz Gateway → Engedélyek** menüpontjában ellenőrizheted és módosíthatod. A menüpontok neve Android-verziónként és gyártónként eltérhet.
+- Az engedélyeket csak a hivatalos alkalmazásnak add meg, és csak az Android által ténylegesen felkínált kéréseket hagyd jóvá.
+
 ## Kiadási állapot
 
-- Legfrissebb publikált GitHub Release: **1.10.50**.
-- Version Code: **87**.
-- Az 1.10.50 APK letölthető a [GitHub Releases oldalról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
+- Legfrissebb publikált GitHub Release: **1.10.54**.
+- Version Code: **91**.
+- Az 1.10.54 APK letölthető a [GitHub Releases oldalról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Új GitHub Release csak a ténylegesen lefordított és ellenőrzött APK-val készüljön.
 
 ## Frissítési rendszer
