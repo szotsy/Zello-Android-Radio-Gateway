@@ -96,12 +96,12 @@ For the application to work correctly, grant the Android permissions that it act
 
 ## Current release and source status
 
-- Latest published GitHub Release: **1.10.57**.
+- Latest published GitHub Release: **1.10.62**.
 - Version Code: **94**.
-- The 1.10.57 APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
+- The 1.10.62 APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Publish a new GitHub Release only after the APK has been built and verified.
 
-## 1.10.57 – Release notes
+## 1.10.62 – Release notes
 
 - Updated the foreground service notification title to **Orfeusz Gateway active**.
 - Tapping the notification opens the Orfeusz Gateway application.
@@ -150,7 +150,7 @@ This list includes devices that have actually been tested. Compatibility with ot
 - Zello package visibility queries are declared in the manifest for Android 11 and later; this does not restrict operation on older Android versions.
 - The minimum Android version is a project configuration requirement, not a claim that every Android release or device has been individually tested. See “Tested devices” for the devices actually tested.
 
-## 1.10.62 – Source candidate (APK not published)
+## 1.10.62 – Release notes
 
 - Large screens (available width of at least 700 dp) use a two-column layout: FTDI, radio and Zello status indicators on the left; action buttons on the right.
 - Narrow phone screens retain the original single-column layout.
@@ -161,7 +161,7 @@ This list includes devices that have actually been tested. Compatibility with ot
 
 **Version Code:** 99 · **Minimum Android:** 6.0 (API 23)
 
-This is a source candidate, not a published APK release. Create a GitHub Release only after the APK has been successfully built and verified in AndroidIDE.
+APK: [Orfeusz.Gateway_v1.10.62.apk](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.62/Orfeusz.Gateway_v1.10.62.apk).
 
 ## Hardware compatibility
 
@@ -198,7 +198,7 @@ Die Anwendung wurde ausschließlich mit dem FTDI FT232R USB–UART-Adapter getes
 
 ## Development notes
 
-The AndroidIDE source project is prepared separately as a versioned ZIP package. A source candidate must be synchronized, built and tested in AndroidIDE before its APK is published as a GitHub Release. Keep the Gradle `versionName`, `versionCode`, in-app version display, diagnostic output and release notes synchronized.
+The AndroidIDE source project is prepared separately as a versioned ZIP package. The source project is versioned separately; release build and device verification are completed before publication. Keep the Gradle `versionName`, `versionCode`, in-app version display, diagnostic output and release notes synchronized.
 
 
 ## Trademark disclaimer and independence
