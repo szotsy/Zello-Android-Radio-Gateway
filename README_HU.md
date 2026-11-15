@@ -8,9 +8,9 @@ Androidos, kétirányú Zello–rádió kapuállomás.
 
 
 <details>
-<summary><strong>⬇️ APK LETÖLTÉSE – Orfeusz Gateway 1.10.62</strong></summary>
+<summary><strong>⬇️ APK LETÖLTÉSE – Orfeusz Gateway (legfrissebb verzió)</strong></summary>
 
-[**KÖZVETLEN APK-LETÖLTÉS**](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.62/Orfeusz.Gateway_v1.10.62.apk)
+[**KÖZVETLEN APK-LETÖLTÉS**](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk)
 
 [Összes kiadás és korábbi verziók megtekintése](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases)
 
