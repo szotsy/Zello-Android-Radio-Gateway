@@ -1,0 +1,64 @@
+name: FTDI / radio hardware report
+description: Report a connection or radio-interface problem.
+title: "[HARDWARE] "
+labels: ["hardware"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not post private radio traffic, personal information or sensitive frequencies. Never open or modify powered equipment."
+  - type: input
+    id: app_version
+    attributes:
+      label: Orfeusz Gateway version
+      placeholder: "1.10.62"
+    validations:
+      required: true
+  - type: input
+    id: radio
+    attributes:
+      label: Radio model and modification
+      placeholder: "Baofeng UV-5R / BF-888S; describe the interface modification"
+    validations:
+      required: true
+  - type: input
+    id: adapter
+    attributes:
+      label: USB-UART adapter
+      description: "The verified adapter is FTDI FT232R (VID 0403, PID 6001). Other adapters are not verified."
+      placeholder: "FTDI FT232R"
+    validations:
+      required: true
+  - type: input
+    id: android
+    attributes:
+      label: Android device and version
+      placeholder: "Samsung Galaxy S23, Android ..."
+    validations:
+      required: true
+  - type: dropdown
+    id: symptom
+    attributes:
+      label: Symptom
+      options:
+        - Adapter not detected
+        - USB permission / connection problem
+        - Radio receive (RX) not detected
+        - PTT / transmit problem
+        - Audio problem
+        - Intermittent connection
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: wiring
+    attributes:
+      label: Wiring and power details
+      description: "Describe your wiring, power supply and connector orientation. Do not guess pin assignments."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps and observations
+    validations:
+      required: true
