@@ -170,6 +170,10 @@ Starting with 1.10.46, the app checks the latest stable GitHub Release through t
 
 Newer app versions do not need `update.json` to discover subsequent releases. The app compares the release tag with its installed Gradle version and only looks for an APK asset when a newer release is available.
 
+## Publishing a release
+
+See [RELEASE_PROCESS.md](RELEASE_PROCESS.md) for the build, device-verification and publishing checklist. The release workflow validates the versioned APK, creates the stable-name download asset and publishes a SHA-256 checksum.
+
 ## Release asset naming
 
 For a release tag such as `1.10.50`, the APK asset must be named exactly:
