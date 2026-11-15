@@ -6,6 +6,17 @@ Androidos, kétirányú Zello–rádió kapuállomás.
 
 ![Android](https://img.shields.io/badge/ANDROID-3D3D3D?style=for-the-badge&logo=android&logoColor=white) ![Zello](https://img.shields.io/badge/ZELLO-F36C21?style=for-the-badge&logoColor=white) ![Radio Gateway](https://img.shields.io/badge/RADIO_GATEWAY-171717?style=for-the-badge&logoColor=white) ![Version](https://img.shields.io/github/v/release/szotsy/Zello-Android-Radio-Gateway?display_name=tag&style=for-the-badge&label=VERSION&color=F36C21)
 
+
+<details>
+<summary><strong>⬇️ APK LETÖLTÉSE – Orfeusz Gateway 1.10.62</strong></summary>
+
+[**KÖZVETLEN APK-LETÖLTÉS**](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.62/Orfeusz.Gateway_v1.10.62.apk)
+
+[Összes kiadás és korábbi verziók megtekintése](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases)
+
+</details>
+
+
 ## Letöltés és telepítés
 
 **A legtöbb felhasználónak nem kell a forráskódot klónoznia vagy Android Studio-t használnia.** A kész, telepíthető alkalmazást a hivatalos GitHub Releases oldalról töltsd le.
