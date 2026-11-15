@@ -114,7 +114,7 @@ A hibátlan működéshez az alkalmazás által ténylegesen kért Android-enged
 
 ### Régi telepítések migrációja
 
-A gyökérben lévő `update.json` szándékosan megmarad. A régi, JSON-alapú frissítést használó telepítéseket az **1.10.46** migrációs verzióra irányítja. Törölni vagy átírni csak külön migrációs döntés alapján szabad.
+A gyökérben lévő `update.json` a régi, JSON-alapú frissítőt használó telepítések kompatibilitása miatt marad meg. Jelenleg az **1.10.62** verzióra és annak APK-jára mutat.
 
 ### Új frissítési rendszer
 
