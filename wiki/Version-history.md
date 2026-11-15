@@ -1,6 +1,6 @@
 # Verziótörténet / Version history
 
-> **A részletes változáslistát és a verziókhoz tartozó képernyőképeket később bővítjük. / Detailed changelog entries and version screenshots will be added later.**
+> **A részletes változáslista és a verziókhoz tartozó képernyőképek később kerülnek be. / Detailed changelog entries and version screenshots will be added later.**
 
 ## Magyar
 
