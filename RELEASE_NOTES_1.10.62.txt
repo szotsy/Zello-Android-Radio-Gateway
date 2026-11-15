@@ -1,4 +1,4 @@
-Orfeusz Gateway 1.10.62
+Orfeusz Gateway 1.10.62 — Published release
 
 - Large screens (available width >= 700 dp): two-column layout.
 - Left column: FTDI, radio receive/transmit and Zello status indicators.
@@ -11,5 +11,4 @@ Orfeusz Gateway 1.10.62
 
 Version Code: 99
 Minimum Android: 6.0 (API 23)
-
-SOURCE CANDIDATE ONLY: APK build and device verification are pending. Do not publish as a GitHub Release until the APK has been built and verified.
+APK: https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.62/Orfeusz.Gateway_v1.10.62.apk
