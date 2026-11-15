@@ -143,6 +143,13 @@ I have tested the application on the following Android devices:
 
 This list includes devices that have actually been tested. Compatibility with other devices and Android versions is not implied.
 
+## Android version compatibility
+
+- **Minimum supported Android version: Android 6.0 (Marshmallow, API 23).**
+- The source project's minSdk setting allows installation on Android 6.0 and newer versions.
+- Zello package visibility queries are declared in the manifest for Android 11 and later; this does not restrict operation on older Android versions.
+- The minimum Android version is a project configuration requirement, not a claim that every Android release or device has been individually tested. See “Tested devices” for the devices actually tested.
+
 ## Hardware compatibility
 
 ### 🇭🇺 Magyar
