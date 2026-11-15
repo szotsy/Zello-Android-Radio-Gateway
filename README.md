@@ -20,7 +20,7 @@ And the possibilities do not stop there. If another Zello gateway is operating i
 
 Orfeusz Gateway therefore **combines the simplicity of conventional radio with the geographical reach of the internet**, creating a genuine two-way communication link between radio and Zello.
 
-> **Important – additional radio hardware required:** a stock Baofeng radio and a simple connection cable are not sufficient. The setup requires a **modified Baofeng UV-5R or BF-888S radio**, a separate radio interface, and a USB–UART adapter connected to that interface. The verified USB–UART adapter is the **FTDI FT232R (VID: 0403, PID: 6001)**. I will publish the wiring diagrams and photos of the completed hardware soon.
+> **Important – additional radio hardware required:** a stock Baofeng radio and a simple connection cable are not sufficient. The setup requires a **modified Baofeng UV-5R or BF-888S radio**, a separate radio interface, and a USB–UART adapter connected to that interface. The verified USB–UART adapter is the **FTDI FT232R (VID: 0403, PID: 6001)**. The radio interface wiring diagram and parts list are available in the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html); the [Hungarian guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) is also available.
 
 ## Replacing legacy PC-based Zello gateways
 
@@ -48,7 +48,7 @@ For field use, the equipment must be protected against rain, dust, overheating a
 - Separate radio interface.
 - Verified USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).
 
-**Coming soon:** I will upload wiring diagrams for the modified radio and radio interface, plus photos of the completed hardware assembly.
+**Wiring documentation:** the radio interface diagram and detailed parts list are available in the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html). The [Hungarian guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) is also available.
 
 **Don't be intimidated by the build!** If you have soldered before, you should be able to assemble it by following the wiring diagrams with only basic soldering and electronics knowledge. You do not need advanced electronics skills – just a little patience and basic hands-on ability.
 
@@ -59,7 +59,7 @@ For field use, the equipment must be protected against rain, dust, overheating a
 
 ## Hardware gallery
 
-The following presentation images were AI-re-rendered from photographs of the original Orfeusz Gateway system. They illustrate the appearance and general layout of the real system; however, due to the AI re-rendering, **the electrical circuit, wiring and small electronic details may not be accurate**. Preparation and upload of the exact schematics and technical documentation are in progress; those documents will be the authoritative reference for building the hardware.
+The following presentation images were AI-re-rendered from photographs of the original Orfeusz Gateway system. They illustrate the appearance and general layout of the real system; however, due to the AI re-rendering, **the electrical circuit, wiring and small electronic details may not be accurate**. The radio interface wiring diagram and parts list are available in the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html). Use the verified diagram and check the actual pinout of your own components before assembly.
 
 | Complete system | Radio interface | Internal electronics detail |
 |---|---|---|
@@ -164,12 +164,6 @@ This list includes devices that have actually been tested. Compatibility with ot
 APK: [Orfeusz.Gateway_v1.10.62.apk](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.62/Orfeusz.Gateway_v1.10.62.apk).
 
 ## Hardware compatibility
-
-### 🇭🇺 Magyar
-
-**Igazolt adapter: FTDI FT232R – VID: 0403, PID: 6001.**
-
-Az alkalmazás jelenleg kizárólag az FTDI FT232R USB–UART adapterrel tesztelt és igazoltan működőképes. Más FTDI típusok, CH340G és egyéb USB–UART adapterek támogatása nem igazolt, működésük nem garantált.
 
 ### 🇬🇧 English
 
