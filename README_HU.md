@@ -20,7 +20,7 @@ A lehetőségek azonban itt nem érnek véget! Ha egy másik földrajzi helyen i
 
 Az Orfeusz Gateway tehát **összekapcsolja a hagyományos rádiózás egyszerűségét az internet által biztosított földrajzi szabadsággal**, valódi, kétirányú kommunikációs lehetőséget teremtve a rádió és a Zello között.
 
-> **Fontos – szükséges rádiós hardver:** az alkalmazás használatához nem elegendő egy gyári Baofeng rádió és egy egyszerű csatlakozókábel. **Átalakított Baofeng UV-5R vagy BF-888S rádió szükséges**, továbbá egy külön rádióinterfész és az interfészhez csatlakozó USB–UART adapter. Az igazolt USB–UART adapter típusa: **FTDI FT232R (VID: 0403, PID: 6001)**. A kapcsolási rajzokat és a megépített rendszer fényképeit hamarosan közzéteszem.
+> **Fontos – szükséges rádiós hardver:** az alkalmazás használatához nem elegendő egy gyári Baofeng rádió és egy egyszerű csatlakozókábel. **Átalakított Baofeng UV-5R vagy BF-888S rádió szükséges**, továbbá egy külön rádióinterfész és az interfészhez csatlakozó USB–UART adapter. Az igazolt USB–UART adapter típusa: **FTDI FT232R (VID: 0403, PID: 6001)**. A rádióinterfész bekötési rajza és részletes alkatrészlistája már elérhető a [bekötési útmutatóban](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html).
 
 ## A régi PC-s Zello-kapuállomások kiváltása
 
@@ -48,7 +48,7 @@ A terepi használatnál a készülékeket védeni kell az esőtől, portól, tú
 - Külön rádióinterfész.
 - Igazolt USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).
 
-**Hamarosan:** feltöltöm az átalakított rádió és a rádióinterfész kapcsolási rajzait, valamint a megépített hardverről készült fényképeket.
+**Bekötési dokumentáció:** a rádióinterfész kapcsolási rajza és részletes alkatrészlistája a [magyar bekötési útmutatóban](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html), az angol változat pedig [itt](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html) érhető el.
 
 **Nem kell megijedni az építéstől!** Ha forrasztottál már korábban, a kapcsolási rajzok alapján minimális forrasztási és elektronikai ismerettel is meg tudod építeni. Nem szükséges hozzá komoly elektronikai szaktudás – egy kis türelem és alapvető kézügyesség elegendő.
 
@@ -59,7 +59,7 @@ A terepi használatnál a készülékeket védeni kell az esőtől, portól, tú
 
 ## Hardvergaléria
 
-A következő képek az eredeti Orfeusz Gateway rendszerről készült fényképek alapján, AI segítségével újrarenderelt bemutatóképek. A képek az eredeti rendszer megjelenését és felépítését szemléltetik, azonban az újrarenderelés miatt **az elektromos kapcsolás, a bekötések és az apró elektronikai részletek nem feltétlenül pontosak**. A pontos kapcsolási rajzok és műszaki dokumentáció összeállítása és feltöltése folyamatban van; ezek lesznek a hiteles hivatkozási alapok a hardver megépítéséhez.
+A következő képek az eredeti Orfeusz Gateway rendszerről készült fényképek alapján, AI segítségével újrarenderelt bemutatóképek. A képek az eredeti rendszer megjelenését és felépítését szemléltetik, azonban az újrarenderelés miatt **az elektromos kapcsolás, a bekötések és az apró elektronikai részletek nem feltétlenül pontosak**. A rádióinterfész bekötési rajza és az alkatrészlista a [magyar bekötési útmutatóban](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) érhető el. Építés előtt mindig ellenőrizd a saját alkatrészeid és rádiód tényleges bekötését.
 
 | A teljes rendszer | A rádióinterfész | Belső elektronikai részlet |
 |---|---|---|
