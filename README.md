@@ -8,9 +8,9 @@ Android-based two-way Zello ↔ radio gateway application.
 
 
 <details>
-<summary><strong>⬇️ DOWNLOAD APK – Orfeusz Gateway 1.10.62</strong></summary>
+<summary><strong>⬇️ DOWNLOAD APK – Orfeusz Gateway (latest version)</strong></summary>
 
-[**DIRECT APK DOWNLOAD**](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.62/Orfeusz.Gateway_v1.10.62.apk)
+[**DIRECT APK DOWNLOAD**](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk)
 
 [View all releases and previous versions](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases)
 
