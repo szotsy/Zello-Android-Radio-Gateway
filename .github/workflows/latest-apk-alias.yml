@@ -46,9 +46,10 @@ jobs:
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
           echo "apk=Orfeusz.Gateway_v${TAG}.apk" >> "$GITHUB_OUTPUT"
 
-      - name: Download versioned APK from the release
+      - name: Download and validate versioned APK
         env:
           GH_TOKEN: ${{ github.token }}
+        shell: bash
         run: |
           mkdir -p dist
           gh release download "${{ steps.release.outputs.tag }}" \
@@ -56,12 +57,28 @@ jobs:
             --pattern "${{ steps.release.outputs.apk }}" \
             --dir dist
 
-      - name: Create and upload stable-name APK asset
+          APK="dist/${{ steps.release.outputs.apk }}"
+          if [[ ! -s "$APK" ]]; then
+            echo "::error::The versioned APK is missing or empty."
+            exit 1
+          fi
+          file "$APK"
+          sha256sum "$APK" | tee dist/Orfeusz.Gateway.apk.sha256
+
+      - name: Create and verify stable-name APK alias
+        shell: bash
+        run: |
+          cp "dist/${{ steps.release.outputs.apk }}" dist/Orfeusz.Gateway.apk
+          cmp --silent "dist/${{ steps.release.outputs.apk }}" dist/Orfeusz.Gateway.apk
+          sha256sum --check dist/Orfeusz.Gateway.apk.sha256
+          echo "Validated APK size: $(stat -c%s dist/Orfeusz.Gateway.apk) bytes"
+
+      - name: Upload stable APK and SHA-256 checksum
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          cp "dist/${{ steps.release.outputs.apk }}" "dist/Orfeusz.Gateway.apk"
           gh release upload "${{ steps.release.outputs.tag }}" \
-            "dist/Orfeusz.Gateway.apk" \
+            dist/Orfeusz.Gateway.apk \
+            dist/Orfeusz.Gateway.apk.sha256 \
             --repo "${{ github.repository }}" \
             --clobber
