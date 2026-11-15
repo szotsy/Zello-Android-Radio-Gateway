@@ -1,60 +1,60 @@
-name: Application bug report
-description: Report a reproducible Orfeusz Gateway application issue.
+name: "Hibabejelentés / Application bug report"
+description: "Alkalmazáshiba bejelentése / Report an application issue."
 title: "[BUG] "
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
-      value: "Before submitting, check whether the issue is already reported. Do not include passwords, personal data or private Zello channel details."
+      value: "HU: Beküldés előtt ellenőrizd, hogy a hibát jelentették-e már. Ne adj meg jelszót, személyes adatot vagy privát Zello-csatornaadatot.\n\nEN: Check whether the issue has already been reported. Do not include passwords, personal data or private Zello channel details."
   - type: input
     id: app_version
     attributes:
-      label: App version
-      description: "For example: 1.10.62 (include Version Code if known)."
+      label: "Alkalmazás verziója / App version"
+      description: "Példa / Example: 1.10.62 (ha ismert, a Version Code-ot is add meg / include Version Code if known)."
       placeholder: "1.10.62"
     validations:
       required: true
   - type: input
     id: android_version
     attributes:
-      label: Android version and device
+      label: "Android-verzió és készülék / Android version and device"
       placeholder: "Android 14, Samsung Galaxy S23"
     validations:
       required: true
   - type: textarea
     id: problem
     attributes:
-      label: What happened?
-      description: "Describe the actual behaviour and the expected behaviour."
-      placeholder: "Steps and observed result..."
+      label: "Mi történt? / What happened?"
+      description: "Írd le a tapasztalt és az elvárt működést. / Describe the actual and expected behaviour."
+      placeholder: "A hiba leírása / Describe the issue..."
     validations:
       required: true
   - type: textarea
     id: reproduce
     attributes:
-      label: Steps to reproduce
-      placeholder: "1. Open the app...\n2. Connect..."
+      label: "A hiba előidézésének lépései / Steps to reproduce"
+      placeholder: "1. Nyisd meg az alkalmazást / Open the app...\n2. Csatlakoztasd / Connect..."
     validations:
       required: true
   - type: dropdown
     id: area
     attributes:
-      label: Affected area
+      label: "Érintett terület / Affected area"
       options:
-        - App startup / installation
-        - Zello
-        - FTDI / USB
-        - Radio receive
-        - PTT / radio transmit
-        - User interface
-        - Update / download
-        - Other
+        - "Alkalmazás indítása / telepítése — App startup / installation"
+        - "Zello"
+        - "FTDI / USB"
+        - "Rádió vétel — Radio receive"
+        - "PTT / rádióadás — PTT / radio transmit"
+        - "Felhasználói felület — User interface"
+        - "Frissítés / letöltés — Update / download"
+        - "Egyéb — Other"
     validations:
       required: true
   - type: textarea
     id: logs
     attributes:
-      label: Relevant logs or screenshots
-      description: "Remove personal data, phone numbers, tokens and private channel information before posting."
+      label: "Naplók vagy képernyőképek / Relevant logs or screenshots"
+      description: "Beküldés előtt távolítsd el a személyes adatokat, telefonszámokat, tokeneket és privát csatornaadatokat. / Remove personal data, phone numbers, tokens and private channel information before posting."
     validations:
       required: false
