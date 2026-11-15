@@ -101,7 +101,7 @@ For the application to work correctly, grant the Android permissions that it act
 - The 1.10.62 APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Publish a new GitHub Release only after the APK has been built and verified.
 
-## 1.10.62 – Release notes
+## 1.10.57 – Release notes
 
 - Updated the foreground service notification title to **Orfeusz Gateway active**.
 - Tapping the notification opens the Orfeusz Gateway application.
