@@ -96,12 +96,12 @@ A hibátlan működéshez az alkalmazás által ténylegesen kért Android-enged
 
 ## Kiadási állapot
 
-- Legfrissebb publikált GitHub Release: **1.10.57**.
+- Legfrissebb publikált GitHub Release: **1.10.62**.
 - Version Code: **94**.
-- Az 1.10.57 APK letölthető a [GitHub Releases oldalról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
+- Az 1.10.62 APK letölthető a [GitHub Releases oldalról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Új GitHub Release csak a ténylegesen lefordított és ellenőrzött APK-val készüljön.
 
-## 1.10.57 – Kiadási megjegyzések
+## 1.10.62 – Kiadási megjegyzések
 
 - A háttérszolgáltatás értesítésének címe: **Orfeusz Gateway aktív**.
 - Az értesítésre koppintva megnyílik az Orfeusz Gateway alkalmazás.
@@ -148,7 +148,7 @@ A felsorolás a ténylegesen tesztelt készülékeket tartalmazza. Más készül
 - Az Android 11-től bevezetett csomagláthatósági szabályokat a Manifestben deklarált Zello-csomaglekérdezések kezelik; ez a régebbi Android-verziók működését nem korlátozza.
 - A minimális Android-verzió a projekt beállítása, nem jelenti azt, hogy minden Android-verzióval és készülékkel külön tesztelve lett. A ténylegesen tesztelt készülékeket a „Tesztelt készülékek” rész sorolja fel.
 
-## 1.10.62 – Forrásjelölt (APK még nem publikált)
+## 1.10.62 – Kiadási megjegyzések
 
 - Nagy képernyőkön (legalább 700 dp rendelkezésre álló szélességnél) kétoszlopos elrendezés: bal oldalon az FTDI-, rádió- és Zello-állapotjelzések, jobb oldalon a kezelőgombok.
 - Keskeny, telefonos képernyőkön megmarad az eredeti egyoszlopos elrendezés.
@@ -159,7 +159,7 @@ A felsorolás a ténylegesen tesztelt készülékeket tartalmazza. Más készül
 
 **Version Code:** 99 · **Minimum Android:** 6.0 (API 23)
 
-Ez forrásjelölt, nem publikált APK-kiadás. GitHub Release csak az AndroidIDE-ben sikeresen lefordított és ellenőrzött APK-val készülhet.
+A kiadás APK-ja: [Orfeusz.Gateway_v1.10.62.apk](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.62/Orfeusz.Gateway_v1.10.62.apk).
 
 ## Hardverkompatibilitás
 
@@ -178,7 +178,7 @@ Az alkalmazás jelenleg kizárólag az FTDI FT232R USB–UART adapterrel tesztel
 
 - A Gradle `versionName` és `versionCode`, az alkalmazásban megjelenő verzió, a diagnosztikai napló és a kiadási leírás legyen összhangban.
 - Az alkalmazás verzióját a kód a Gradle által generált BuildConfig adatokból olvassa.
-- A forrásjelölt AndroidIDE-ben történő buildelése és tesztelése kötelező a publikálás előtt.
+- A buildelést és a készüléken történő ellenőrzést a kiadás publikálása előtt külön el kell végezni.
 - A teljes AndroidIDE-forrásprojekt külön, verziószámmal elnevezett ZIP-csomagban készül.
 
 
