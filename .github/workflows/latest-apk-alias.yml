@@ -1,6 +1,10 @@
 name: Maintain latest APK download
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/latest-apk-alias.yml"
   release:
     types: [published]
   workflow_dispatch:
@@ -22,10 +26,14 @@ jobs:
     steps:
       - name: Resolve release tag and APK filename
         id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
             TAG="${{ inputs.release_tag }}"
+          elif [[ "${GITHUB_EVENT_NAME}" == "push" ]]; then
+            TAG="$(gh release view --repo "${GITHUB_REPOSITORY}" --json tagName --jq .tagName)"
           else
             TAG="${GITHUB_REF_NAME}"
           fi
