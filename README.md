@@ -97,7 +97,7 @@ For the application to work correctly, grant the Android permissions that it act
 ## Current release and source status
 
 - Latest published GitHub Release: **1.10.62**.
-- Version Code: **94**.
+- Version Code: **99**.
 - The 1.10.62 APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Publish a new GitHub Release only after the APK has been built and verified.
 
@@ -114,7 +114,7 @@ For the application to work correctly, grant the Android permissions that it act
 
 ### Legacy migration path
 
-The root `update.json` is intentionally retained for installations that still use the old JSON-based updater. It points to **1.10.46** as the migration bridge. Do not delete it or change its version/URL without a deliberate migration decision.
+The root `update.json` is retained for compatibility with installations that still use the legacy JSON-based updater. It currently points to **1.10.62** and its APK.
 
 ### Current updater
 
