@@ -1,6 +1,6 @@
 # Orfeusz Gateway – Tudásbázis / Knowledge Base
 
-**A dokumentáció jelenleg szöveges alapváltozat. Képekkel, képernyőképekkel és feliratozott bekötési ábrákkal később bővítjük. / This is the initial text version. Photos, screenshots and annotated wiring diagrams will be added later.**
+**A dokumentáció jelenleg szöveges alapváltozat. Képekkel, képernyőképekkel és feliratozott bekötési ábrákkal később bővül. / This is the initial text version. Photos, screenshots and annotated wiring diagrams will be added later.**
 
 - [Kezdőlap / Home](Home.md)
 - [Telepítés / Installation](Installation.md)
