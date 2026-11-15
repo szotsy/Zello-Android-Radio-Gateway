@@ -148,6 +148,19 @@ A felsorolás a ténylegesen tesztelt készülékeket tartalmazza. Más készül
 - Az Android 11-től bevezetett csomagláthatósági szabályokat a Manifestben deklarált Zello-csomaglekérdezések kezelik; ez a régebbi Android-verziók működését nem korlátozza.
 - A minimális Android-verzió a projekt beállítása, nem jelenti azt, hogy minden Android-verzióval és készülékkel külön tesztelve lett. A ténylegesen tesztelt készülékeket a „Tesztelt készülékek” rész sorolja fel.
 
+## 1.10.62 – Forrásjelölt (APK még nem publikált)
+
+- Nagy képernyőkön (legalább 700 dp rendelkezésre álló szélességnél) kétoszlopos elrendezés: bal oldalon az FTDI-, rádió- és Zello-állapotjelzések, jobb oldalon a kezelőgombok.
+- Keskeny, telefonos képernyőkön megmarad az eredeti egyoszlopos elrendezés.
+- A lefelé görgetést jelző nyíl csak akkor látható, ha további görgethető tartalom van.
+- A Zello telepítettségi állapotának frissítése eseményvezérelt; nincs folyamatos lekérdezés.
+- A Zello Play Áruház-hivatkozása a `com.loudtalks` csomagazonosítót használja.
+- Az FTDI-, USB-, RTS-, CTS- és PTT-vezérlési logika változatlan.
+
+**Version Code:** 99 · **Minimum Android:** 6.0 (API 23)
+
+Ez forrásjelölt, nem publikált APK-kiadás. GitHub Release csak az AndroidIDE-ben sikeresen lefordított és ellenőrzött APK-val készülhet.
+
 ## Hardverkompatibilitás
 
 **Igazolt adapter: FTDI FT232R – VID: 0403, PID: 6001.**
