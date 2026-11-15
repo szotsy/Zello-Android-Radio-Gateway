@@ -63,7 +63,8 @@ jobs:
             exit 1
           fi
           file "$APK"
-          sha256sum "$APK" | tee dist/Orfeusz.Gateway.apk.sha256
+          cp "$APK" dist/Orfeusz.Gateway.apk
+          (cd dist && sha256sum Orfeusz.Gateway.apk > Orfeusz.Gateway.apk.sha256)
 
       - name: Create and verify stable-name APK alias
         shell: bash
