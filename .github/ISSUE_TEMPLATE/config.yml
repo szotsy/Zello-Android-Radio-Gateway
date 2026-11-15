@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Documentation and installation guide
+  - name: "Dokumentáció és telepítési útmutató / Documentation and installation guide"
     url: https://szotsy.github.io/Zello-Android-Radio-Gateway/
-    about: Read the official project documentation before reporting a problem.
-  - name: Releases and APK downloads
+    about: "Olvasd el a projekt dokumentációját hibabejelentés előtt. / Read the official project documentation before reporting a problem."
+  - name: "Kiadások és APK-letöltés / Releases and APK downloads"
     url: https://github.com/szotsy/Zello-Android-Radio-Gateway/releases
-    about: Download the latest stable APK or review previous versions.
+    about: "Töltsd le a legfrissebb stabil APK-t vagy nézd meg a korábbi verziókat. / Download the latest stable APK or review previous versions."
