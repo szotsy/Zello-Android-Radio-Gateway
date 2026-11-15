@@ -7,14 +7,17 @@ Androidos, kétirányú Zello–rádió kapuállomás.
 ![Android](https://img.shields.io/badge/ANDROID-3D3D3D?style=for-the-badge&logo=android&logoColor=white) ![Zello](https://img.shields.io/badge/ZELLO-F36C21?style=for-the-badge&logoColor=white) ![Radio Gateway](https://img.shields.io/badge/RADIO_GATEWAY-171717?style=for-the-badge&logoColor=white) ![Version](https://img.shields.io/github/v/release/szotsy/Zello-Android-Radio-Gateway?display_name=tag&style=for-the-badge&label=VERSION&color=F36C21)
 
 
-<details>
-<summary><strong>⬇️ APK LETÖLTÉSE – Orfeusz Gateway (legfrissebb verzió)</strong></summary>
+## ⬇️ Orfeusz Gateway – APK letöltése
 
-[**KÖZVETLEN APK-LETÖLTÉS**](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk)
+<badge>LEGFRISSEBB STABIL KIADÁS</badge>
+
+**[⬇️ APK LETÖLTÉSE – közvetlen, egykattintásos letöltés](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk)**
+
+A fenti hivatkozás mindig a legfrissebb stabil kiadás telepítőjét tölti le. Nem kell a GitHub Assets listájában keresgélned.
 
 [Összes kiadás és korábbi verziók megtekintése](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases)
 
-</details>
+> **Licenc:** a projekt egyedi, korlátozó felhasználási licenc alatt áll, nem OSI-minősítésű nyílt forráskódú licenc. A módosítatlan APK használata és változatlan továbbadása engedélyezett; a forráskód módosítása vagy módosított változat terjesztése csak előzetes írásbeli engedéllyel lehetséges. Részletek a [LICENSE](LICENSE) fájlban.
 
 
 ## Letöltés és telepítés
@@ -226,6 +229,11 @@ Az alkalmazás jelenleg kizárólag az FTDI FT232R USB–UART adapterrel tesztel
 - A buildelést és a készüléken történő ellenőrzést a kiadás publikálása előtt külön el kell végezni.
 - A teljes AndroidIDE-forrásprojekt külön, verziószámmal elnevezett ZIP-csomagban készül.
 
+
+
+## Licenc és közreműködés
+
+A GitHub-repó nyilvános, de ez **nem jelent szabad módosítási vagy továbbfejlesztési engedélyt**. A projekt egyedi felhasználási licencet alkalmaz, nem OSI-minősítésű nyílt forráskódú licencet. A forráskód megtekinthető és letölthető; módosítása, átdolgozása és módosított változat terjesztése kizárólag a jogosult előzetes írásbeli engedélyével lehetséges. A módosítatlan APK használatára és változatlan továbbadására a LICENSE fájlban rögzített feltételek vonatkoznak.
 
 ## Védjegynyilatkozat és függetlenség
 
