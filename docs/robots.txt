@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://szotsy.github.io/Zello-Android-Radio-Gateway/sitemap.xml
