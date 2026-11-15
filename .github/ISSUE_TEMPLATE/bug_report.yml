@@ -1,0 +1,60 @@
+name: Application bug report
+description: Report a reproducible Orfeusz Gateway application issue.
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Before submitting, check whether the issue is already reported. Do not include passwords, personal data or private Zello channel details."
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      description: "For example: 1.10.62 (include Version Code if known)."
+      placeholder: "1.10.62"
+    validations:
+      required: true
+  - type: input
+    id: android_version
+    attributes:
+      label: Android version and device
+      placeholder: "Android 14, Samsung Galaxy S23"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: "Describe the actual behaviour and the expected behaviour."
+      placeholder: "Steps and observed result..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open the app...\n2. Connect..."
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - App startup / installation
+        - Zello
+        - FTDI / USB
+        - Radio receive
+        - PTT / radio transmit
+        - User interface
+        - Update / download
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      description: "Remove personal data, phone numbers, tokens and private channel information before posting."
+    validations:
+      required: false
