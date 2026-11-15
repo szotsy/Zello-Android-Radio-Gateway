@@ -141,6 +141,13 @@ Az alkalmazást az alábbi Android-eszközökön teszteltem:
 
 A felsorolás a ténylegesen tesztelt készülékeket tartalmazza. Más készülékeken és Android-verziókon a működés nincs automatikusan igazolva.
 
+## Android-verzió kompatibilitás
+
+- **Minimálisan támogatott Android-verzió: Android 6.0 (Marshmallow, API 23).**
+- A forrásprojekt minSdk beállítása alapján az alkalmazás Android 6.0-tól újabb Android-verziókon is telepíthető.
+- Az Android 11-től bevezetett csomagláthatósági szabályokat a Manifestben deklarált Zello-csomaglekérdezések kezelik; ez a régebbi Android-verziók működését nem korlátozza.
+- A minimális Android-verzió a projekt beállítása, nem jelenti azt, hogy minden Android-verzióval és készülékkel külön tesztelve lett. A ténylegesen tesztelt készülékeket a „Tesztelt készülékek” rész sorolja fel.
+
 ## Hardverkompatibilitás
 
 **Igazolt adapter: FTDI FT232R – VID: 0403, PID: 6001.**
