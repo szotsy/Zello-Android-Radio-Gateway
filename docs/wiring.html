@@ -3,17 +3,66 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FRN rádióinterfész – Bekötési rajz</title>
+<meta name="description" content="Orfeusz Gateway rádióinterfész bekötési dokumentációja Baofeng BF-888S és UV-5R rádiókhoz.">
+<meta name="theme-color" content="#171717">
+<title>Orfeusz Gateway – Rádióinterfész bekötése</title>
 <style>
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:#fff}
-main{width:100%;max-width:1100px;margin:0 auto;padding:12px}
-img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}
+:root{color-scheme:dark;--bg:#111;--panel:#1b1b1b;--line:#333;--text:#f3f3f3;--muted:#bbb;--orange:#f36c21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{width:min(1000px,92%);margin:auto}a{color:#ff9a62;text-decoration:none}a:hover{text-decoration:underline}
+header{padding:22px 0;border-bottom:1px solid var(--line)}h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:28px 0 10px}h1 span{color:var(--orange)}
+h2{font-size:1.5rem;margin:0 0 12px}p{color:#ddd}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px;margin:18px 0}
+.note{border-left:4px solid var(--orange);padding:12px 16px;background:#202020;border-radius:4px;color:#eee}
+table{width:100%;border-collapse:collapse;margin:12px 0}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}th{color:#ffb38c}
+.diagram{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}.unit{border:1px solid #454545;border-radius:10px;padding:16px;background:#151515}.unit strong{display:block;color:#ffad7f;margin-bottom:8px}
+.pins{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:12px 0}.pin{background:#292929;border:1px solid #555;border-radius:8px;padding:10px 4px;text-align:center}.pin b{display:block;color:#ffad7f;font-size:1.2rem}
+.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}.part{padding:12px;background:#151515;border:1px solid var(--line);border-radius:8px}
+footer{padding:25px 0 45px;color:var(--muted)}@media(max-width:620px){.diagram{grid-template-columns:1fr}.pins{grid-template-columns:repeat(5,minmax(0,1fr))}th,td{padding:8px 6px;font-size:.94rem}}
 </style>
 </head>
-<body>
+<body><div class="wrap">
+<header><a href="./">← Orfeusz Gateway főoldal</a></header>
 <main>
-<img src="./assets/OG-kapcsolasi-rajz.png" alt="FRN rádióinterfész bekötési rajz">
+<h1>Rádióinterfész <span>bekötése</span></h1>
+<p>Az alábbi dokumentáció az Orfeusz Gateway optocsatolós FRN rádióinterfészének csatlakozóit és alkatrészeit mutatja be.</p>
+<section class="panel">
+<h2>Bekötési rajz</h2>
+<img src="./assets/OG-kapcsolasi-rajz.png" alt="Orfeusz Gateway FRN rádióinterfész bekötési rajza" style="display:block;width:100%;height:auto;max-width:100%;object-fit:contain;background:#fff;border-radius:8px">
+</section>
+<div class="note"><strong>Kompatibilitás:</strong> Baofeng BF-888S és Baofeng UV-5R. A felhasználó saját interfészén mindkét rádióval ellenőrizte a működést.</div>
+<section class="panel">
+<h2>Rádióoldali csatlakozó – Con1 (5 pólus)</h2>
+<div class="pins">
+<div class="pin"><b>1</b>Squelch</div><div class="pin"><b>2</b>GND</div><div class="pin"><b>3</b>PTT</div><div class="pin"><b>4</b>Speaker</div><div class="pin"><b>5</b>MIC</div>
+</div>
+<p>A számozás az eredeti, feltöltött interfészrajz szerinti kiosztást követi.</p>
+</section>
+<section class="panel">
+<h2>FTDI-oldali csatlakozó – Con2 (3 pólus)</h2>
+<div class="pins" style="grid-template-columns:repeat(3,1fr)">
+<div class="pin"><b>A</b>CTS</div><div class="pin"><b>B</b>GND</div><div class="pin"><b>C</b>RTS</div>
+</div>
+<p>A/B/C jelölések az eredeti rajz szerint. Az FTDI-adapter vezetékének tényleges színét és jelölését mindig az adott adapter dokumentációja alapján azonosítsd.</p>
+</section>
+<section class="panel">
+<h2>Az interfész alkatrészei</h2>
+<div class="parts">
+<div class="part"><strong>R1</strong><br>220 Ω</div>
+<div class="part"><strong>R2</strong><br>1 kΩ</div>
+<div class="part"><strong>IC1, IC2</strong><br>4N25 optocsatoló</div>
+<div class="part"><strong>D1, D2</strong><br>1N4148 dióda</div>
+<div class="part"><strong>Potméter</strong><br>470 Ω</div>
+</div>
+</section>
+<section class="panel">
+<h2>Csatlakozók és hangkapcsolatok</h2>
+<div class="diagram">
+<div class="unit"><strong>Rádió hangszóró kimenet</strong>Con1 – 4. érintkező<br>3,5 mm jack csatlakozó</div>
+<div class="unit"><strong>Rádió mikrofon bemenet</strong>Con1 – 5. érintkező<br>3,5 mm jack csatlakozó</div>
+</div>
+<p>A 470 Ω-os potméter a rajz szerinti hangszint-beállításhoz tartozik.</p>
+</section>
+<div class="note"><strong>Fontos biztonsági megjegyzés:</strong> Összeszerelés előtt ellenőrizd a csatlakozó nézeti irányát, a rádió aljzatának tényleges lábkiosztását és az FTDI-adapter jelöléseit. A Con1 számozását ne keverd össze a dugó forrasztási oldaláról nézett kiosztással. Bekapcsolás előtt ellenőrizd a földeléseket és a rövidzármentességet. A dokumentáció a feltöltött rajzot írja le; nem helyettesíti a saját példányodon végzett elektromos ellenőrzést.</div>
 </main>
-</body>
-</html>
+<footer>Orfeusz Gateway · Rádióinterfész dokumentáció · <a href="https://github.com/szotsy/Zello-Android-Radio-Gateway">GitHub-projekt</a></footer>
+</div></body></html>
