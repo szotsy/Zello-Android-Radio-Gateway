@@ -1,6 +1,6 @@
 # Hibaelhárítás / Troubleshooting
 
-> **A hibaelhárítási folyamatot később képernyőképekkel és példákkal egészítjük ki. / Screenshots and examples will be added later.**
+> **A hibaelhárítási folyamat később képernyőképekkel és példákkal egészül ki. / Screenshots and examples will be added later.**
 
 ## Magyar
 
