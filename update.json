@@ -1,15 +1,15 @@
 {
-  "versionName": "1.10.46",
-  "versionCode": 83,
-  "apkUrl": "https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.46/Orfeusz.Gateway_v1.10.46.apk", 
+  "versionName": "1.10.62",
+  "versionCode": 99,
+  "apkUrl": "https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.62/Orfeusz.Gateway_v1.10.62.apk",
   "releaseNotes": [
-    "A frissítéskeresés mostantól közvetlenül a GitHub Releases API-n keresztül működik. Az alkalmazás automatikusan felismeri a legújabb kiadást és megkeresi a hozzá tartozó APK-fájlt.",
-    "Update checking now works directly through the GitHub Releases API. The application automatically detects the latest release and locates its associated APK file.",
-    "Die Update-Prüfung erfolgt ab sofort direkt über die GitHub Releases API. Die Anwendung erkennt automatisch die neueste Version und findet die zugehörige APK-Datei.",
-    "Проверка обновлений теперь выполняется напрямую через GitHub Releases API. Приложение автоматически определяет последнюю версию и находит соответствующий APK-файл.",
-    "A rádióvezérlés és az FTDI-kommunikáció változatlan.",
-    "Radio control and FTDI communication remain unchanged.",
-    "Die Funksteuerung und die FTDI-Kommunikation bleiben unverändert.",
-    "Управление радиостанцией и связь через FTDI остались без изменений."
+    "Újdonságok: kétoszlopos kezelőfelület nagy képernyőkön és Samsung DeX használatakor; telefonokon megmarad az egyoszlopos elrendezés; feltételes görgetési nyíl; eseményvezérelt Zello-telepítettségi állapot; javított Zello Play Áruház-hivatkozás és egységesített indítógomb.",
+    "What's new: two-column interface on large screens and Samsung DeX; single-column layout retained on phones; conditional scroll indicator; event-driven Zello installation status; fixed Zello Play Store link and improved launch button.",
+    "Neu: zweispaltige Oberfläche auf großen Bildschirmen und unter Samsung DeX; einspaltiges Layout auf Smartphones; bedingter Scroll-Hinweis; ereignisgesteuerte Aktualisierung des Zello-Installationsstatus; korrigierter Play-Store-Link und verbesserter Startbutton.",
+    "Новое: двухколоночный интерфейс на больших экранах и Samsung DeX; одноколоночный интерфейс на телефонах; условный индикатор прокрутки; обновление статуса установки Zello по событиям; исправленная ссылка Play Маркета и улучшенная кнопка запуска.",
+    "A minimálisan támogatott Android-verzió Android 6.0 (API 23), Version Code: 99. Az FTDI-, USB-, RTS-, CTS- és PTT-vezérlési logika változatlan.",
+    "Minimum Android: 6.0 (API 23), Version Code: 99. FTDI, USB, RTS, CTS and PTT control logic remains unchanged.",
+    "Mindestversion: Android 6.0 (API 23), Version Code: 99. Die FTDI-, USB-, RTS-, CTS- und PTT-Steuerungslogik bleibt unverändert.",
+    "Минимальная версия Android: 6.0 (API 23), Version Code: 99. Логика управления FTDI, USB, RTS, CTS и PTT не изменена."
   ]
 }
