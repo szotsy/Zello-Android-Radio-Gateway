@@ -9,7 +9,7 @@ Androidos, kétirányú Zello–rádió kapuállomás.
 
 ## ⬇️ Orfeusz Gateway – APK letöltése
 
-<badge>LEGFRISSEBB STABIL KIADÁS</badge>
+**LEGFRISSEBB STABIL KIADÁS**
 
 **[⬇️ APK LETÖLTÉSE – közvetlen, egykattintásos letöltés](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk)**
 
