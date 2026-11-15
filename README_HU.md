@@ -172,6 +172,10 @@ Az 1.10.46-tól az alkalmazás a GitHub Releases API-n keresztül keresi a legú
 
 Az alkalmazás a GitHub Release tagjét a telepített Gradle-verzióval hasonlítja össze. APK-assetet csak akkor keres, ha valóban újabb kiadás érhető el.
 
+## Kiadás publikálása
+
+A kiadások előkészítésének, ellenőrzésének és publikálásának lépéseit a [RELEASE_PROCESS.md](RELEASE_PROCESS.md) dokumentum tartalmazza. A kiadási folyamat ellenőrzi a verziózott APK-t, létrehozza az állandó nevű letöltési példányt, és SHA-256 ellenőrzőösszeget tesz közzé.
+
 ## APK-elnevezés
 
 A release tag és az APK neve egyezzen a kiadás verziójával. Például az 1.10.50 kiadás APK assetje:
