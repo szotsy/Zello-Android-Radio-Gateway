@@ -97,11 +97,11 @@ A hibátlan működéshez az alkalmazás által ténylegesen kért Android-enged
 ## Kiadási állapot
 
 - Legfrissebb publikált GitHub Release: **1.10.62**.
-- Version Code: **94**.
+- Version Code: **99**.
 - Az 1.10.62 APK letölthető a [GitHub Releases oldalról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Új GitHub Release csak a ténylegesen lefordított és ellenőrzött APK-val készüljön.
 
-## 1.10.62 – Kiadási megjegyzések
+## 1.10.57 – Kiadási megjegyzések
 
 - A háttérszolgáltatás értesítésének címe: **Orfeusz Gateway aktív**.
 - Az értesítésre koppintva megnyílik az Orfeusz Gateway alkalmazás.
