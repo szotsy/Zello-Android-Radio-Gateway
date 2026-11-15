@@ -6,6 +6,40 @@ Androidos, kétirányú Zello–rádió kapuállomás.
 
 ![Android](https://img.shields.io/badge/ANDROID-3D3D3D?style=for-the-badge&logo=android&logoColor=white) ![Zello](https://img.shields.io/badge/ZELLO-F36C21?style=for-the-badge&logoColor=white) ![Radio Gateway](https://img.shields.io/badge/RADIO_GATEWAY-171717?style=for-the-badge&logoColor=white) ![Version](https://img.shields.io/github/v/release/szotsy/Zello-Android-Radio-Gateway?display_name=tag&style=for-the-badge&label=VERSION&color=F36C21)
 
+## Letöltés és telepítés
+
+**A legtöbb felhasználónak nem kell a forráskódot klónoznia vagy Android Studio-t használnia.** A kész, telepíthető alkalmazást a hivatalos GitHub Releases oldalról töltsd le.
+
+### 1. Az APK letöltése
+
+1. Nyisd meg az [Orfeusz Gateway legfrissebb kiadását a GitHub Releases oldalon](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
+2. A legfrissebb kiadás **Assets** részén keresd meg az `.apk` kiterjesztésű telepítőfájlt. A fájl neve például: `Orfeusz.Gateway_v1.10.62.apk`.
+3. Koppints az APK fájlra, és töltsd le a telefonodra.
+4. Csak a fenti hivatalos projektoldalról származó APK-t telepítsd. A **Source code (zip)** és **Source code (tar.gz)** fájlok a fejlesztői forráskódot tartalmazzák, nem a normál felhasználóknak szánt telepítőt.
+
+### 2. Telepítés Androidon
+
+1. Nyisd meg a letöltött APK-t az értesítési sávból vagy a telefon **Letöltések** mappájából.
+2. Ha az Android kéri, engedélyezd az adott alkalmazásnak – például a böngészőnek vagy a fájlkezelőnek –, hogy ebből a forrásból alkalmazásokat telepíthessen. A beállítás neve Android-verziótól és gyártótól függően eltérhet (például **Ismeretlen alkalmazások telepítése**).
+3. Lépj vissza a telepítőhöz, majd válaszd a **Telepítés** lehetőséget.
+4. A telepítés befejezése után nyisd meg az **Orfeusz Gateway** alkalmazást.
+
+Ha korábban már telepítve van az alkalmazás, az újabb hivatalos APK általában frissítésként telepíthető. Ha az Android aláírási vagy csomagütközési hibát jelez, ne töröld automatikusan a meglévő alkalmazást: előbb ellenőrizd, hogy a megfelelő, hivatalos kiadást töltötted-e le.
+
+### 3. Első indítás és rádió csatlakoztatása
+
+1. Első indításkor olvasd el, és add meg az alkalmazás által ténylegesen kért Android-engedélyeket.
+2. Csatlakoztasd az igazolt **FTDI FT232R USB–UART adaptert** a rádióinterfészhez és az Android-eszközhöz. Az Android USB-hozzáférési kérdését engedélyezd.
+3. A rádiós működéshez szükséges hardver: átalakított **Baofeng UV-5R vagy BF-888S**, külön rádióinterfész és FTDI FT232R adapter (VID: 0403, PID: 6001). A részletes bekötést a [magyar bekötési útmutató](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) ismerteti.
+4. A Zello alkalmazásnak is telepítve és használatra beállítva kell lennie az Android-eszközön.
+5. Ellenőrizd az Orfeusz Gateway felületén a csatlakozási állapotokat, mielőtt rádiós forgalmazást kezdesz.
+
+**Fontos:** a telepítés önmagában nem elegendő a rádiós gateway működéséhez. Szükséges a kompatibilis, megfelelően bekötött rádiós hardver, a Zello alkalmazás, valamint stabil tápellátás és internetkapcsolat.
+
+### Biztonsági figyelmeztetés
+
+Mivel az alkalmazás nem a Google Play Áruházból, hanem közvetlenül a GitHubról települ, az Android vagy a Play Protect figyelmeztetést jeleníthet meg. Ez önmagában nem bizonyítja, hogy az alkalmazás kártékony, de **ne hagyj figyelmen kívül konkrét kártevő-észlelést**. Mindig ellenőrizd a letöltés forrását, és csak a hivatalos [GitHub Releases](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest) oldalról származó fájlt használd.
+
 ## Mire szolgál az Orfeusz Gateway?
 
 Az **Orfeusz Gateway** egy Android-alapú rádiós átjáróalkalmazás, amely lehetővé teszi a hagyományos rádióforgalom és a Zello-hálózat kétirányú összekapcsolását.
