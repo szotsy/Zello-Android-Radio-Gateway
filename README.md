@@ -150,6 +150,19 @@ This list includes devices that have actually been tested. Compatibility with ot
 - Zello package visibility queries are declared in the manifest for Android 11 and later; this does not restrict operation on older Android versions.
 - The minimum Android version is a project configuration requirement, not a claim that every Android release or device has been individually tested. See “Tested devices” for the devices actually tested.
 
+## 1.10.62 – Source candidate (APK not published)
+
+- Large screens (available width of at least 700 dp) use a two-column layout: FTDI, radio and Zello status indicators on the left; action buttons on the right.
+- Narrow phone screens retain the original single-column layout.
+- The scroll-down arrow is shown only when additional scrollable content exists.
+- Zello installation state refresh is event-driven; no continuous polling is used.
+- The Zello Play Store link uses the `com.loudtalks` package ID.
+- FTDI, USB, RTS, CTS and PTT control logic remains unchanged.
+
+**Version Code:** 99 · **Minimum Android:** 6.0 (API 23)
+
+This is a source candidate, not a published APK release. Create a GitHub Release only after the APK has been successfully built and verified in AndroidIDE.
+
 ## Hardware compatibility
 
 ### 🇭🇺 Magyar
