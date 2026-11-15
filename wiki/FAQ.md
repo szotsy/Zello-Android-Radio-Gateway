@@ -1,6 +1,6 @@
 # Gyakori kérdések / FAQ
 
-> **A GYIK-et a későbbiekben képernyőképekkel és további kérdésekkel bővítjük. / This FAQ will be expanded with screenshots and additional questions later.**
+> **A GYIK később képernyőképekkel és további kérdésekkel bővül. / This FAQ will be expanded with screenshots and additional questions later.**
 
 ## Magyar
 
