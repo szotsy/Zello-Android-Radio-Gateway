@@ -1,0 +1,15 @@
+Orfeusz Gateway 1.10.62
+
+- Large screens (available width >= 700 dp): two-column layout.
+- Left column: FTDI, radio receive/transmit and Zello status indicators.
+- Right column: Settings, update, stop gateway and additional functions.
+- Narrow screens retain the original single-column phone layout.
+- The scroll-down hint remains conditional on additional scrollable content.
+- Zello installation state refresh is event-driven; no continuous polling.
+- Zello Play Store link uses package ID com.loudtalks.
+- FTDI, USB, RTS, CTS and PTT control logic unchanged.
+
+Version Code: 99
+Minimum Android: 6.0 (API 23)
+
+SOURCE CANDIDATE ONLY: APK build and device verification are pending. Do not publish as a GitHub Release until the APK has been built and verified.
