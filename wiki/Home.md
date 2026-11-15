@@ -33,4 +33,4 @@ Orfeusz Gateway is an Android application designed to interface Zello with an ex
 **[Download the latest stable APK](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk)**
 
 ---
-*Images, annotated screenshots and additional visual guides will be added in a later documentation update. / A képeket, feliratozott képernyőképeket és további vizuális útmutatókat egy későbbi frissítésben adjuk hozzá.*
+*Images, annotated screenshots and additional visual guides will be added in a later documentation update. / A képek, feliratozott képernyőképek és további vizuális útmutatók egy későbbi frissítésben kerülnek be.*
