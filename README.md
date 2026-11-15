@@ -7,14 +7,15 @@ Android-based two-way Zello ↔ radio gateway application.
 ![Android](https://img.shields.io/badge/ANDROID-3D3D3D?style=for-the-badge&logo=android&logoColor=white) ![Zello](https://img.shields.io/badge/ZELLO-F36C21?style=for-the-badge&logoColor=white) ![Radio Gateway](https://img.shields.io/badge/RADIO_GATEWAY-171717?style=for-the-badge&logoColor=white) ![Version](https://img.shields.io/github/v/release/szotsy/Zello-Android-Radio-Gateway?display_name=tag&style=for-the-badge&label=VERSION&color=F36C21)
 
 
-<details>
-<summary><strong>⬇️ DOWNLOAD APK – Orfeusz Gateway (latest version)</strong></summary>
+## ⬇️ Orfeusz Gateway – Download APK
 
-[**DIRECT APK DOWNLOAD**](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk)
+**[⬇️ DOWNLOAD APK – direct, one-click download](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk)**
+
+The link above always downloads the installer from the latest stable release. You do not need to search through the GitHub Assets list.
 
 [View all releases and previous versions](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases)
 
-</details>
+> **Licence:** this project uses a custom restrictive licence and is not distributed under an OSI-approved open-source licence. Use and unchanged redistribution of the APK are permitted; modifying the source code or distributing modified versions requires prior written permission. See [LICENSE](LICENSE) for the full terms.
 
 
 ## Download and installation
@@ -239,6 +240,11 @@ Die Anwendung wurde ausschließlich mit dem FTDI FT232R USB–UART-Adapter getes
 
 The AndroidIDE source project is prepared separately as a versioned ZIP package. The source project is versioned separately; release build and device verification are completed before publication. Keep the Gradle `versionName`, `versionCode`, in-app version display, diagnostic output and release notes synchronized.
 
+
+
+## Licence and contributions
+
+The GitHub repository is public, but **public visibility does not grant permission to modify or build derivative versions**. This project uses a custom licence and is not distributed under an OSI-approved open-source licence. The source code may be viewed and downloaded; modification, adaptation and distribution of modified versions require the rights holder's prior written permission. Use and unchanged redistribution of the unmodified APK are governed by the terms in the LICENSE file.
 
 ## Trademark disclaimer and independence
 
