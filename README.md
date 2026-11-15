@@ -6,6 +6,40 @@ Android-based two-way Zello ↔ radio gateway application.
 
 ![Android](https://img.shields.io/badge/ANDROID-3D3D3D?style=for-the-badge&logo=android&logoColor=white) ![Zello](https://img.shields.io/badge/ZELLO-F36C21?style=for-the-badge&logoColor=white) ![Radio Gateway](https://img.shields.io/badge/RADIO_GATEWAY-171717?style=for-the-badge&logoColor=white) ![Version](https://img.shields.io/github/v/release/szotsy/Zello-Android-Radio-Gateway?display_name=tag&style=for-the-badge&label=VERSION&color=F36C21)
 
+## Download and installation
+
+**Most users do not need to clone the source code or use Android Studio.** Download the ready-to-install APK from the official GitHub Releases page.
+
+### 1. Download the APK
+
+1. Open the [latest Orfeusz Gateway release on GitHub](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
+2. Under **Assets** in the latest release, find the installer file with the `.apk` extension. Its name looks like `Orfeusz.Gateway_v1.10.62.apk`.
+3. Tap the APK file to download it to your phone.
+4. Only install APKs from the official project page above. The **Source code (zip)** and **Source code (tar.gz)** files contain developer source code; they are not the installer intended for regular users.
+
+### 2. Install on Android
+
+1. Open the downloaded APK from the notification shade or your phone's **Downloads** folder.
+2. If Android asks, allow the app you used to open the file – such as your browser or file manager – to install apps from that source. Depending on the Android version and manufacturer, this setting may be called **Install unknown apps** or similar.
+3. Return to the installer and tap **Install**.
+4. When installation is complete, open **Orfeusz Gateway**.
+
+If an earlier version is already installed, a newer official APK can normally be installed as an update. If Android reports a signature or package conflict, do not automatically uninstall the existing app; first verify that you downloaded the correct official release.
+
+### 3. First launch and radio connection
+
+1. On first launch, review and grant the Android permissions actually requested by the application.
+2. Connect the verified **FTDI FT232R USB–UART adapter** to the radio interface and the Android device. Approve Android's USB-device access prompt.
+3. Radio operation requires the following hardware: a modified **Baofeng UV-5R or BF-888S**, a separate radio interface, and an FTDI FT232R adapter (VID: 0403, PID: 6001). See the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html) for the detailed connections.
+4. The Zello app must also be installed and configured for use on the Android device.
+5. Check the connection status indicators in Orfeusz Gateway before starting radio traffic.
+
+**Important:** installing the app alone does not create a working radio gateway. Compatible and correctly wired radio hardware, the Zello app, reliable power and an internet connection are also required.
+
+### Security notice
+
+Because the app is installed directly from GitHub rather than the Google Play Store, Android or Play Protect may display a warning. This alone does not prove that the app is malicious, but **do not ignore a specific malware detection**. Always verify the download source and use only files published on the official [GitHub Releases](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest) page.
+
 ## What is Orfeusz Gateway for?
 
 **Orfeusz Gateway** is an Android-based radio gateway application that enables two-way communication between conventional radio traffic and the Zello network.
