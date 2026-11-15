@@ -1,6 +1,6 @@
 # Hardver és bekötés / Hardware and wiring
 
-> **A fejezetet később fotókkal és feliratozott bekötési képekkel egészítjük ki. / Photos and annotated wiring illustrations will be added later.**
+> **A fejezet később további fotókkal és feliratozott ábrákkal bővül. / More photos and annotated illustrations will be added later.**
 
 ## Magyar
 
@@ -10,6 +10,12 @@ Az alkalmazással ellenőrzött USB–soros adapter az **FTDI FT232R**:
 - PID: `6001`
 
 Más USB–soros adapterek (például CH340-alapú típusok) működése nincs igazolva.
+
+### Kapcsolási rajz
+
+![Orfeusz Gateway – hivatalos kapcsolási rajz](../docs/assets/OG-kapcsolasi-rajz.png)
+
+[A kapcsolási rajz megnyitása teljes méretben / Open the wiring diagram at full size](../docs/assets/OG-kapcsolasi-rajz.png)
 
 ### Csatlakozók
 
