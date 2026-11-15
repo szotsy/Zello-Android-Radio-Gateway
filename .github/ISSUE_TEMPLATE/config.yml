@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation and installation guide
+    url: https://szotsy.github.io/Zello-Android-Radio-Gateway/
+    about: Read the official project documentation before reporting a problem.
+  - name: Releases and APK downloads
+    url: https://github.com/szotsy/Zello-Android-Radio-Gateway/releases
+    about: Download the latest stable APK or review previous versions.
