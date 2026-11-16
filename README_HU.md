@@ -8,6 +8,8 @@
 
 # Orfeusz Gateway
 
+> **Fejlesztés:** Az Orfeusz Gateway-t önállóan fejlesztem és tartom karban.
+
 ![Orfeusz Gateway – Android, Zello és rádió](images/Orfeuszbanner.png)
 
 Androidos, kétirányú Zello–rádió kapuállomás.
