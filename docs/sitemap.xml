@@ -46,4 +46,18 @@ layout: null
     <xhtml:link rel="alternate" hreflang="en" href="https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html"/>
   </url>
+  <url>
+    <loc>https://szotsy.github.io/Zello-Android-Radio-Gateway/zello-settings.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://szotsy.github.io/Zello-Android-Radio-Gateway/zello-settings.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://szotsy.github.io/Zello-Android-Radio-Gateway/zello-settings-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://szotsy.github.io/Zello-Android-Radio-Gateway/zello-settings.html"/>
+  </url>
+  <url>
+    <loc>https://szotsy.github.io/Zello-Android-Radio-Gateway/zello-settings-en.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://szotsy.github.io/Zello-Android-Radio-Gateway/zello-settings.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://szotsy.github.io/Zello-Android-Radio-Gateway/zello-settings-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://szotsy.github.io/Zello-Android-Radio-Gateway/zello-settings.html"/>
+  </url>
 </urlset>
