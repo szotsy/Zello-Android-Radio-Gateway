@@ -212,6 +212,7 @@ Az alkalmazást az alábbi Android-eszközökön teszteltem:
 |---|---|
 | Samsung Galaxy S23 | Tesztelve |
 | Samsung Galaxy Tab A7 | Tesztelve |
+| Xiaomi Redmi Note 8 | Tesztelve |
 
 A felsorolás a ténylegesen tesztelt készülékeket tartalmazza. Más készülékeken és Android-verziókon a működés nincs automatikusan igazolva.
 
