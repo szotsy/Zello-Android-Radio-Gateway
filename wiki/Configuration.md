@@ -11,9 +11,9 @@ Ez az oldal az alkalmazás Zello- és rádiókapcsolati beállításait foglalja
 - Győződj meg arról, hogy a szükséges Android-engedélyek rendelkezésre állnak.
 - A kapcsolat állapotát az Orfeusz Gateway felületén ellenőrizd.
 
-### FTDI-kapcsolat
-- Az ellenőrzött USB–soros adapter: **FTDI FT232R**, VID **0403**, PID **6001**.
-- További USB–UART eszközök kompatibilitási vizsgálata folyamatban van; a tesztelések lezárása után az igazoltan támogatott eszközök listája bővülhet.
+### USB–UART kapcsolat
+- A rendszer jelenleg megbízhatóan az **FTDI FT232R USB–UART adapterrel** működik (VID **0403**, PID **6001**).
+- Más USB–UART eszközök kompatibilitása még nem igazolt.
 - USB-csatlakoztatáskor kezeld az Android USB-engedélykérését.
 
 ### Később hozzáadandó képek
@@ -30,9 +30,9 @@ This page summarizes the application's Zello and radio connection configuration.
 - Confirm that the required Android permissions are granted.
 - Check the connection status in the Orfeusz Gateway interface.
 
-### FTDI connection
-- Verified USB-to-serial adapter: **FTDI FT232R**, VID **0403**, PID **6001**.
-- Compatibility testing of additional USB–UART devices is ongoing; the list of verified supported devices may expand after testing.
+### USB–UART connection
+- The system currently operates reliably with the **FTDI FT232R USB–UART adapter** (VID **0403**, PID **6001**).
+- Compatibility with other USB–UART devices has not yet been verified.
 - Handle Android's USB permission prompt when connecting the device.
 
 ### Images to add later
