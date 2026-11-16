@@ -4,8 +4,8 @@
 
 ## Magyar
 
-### Ellenőrzött adapter
-Az alkalmazással ellenőrzött USB–soros adapter az **FTDI FT232R**:
+### USB–UART adapter
+A rendszer jelenleg megbízhatóan az **FTDI FT232R USB–UART adapterrel** működik:
 - VID: `0403`
 - PID: `6001`
 
@@ -45,8 +45,8 @@ További USB–UART eszközök kompatibilitási vizsgálata folyamatban van. A m
 
 ## English
 
-### Verified adapter
-The USB-to-serial adapter verified with the application is **FTDI FT232R**:
+### USB–UART adapter
+The system currently operates reliably with the **FTDI FT232R USB–UART adapter**:
 - VID: `0403`
 - PID: `6001`
 
