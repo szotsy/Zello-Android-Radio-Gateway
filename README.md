@@ -84,7 +84,7 @@ Orfeusz Gateway therefore **combines the simplicity of conventional radio with t
 
 Orfeusz Gateway is an Android-based alternative to legacy radio gateways built around the PC version of the Zello client. With the retirement of the old PC client, you do not necessarily have to abandon a radio gateway you already own: Orfeusz Gateway can bring a compatible existing setup back into service by moving the gateway operation to an Android device.
 
-This lets you continue using your previously built radio system without relying on the PC-based Zello client, provided that its radio and interface hardware are compatible. **Important:** direct reuse depends on the existing hardware design; the application has currently been tested with a modified Baofeng UV-5R or BF-888S radio and the verified FTDI FT232R USB–UART adapter.
+This lets you continue using your previously built radio system without relying on the PC-based Zello client, provided that its radio and interface hardware are compatible. **Important:** direct reuse depends on the existing hardware design; the application has currently been tested with a modified Baofeng UV-5R or BF-888S radio and a USB–UART adapter; reliable operation is currently verified with the FTDI FT232R.
 
 ## Compact, self-contained mobile gateway – no PC required
 
@@ -126,9 +126,9 @@ The following presentation images were AI-re-rendered from photographs of the or
 
 ## Screenshots
 
-The following screenshots show the Orfeusz Gateway interface and its radio/FTDI status indicators.
+The following screenshots show the Orfeusz Gateway interface and its radio/USB–UART status indicators.
 
-| FTDI disconnected | FTDI connected / standby |
+| USB–UART disconnected | USB–UART connected / standby |
 |---|---|
 | ![FTDI disconnected](docs/screenshots/Screenshot_20261114_134559.jpg) | ![FTDI connected](docs/screenshots/Screenshot_20261114_134649.jpg) |
 
@@ -142,7 +142,7 @@ The following screenshots show the Orfeusz Gateway interface and its radio/FTDI 
 
 Orfeusz Gateway is distributed through GitHub Releases rather than the Google Play Store. For that reason, Android or Google Play Protect may display a security notice during installation or request an additional scan. **Such a notice alone does not prove that an application is malicious.**
 
-I develop this app specifically to provide two-way audio communication between Zello and a connected radio, and to control the FTDI radio interface. It is not designed to damage the device or deceive the user. Before installing, make sure you downloaded the APK from the project's official [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest). I do not recommend installing renamed, modified or third-party APK files. If Android identifies a specific threat, do not dismiss the alert automatically; verify the file's origin and the authenticity of the release.
+I develop this app specifically to provide two-way audio communication between Zello and a connected radio, and to control the USB–UART connection to the radio interface. It is not designed to damage the device or deceive the user. Before installing, make sure you downloaded the APK from the project's official [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest). I do not recommend installing renamed, modified or third-party APK files. If Android identifies a specific threat, do not dismiss the alert automatically; verify the file's origin and the authenticity of the release.
 
 ### Do Not Disturb – required operating setting
 
@@ -155,7 +155,7 @@ Enable Do Not Disturb before starting the gateway and make sure it does not turn
 For the application to work correctly, grant the Android permissions that it actually requests. Denying or later revoking permissions may restrict certain functions, such as audio handling or background operation, and can prevent the Zello-to-radio connection from working as intended.
 
 - On first launch, review the Android permission prompts and grant the permissions requested for the app's operation.
-- When connecting the FTDI USB adapter, also allow the USB-device access prompt displayed by Android.
+- When connecting the USB–UART adapter, also allow the USB-device access prompt displayed by Android.
 - If you previously denied a permission, review it under **Android Settings → Apps → Orfeusz Gateway → Permissions**. Menu names may vary by Android version and device manufacturer.
 - Grant permissions only to the official app, and approve only prompts that Android actually displays.
 
@@ -223,7 +223,7 @@ This list includes devices that have actually been tested. Compatibility with ot
 
 - Added a guided first-launch permission assistant with clear explanations.
 - Guides microphone and notification permissions and battery-optimization exemption.
-- Missing permissions can be checked and granted later; USB/FTDI access remains separate.
+- Missing permissions can be checked and granted later; USB/USB–UART access remains separate.
 - Permission guidance is available in Hungarian, English, German and Russian.
 - Existing USB–UART, RTS, CTS and PTT control logic remains unchanged.
 
@@ -238,7 +238,7 @@ APK: [Orfeusz.Gateway_v1.10.63.apk](https://github.com/szotsy/Zello-Android-Radi
 - The scroll-down arrow is shown only when additional scrollable content exists.
 - Zello installation state refresh is event-driven; no continuous polling is used.
 - The Zello Play Store link uses the `com.loudtalks` package ID.
-- FTDI, USB, RTS, CTS and PTT control logic remains unchanged.
+- USB–UART, RTS, CTS and PTT control logic remains unchanged.
 
 **Version Code:** 99 · **Minimum Android:** 6.0 (API 23)
 
@@ -248,7 +248,7 @@ APK: [Orfeusz.Gateway_v1.10.62.apk](https://github.com/szotsy/Zello-Android-Radi
 
 ### 🇬🇧 English
 
-**Verified adapter: FTDI FT232R – VID: 0403, PID: 6001.**
+**USB–UART adapter currently verified for reliable operation: FTDI FT232R – VID: 0403, PID: 6001.**
 
 The USB–UART adapter currently verified with the application is the FTDI FT232R (VID: 0403, PID: 6001). Compatibility testing of additional USB–UART devices is ongoing. The supported hardware range may expand as testing is completed. Devices still under evaluation should not yet be considered verified.
 
@@ -266,7 +266,7 @@ Die Anwendung wurde ausschließlich mit dem FTDI FT232R USB–UART-Adapter getes
 
 ## Radio gateway safety
 
-- FTDI RTS/CTS and PTT control are safety-critical to the gateway operation.
+- USB–UART RTS/CTS and PTT control are safety-critical to the gateway operation.
 - Do not change the radio-control logic as part of unrelated UI, updater or documentation work.
 - The Zello installation reminder is not proof of a live Zello server connection.
 - Updates are manually initiated; automatic background update checks and automatic installation are intentionally not used.
