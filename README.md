@@ -217,6 +217,7 @@ I have tested the application on the following Android devices:
 |---|---|
 | Samsung Galaxy S23 | Tested |
 | Samsung Galaxy Tab A7 | Tested |
+| Xiaomi Redmi Note 8 | Tested |
 
 This list includes devices that have actually been tested. Compatibility with other devices and Android versions is not implied.
 
