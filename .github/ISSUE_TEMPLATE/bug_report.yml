@@ -43,7 +43,7 @@ body:
       options:
         - "Alkalmazás indítása / telepítése — App startup / installation"
         - "Zello"
-        - "FTDI / USB"
+        - "USB–UART / USB"
         - "Rádió vétel — Radio receive"
         - "PTT / rádióadás — PTT / radio transmit"
         - "Felhasználói felület — User interface"
