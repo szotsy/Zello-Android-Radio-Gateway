@@ -28,6 +28,42 @@
       "status": "not_verified",
       "note_hu": "Nincs közzétett kompatibilitási teszteredmény.",
       "note_en": "No compatibility test result has been published."
+    },
+    {
+      "name": "CP2102N",
+      "chip": "CP2102N",
+      "vid": null,
+      "pid": null,
+      "status": "under_investigation",
+      "note_hu": "Alternatív USB–UART adapter; teljes RTS/CTS-teszt még folyamatban.",
+      "note_en": "Alternative USB–UART adapter; full RTS/CTS testing is pending."
+    },
+    {
+      "name": "FTDI FT231X",
+      "chip": "FT231X",
+      "vid": null,
+      "pid": null,
+      "status": "under_investigation",
+      "note_hu": "FTDI-család bővítése; tesztelés alatt.",
+      "note_en": "FTDI family expansion; testing in progress."
+    },
+    {
+      "name": "WCH CH340C",
+      "chip": "CH340C",
+      "vid": null,
+      "pid": null,
+      "status": "under_investigation",
+      "note_hu": "CH340 család bővítése; tesztelés alatt.",
+      "note_en": "CH340 family expansion; testing in progress."
+    },
+    {
+      "name": "Prolific PL2303GC",
+      "chip": "PL2303GC",
+      "vid": null,
+      "pid": null,
+      "status": "under_investigation",
+      "note_hu": "További gyártó bevonása; tesztelés alatt.",
+      "note_en": "Additional manufacturer; testing in progress."
     }
   ]
 }
