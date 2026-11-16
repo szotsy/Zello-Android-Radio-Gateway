@@ -7,8 +7,8 @@ This checklist describes the repository's current release asset convention and t
 1. Build the Android application from the intended source revision.
 2. Verify the Gradle `versionName` and `versionCode`; synchronize the in-app version display, README files and release notes.
 3. Install the APK on a test device and verify startup, Zello launch/connection status, FTDI detection, radio receive, PTT/transmit and stop behaviour.
-4. Confirm that the release tag uses `MAJOR.MINOR.PATCH` format, for example `1.10.62`.
-5. Name the versioned APK exactly `Orfeusz.Gateway_v<TAG>.apk`, for example `Orfeusz.Gateway_v1.10.62.apk`.
+4. Confirm that the release tag uses `MAJOR.MINOR.PATCH` format, for example `1.10.63`.
+5. Name the versioned APK exactly `Orfeusz.Gateway_v<TAG>.apk`, for example `Orfeusz.Gateway_v1.10.63.apk`.
 6. Prepare the matching release notes. Do not publish an unbuilt, untested or placeholder APK.
 
 ## Publish the GitHub Release
@@ -36,7 +36,7 @@ Prereleases are intentionally excluded from automatic stable-alias updates.
 
 ## Recovery / manual run
 
-If the workflow fails after the release is published, inspect the failed Actions run and correct the missing or incorrectly named asset. Then open **Actions → Maintain latest APK download → Run workflow**, enter the exact release tag (for example `1.10.62`), and run it.
+If the workflow fails after the release is published, inspect the failed Actions run and correct the missing or incorrectly named asset. Then open **Actions → Maintain latest APK download → Run workflow**, enter the exact release tag (for example `1.10.63`), and run it.
 
 ## Final verification
 
