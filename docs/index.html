@@ -129,10 +129,10 @@
         <ul>
           <li>Átalakított Baofeng UV-5R vagy BF-888S rádió.</li>
           <li>Külön rádióinterfész.</li>
-          <li>Jelenleg igazolt USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).</li>
-          <li>További USB–UART eszközök kompatibilitási vizsgálata folyamatban van.</li>
+          <li>USB–UART adapter.</li>
+          
         </ul>
-        <p class="note"><strong>Hardverkompatibilitás:</strong> jelenleg az FTDI FT232R adapterrel működő összeállítás igazolt. További USB–UART eszközök vizsgálata és tesztelése folyamatban van; az újonnan kompatibilisnek bizonyuló eszközök listáját a tesztek lezárása után frissítjük. A vizsgálat alatt álló panelek támogatása egyelőre nem tekinthető igazoltnak.</p>
+        <p class="note"><strong>USB–UART kompatibilitás:</strong> az alkalmazás USB–UART adapteren keresztül csatlakozik a rádióinterfészhez. A rendszer jelenleg megbízhatóan az FTDI FT232R adapterrel működik (VID: 0403, PID: 6001). Más USB–UART eszközök kompatibilitása még nem igazolt.</p>
         <p class="note">Egy gyári Baofeng rádió és egy egyszerű USB-kábel önmagában nem elegendő. A részletes hardveres bekötési dokumentáció a <a href="./wiring.html">bekötési útmutatóban</a> található.</p>
       </section>
 
@@ -151,10 +151,10 @@
         <ul>
           <li>Új, lépésről lépésre vezető első indítási engedélysegéd mikrofon- és értesítési engedélyekhez.</li>
           <li>Segítség az akkumulátor-optimalizálás alóli kivétel beállításához.</li>
-          <li>A hiányzó engedélyek később is ellenőrizhetők; az USB/FTDI-hozzáférés külön Android-kérés marad.</li>
+          <li>A hiányzó engedélyek később is ellenőrizhetők; az USB/USB–UART-hozzáférés külön Android-kérés marad.</li>
           <li>Magyar, angol, német és orosz nyelvű engedélymagyarázat.</li>
           <li>Minimum Android 6.0 (API 23), Version Code 100.</li>
-          <li>Az FTDI-, USB-, RTS-, CTS- és PTT-vezérlési logika változatlan.</li>
+          <li>Az USB–UART-, RTS-, CTS- és PTT-vezérlési logika változatlan.</li>
         </ul>
         <p class="note">Az 1.10.63-as verzió publikált GitHub Release-ként érhető el.</p>
       </section>
