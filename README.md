@@ -37,7 +37,7 @@ The link above always downloads the installer from the latest stable release. Yo
 ### 1. Download the APK
 
 1. Open the [latest Orfeusz Gateway release on GitHub](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
-2. Under **Assets** in the latest release, find the installer file with the `.apk` extension. Its name looks like `Orfeusz.Gateway_v1.10.62.apk`.
+2. Under **Assets** in the latest release, find the installer file with the `.apk` extension. Its name looks like `Orfeusz.Gateway_v1.10.63.apk`.
 3. Tap the APK file to download it to your phone.
 4. Only install APKs from the official project page above. The **Source code (zip)** and **Source code (tar.gz)** files contain developer source code; they are not the installer intended for regular users.
 
@@ -160,9 +160,9 @@ For the application to work correctly, grant the Android permissions that it act
 
 ## Current release and source status
 
-- Latest published GitHub Release: **1.10.62**.
-- Version Code: **99**.
-- The 1.10.62 APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
+- Latest published GitHub Release: **1.10.63**.
+- Version Code: **100**.
+- The 1.10.63 APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Publish a new GitHub Release only after the APK has been built and verified.
 
 ## 1.10.57 – Release notes
@@ -178,7 +178,7 @@ For the application to work correctly, grant the Android permissions that it act
 
 ### Legacy migration path
 
-The root `update.json` is retained for compatibility with installations that still use the legacy JSON-based updater. It currently points to **1.10.62** and its APK.
+The root `update.json` is retained for compatibility with installations that still use the legacy JSON-based updater. It is retained unchanged for legacy compatibility; the current updater uses the GitHub Releases API.
 
 ### Current updater
 
@@ -217,6 +217,18 @@ This list includes devices that have actually been tested. Compatibility with ot
 - The source project's minSdk setting allows installation on Android 6.0 and newer versions.
 - Zello package visibility queries are declared in the manifest for Android 11 and later; this does not restrict operation on older Android versions.
 - The minimum Android version is a project configuration requirement, not a claim that every Android release or device has been individually tested. See “Tested devices” for the devices actually tested.
+
+## 1.10.63 – Release notes
+
+- Added a guided first-launch permission assistant with clear explanations.
+- Guides microphone and notification permissions and battery-optimization exemption.
+- Missing permissions can be checked and granted later; USB/FTDI access remains separate.
+- Permission guidance is available in Hungarian, English, German and Russian.
+- Existing FTDI, USB, RTS, CTS and PTT control logic remains unchanged.
+
+**Version Code:** 100 · **Minimum Android:** 6.0 (API 23)
+
+APK: [Orfeusz.Gateway_v1.10.63.apk](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.63/Orfeusz.Gateway_v1.10.63.apk).
 
 ## 1.10.62 – Release notes
 
