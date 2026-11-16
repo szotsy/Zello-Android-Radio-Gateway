@@ -104,7 +104,7 @@ For field use, the equipment must be protected against rain, dust, overheating a
 
 - Modified Baofeng UV-5R or BF-888S radio.
 - Separate radio interface.
-- Currently verified USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).
+- USB–UART adapter; reliable operation is currently verified with the FTDI FT232R (VID: 0403, PID: 6001).
 - Compatibility testing of additional USB–UART devices is ongoing; the range of supported devices may expand as testing is completed.
 
 **Wiring documentation:** the radio interface diagram and detailed parts list are available in the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html). The [Hungarian guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) is also available.
@@ -130,7 +130,7 @@ The following screenshots show the Orfeusz Gateway interface and its radio/USB�
 
 | USB–UART disconnected | USB–UART connected / standby |
 |---|---|
-| ![FTDI disconnected](docs/screenshots/Screenshot_20261114_134559.jpg) | ![FTDI connected](docs/screenshots/Screenshot_20261114_134649.jpg) |
+| ![USB–UART disconnected](docs/screenshots/Screenshot_20261114_134559.jpg) | ![USB–UART connected](docs/screenshots/Screenshot_20261114_134649.jpg) |
 
 | Radio receiving | Radio transmitting |
 |---|---|
@@ -250,7 +250,7 @@ APK: [Orfeusz.Gateway_v1.10.62.apk](https://github.com/szotsy/Zello-Android-Radi
 
 **USB–UART adapter currently verified for reliable operation: FTDI FT232R – VID: 0403, PID: 6001.**
 
-The USB–UART adapter currently verified with the application is the FTDI FT232R (VID: 0403, PID: 6001). Compatibility testing of additional USB–UART devices is ongoing. The supported hardware range may expand as testing is completed. Devices still under evaluation should not yet be considered verified.
+The system currently operates reliably with the FTDI FT232R USB–UART adapter (VID: 0403, PID: 6001). Compatibility with other USB–UART devices has not yet been verified.
 
 ### 🇩🇪 Deutsch
 
