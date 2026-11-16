@@ -13,7 +13,7 @@ Ez az oldal az alkalmazás Zello- és rádiókapcsolati beállításait foglalja
 
 ### FTDI-kapcsolat
 - Az ellenőrzött USB–soros adapter: **FTDI FT232R**, VID **0403**, PID **6001**.
-- További USB–UART adapterek és rádióinterfész-megoldások kompatibilitási vizsgálata folyamatban van; a tesztelések lezárása után az igazoltan támogatott hardverek listája bővülhet.
+- További USB–UART eszközök kompatibilitási vizsgálata folyamatban van; a tesztelések lezárása után az igazoltan támogatott eszközök listája bővülhet.
 - USB-csatlakoztatáskor kezeld az Android USB-engedélykérését.
 
 ### Később hozzáadandó képek
@@ -32,7 +32,7 @@ This page summarizes the application's Zello and radio connection configuration.
 
 ### FTDI connection
 - Verified USB-to-serial adapter: **FTDI FT232R**, VID **0403**, PID **6001**.
-- Compatibility testing of additional USB–UART adapters and radio-interface solutions is ongoing; the list of verified supported hardware may expand after testing.
+- Compatibility testing of additional USB–UART devices is ongoing; the list of verified supported devices may expand after testing.
 - Handle Android's USB permission prompt when connecting the device.
 
 ### Images to add later
