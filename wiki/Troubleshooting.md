@@ -4,9 +4,9 @@
 
 ## Magyar
 
-### Az FTDI adapter nem jelenik meg
+### Az USB–UART adapter nem jelenik meg
 - Ellenőrizd az USB-kábelt és az OTG/USB-csatlakozást.
-- Ellenőrizd, hogy az adapter FTDI FT232R-e (VID 0403, PID 6001).
+- A megbízható működés jelenleg az FTDI FT232R adapterrel igazolt (VID 0403, PID 6001); más adapterek kompatibilitása még nem igazolt.
 - Csatlakoztatáskor fogadd el az Android USB-engedélykérését, ha megjelenik.
 
 ### Nincs rádióvétel (RX)
@@ -28,9 +28,9 @@ Ha a hiba továbbra is fennáll, a [GitHub hibabejelentő sablonok](https://gith
 
 ## English
 
-### FTDI adapter is not detected
+### USB–UART adapter is not detected
 - Check the USB cable and OTG/USB connection.
-- Verify that the adapter is an FTDI FT232R (VID 0403, PID 6001).
+- Reliable operation is currently verified with the FTDI FT232R adapter (VID 0403, PID 6001); other adapters are not yet verified.
 - Accept Android's USB permission prompt when it appears.
 
 ### No radio receive (RX)
