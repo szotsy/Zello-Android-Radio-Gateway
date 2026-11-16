@@ -129,17 +129,9 @@
             <div class="card"><img src="https://raw.githubusercontent.com/szotsy/Zello-Android-Radio-Gateway/main/images/Radio-interface-detail-illustration.png" alt="Internal radio interface detail illustration"><p>Internal electronics detail</p></div>
           </div>
         </section>
-        <section>
-          <h2>What's new in v1.10.63</h2>
-          <ul>
-            <li>Guided first-launch permission assistant with explanations for microphone and notifications.</li>
-            <li>Guidance for requesting exemption from battery optimization.</li>
-            <li>Missing permissions can be reviewed later; USB/USB–UART access remains a separate Android prompt.</li>
-            <li>Permission guidance in Hungarian, English, German and Russian.</li>
-            <li>Minimum Android 6.0 (API 23), Version Code 100.</li>
-            <li>USB–UART, RTS, CTS and PTT control logic remains unchanged.</li>
-          </ul>
-          <p class="note">Version 1.10.63 is available as a published GitHub Release.</p>
+        <section id="latest-release-notes">
+          <h2>Latest release highlights</h2>
+          <div id="latest-release-notes-content"><p class="note">Loading release notes…</p></div>
         </section>
         <section>
           <h2>Project information</h2>
@@ -165,22 +157,55 @@
 (async function(){
   const versionEl=document.getElementById('latest-release-version');
   const linkEl=document.getElementById('latest-release-link');
-  if(!versionEl||!linkEl)return;
+  const notesEl=document.getElementById('latest-release-notes-content');
   try{
     const response=await fetch('https://api.github.com/repos/szotsy/Zello-Android-Radio-Gateway/releases/latest',{headers:{'Accept':'application/vnd.github+json'}});
     if(!response.ok)throw new Error('GitHub API response: '+response.status);
     const release=await response.json();
     const tag=(release.tag_name||'').replace(/^v/i,'');
     if(!tag)throw new Error('Missing release tag');
-    const codeMatch=(release.body||'').match(/(?:version\s*code|versionCode)\s*[:：]\s*(\d+)/i);
-    versionEl.replaceChildren();
-    const strong=document.createElement('strong');
-    strong.textContent=tag;
-    versionEl.append(strong);
-    if(codeMatch)versionEl.append(document.createTextNode(' · Version Code '+codeMatch[1]));
-    linkEl.href=release.html_url||'https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest';
+    const body=release.body||'';
+    const codeMatch=body.match(/(?:version\s*code|versionCode)\s*[:：]\s*(\d+)/i);
+    if(versionEl){
+      versionEl.replaceChildren();
+      const strong=document.createElement('strong');
+      strong.textContent=tag;
+      versionEl.append(strong);
+      if(codeMatch)versionEl.append(document.createTextNode(' · Version Code '+codeMatch[1]));
+    }
+    if(linkEl)linkEl.href=release.html_url||'https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest';
+    if(notesEl){
+      const marker='🇬🇧 English';
+      const chunk=body.split(/\n\s*---\s*\n/).find(part=>part.includes(marker));
+      if(!chunk)throw new Error('Localized release notes not found');
+      const lines=chunk.split(/\r?\n/).map(line=>line.trim()).filter(Boolean);
+      const nodes=[];
+      let list=null;
+      for(const line of lines){
+        if(line===marker||/^Orfeusz Gateway\s+/i.test(line))continue;
+        if(/^[-*]\s+/.test(line)){
+          if(!list){list=document.createElement('ul');nodes.push(list);}
+          const item=document.createElement('li');
+          item.textContent=line.replace(/^[-*]\s+/,'');
+          list.append(item);
+        }else{
+          list=null;
+          if(/^#{1,3}\s+/.test(line)){
+            const heading=document.createElement('h3');
+            heading.textContent=line.replace(/^#{1,3}\s+/,'');
+            nodes.push(heading);
+          }else{
+            const paragraph=document.createElement('p');
+            paragraph.textContent=line.replace(/^\*\*(.*?)\*\*:?\s*/,'$1: ');
+            nodes.push(paragraph);
+          }
+        }
+      }
+      notesEl.replaceChildren(...nodes);
+    }
   }catch(error){
-    versionEl.textContent='Release information is currently unavailable.';
+    if(versionEl)versionEl.textContent='Release information is currently unavailable.';
+    if(notesEl)notesEl.textContent='Release notes are currently unavailable.';
   }
 })();
 </script>
