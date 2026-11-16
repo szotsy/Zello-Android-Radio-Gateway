@@ -169,9 +169,9 @@ For the application to work correctly, grant the Android permissions that it act
 
 ## Current release and source status
 
-- Latest published GitHub Release: **1.10.63**.
+- The latest stable release version is available automatically on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Version Code: **100**.
-- The 1.10.63 APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
+- The latest APK is available on the [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Publish a new GitHub Release only after the APK has been built and verified.
 
 ## 1.10.57 – Release notes
