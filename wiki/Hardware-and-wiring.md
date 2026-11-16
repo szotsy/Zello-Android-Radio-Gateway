@@ -9,7 +9,7 @@ Az alkalmazással ellenőrzött USB–soros adapter az **FTDI FT232R**:
 - VID: `0403`
 - PID: `6001`
 
-További USB–soros adapterek és rádióinterfész-megoldások kompatibilitási vizsgálata folyamatban van. A még tesztelés alatt álló típusok működése egyelőre nem tekinthető igazoltnak; az eredményeket a vizsgálatok lezárása után dokumentáljuk.
+További USB–UART eszközök kompatibilitási vizsgálata folyamatban van. A még tesztelés alatt álló típusok működése egyelőre nem tekinthető igazoltnak; az eredményeket a vizsgálatok lezárása után dokumentáljuk.
 
 ### Kapcsolási rajz
 
@@ -50,7 +50,7 @@ The USB-to-serial adapter verified with the application is **FTDI FT232R**:
 - VID: `0403`
 - PID: `6001`
 
-Compatibility testing of additional USB-to-serial adapters and radio-interface solutions is ongoing. Models still under evaluation should not yet be considered verified; results will be documented when testing is complete.
+Compatibility testing of additional USB–UART devices is ongoing. Models still under evaluation should not yet be considered verified; results will be documented when testing is complete.
 
 ### Connectors
 
