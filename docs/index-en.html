@@ -172,7 +172,7 @@
     const release=await response.json();
     const tag=(release.tag_name||'').replace(/^v/i,'');
     if(!tag)throw new Error('Missing release tag');
-    const codeMatch=(release.body||'').match(/(?:version\\s*code|versionCode)\\s*[:：]\\s*(\\d+)/i);
+    const codeMatch=(release.body||'').match(/(?:version\s*code|versionCode)\s*[:：]\s*(\d+)/i);
     versionEl.replaceChildren();
     const strong=document.createElement('strong');
     strong.textContent=tag;
