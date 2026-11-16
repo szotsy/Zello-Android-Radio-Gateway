@@ -1,0 +1,87 @@
+name: "USB–UART compatibility request"
+description: "Request a compatibility evaluation for a USB–UART adapter with Orfeusz Gateway."
+title: "[USB-UART COMPAT] "
+labels: ["hardware"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping expand the verified USB–UART adapter list.
+
+        **Important:** a request does not mean the adapter is supported. Compatibility is confirmed only after documented testing. Reliable operation is currently verified with FTDI FT232R (VID: 0403, PID: 6001).
+
+        Do not post personal information, private radio traffic or sensitive frequencies. Never open powered equipment.
+  - type: input
+    id: manufacturer
+    attributes:
+      label: "Manufacturer / brand"
+      placeholder: "Adapter brand or manufacturer"
+    validations:
+      required: true
+  - type: input
+    id: adapter_model
+    attributes:
+      label: "Adapter model"
+      placeholder: "USB–UART adapter model"
+    validations:
+      required: true
+  - type: input
+    id: chip
+    attributes:
+      label: "USB–UART chip"
+      placeholder: "CH340G, FT232R, CP2102..."
+    validations:
+      required: true
+  - type: input
+    id: vid_pid
+    attributes:
+      label: "USB VID / PID"
+      description: "Enter the USB identifiers, or write unknown."
+      placeholder: "VID: xxxx, PID: xxxx"
+  - type: input
+    id: android_device
+    attributes:
+      label: "Android device"
+      placeholder: "Samsung Galaxy S23"
+    validations:
+      required: true
+  - type: input
+    id: android_version
+    attributes:
+      label: "Android version"
+      placeholder: "Android version"
+    validations:
+      required: true
+  - type: dropdown
+    id: rts_cts
+    attributes:
+      label: "RTS and CTS pins"
+      options:
+        - "Both exposed"
+        - "RTS only"
+        - "CTS only"
+        - "Unknown"
+    validations:
+      required: true
+  - type: dropdown
+    id: test_level
+    attributes:
+      label: "What testing can you perform?"
+      options:
+        - "USB adapter detection only"
+        - "RTS and CTS signal checks"
+        - "PTT control check"
+        - "Full radio RX/TX test"
+        - "I do not have the adapter yet"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes, experience and wiring"
+      description: "Describe Android detection and the radio interface you intend to use."
+  - type: textarea
+    id: photos
+    attributes:
+      label: "Photos or additional information (optional)"
+      description: "You can also attach images after creating the issue."
