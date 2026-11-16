@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-11-16",
+  "adapters": [
+    {
+      "name": "FTDI FT232R",
+      "chip": "FT232R",
+      "vid": "0403",
+      "pid": "6001",
+      "status": "verified",
+      "note_hu": "Jelenleg ezzel az adapterrel igazolt a megbízható működés.",
+      "note_en": "Reliable operation is currently verified with this adapter."
+    },
+    {
+      "name": "CH340G",
+      "chip": "CH340G",
+      "vid": null,
+      "pid": null,
+      "status": "under_investigation",
+      "note_hu": "Vizsgálat alatt; támogatottsága még nem igazolt.",
+      "note_en": "Under investigation; support is not yet confirmed."
+    },
+    {
+      "name": "CP2102",
+      "chip": "CP2102",
+      "vid": null,
+      "pid": null,
+      "status": "not_verified",
+      "note_hu": "Nincs közzétett kompatibilitási teszteredmény.",
+      "note_en": "No compatibility test result has been published."
+    }
+  ]
+}
