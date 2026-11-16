@@ -8,6 +8,8 @@
 
 # Orfeusz Gateway
 
+> **Development:** I develop and maintain Orfeusz Gateway independently.
+
 ![Orfeusz Gateway – Android, Zello és rádió](images/Orfeuszbanner.png)
 
 Android-based two-way Zello ↔ radio gateway application.
