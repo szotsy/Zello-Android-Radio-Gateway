@@ -39,7 +39,7 @@ A fenti hivatkozás mindig a legfrissebb stabil kiadás telepítőjét tölti le
 ### 1. Az APK letöltése
 
 1. Nyisd meg az [Orfeusz Gateway legfrissebb kiadását a GitHub Releases oldalon](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
-2. A legfrissebb kiadás **Assets** részén keresd meg az `.apk` kiterjesztésű telepítőfájlt. A fájl neve például: `Orfeusz.Gateway_v1.10.62.apk`.
+2. A legfrissebb kiadás **Assets** részén keresd meg az `.apk` kiterjesztésű telepítőfájlt. A fájl neve például: `Orfeusz.Gateway_v1.10.63.apk`.
 3. Koppints az APK fájlra, és töltsd le a telefonodra.
 4. Csak a fenti hivatalos projektoldalról származó APK-t telepítsd. A **Source code (zip)** és **Source code (tar.gz)** fájlok a fejlesztői forráskódot tartalmazzák, nem a normál felhasználóknak szánt telepítőt.
 
@@ -163,9 +163,9 @@ A hibátlan működéshez az alkalmazás által ténylegesen kért Android-enged
 
 ## Kiadási állapot
 
-- Legfrissebb publikált GitHub Release: **1.10.62**.
-- Version Code: **99**.
-- Az 1.10.62 APK letölthető a [GitHub Releases oldalról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
+- Legfrissebb publikált GitHub Release: **1.10.63**.
+- Version Code: **100**.
+- Az 1.10.63 APK letölthető a [GitHub Releases oldalról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Új GitHub Release csak a ténylegesen lefordított és ellenőrzött APK-val készüljön.
 
 ## 1.10.57 – Kiadási megjegyzések
@@ -181,7 +181,7 @@ A hibátlan működéshez az alkalmazás által ténylegesen kért Android-enged
 
 ### Régi telepítések migrációja
 
-A gyökérben lévő `update.json` a régi, JSON-alapú frissítőt használó telepítések kompatibilitása miatt marad meg. Jelenleg az **1.10.62** verzióra és annak APK-jára mutat.
+A gyökérben lévő `update.json` a régi, JSON-alapú frissítőt használó telepítések kompatibilitása miatt marad meg. Változatlanul megmarad a régi telepítések kompatibilitása miatt; az új frissítési rendszer a GitHub Releases API-t használja.
 
 ### Új frissítési rendszer
 
@@ -218,6 +218,18 @@ A felsorolás a ténylegesen tesztelt készülékeket tartalmazza. Más készül
 - A forrásprojekt minSdk beállítása alapján az alkalmazás Android 6.0-tól újabb Android-verziókon is telepíthető.
 - Az Android 11-től bevezetett csomagláthatósági szabályokat a Manifestben deklarált Zello-csomaglekérdezések kezelik; ez a régebbi Android-verziók működését nem korlátozza.
 - A minimális Android-verzió a projekt beállítása, nem jelenti azt, hogy minden Android-verzióval és készülékkel külön tesztelve lett. A ténylegesen tesztelt készülékeket a „Tesztelt készülékek” rész sorolja fel.
+
+## 1.10.63 – Kiadási megjegyzések
+
+- Új, lépésről lépésre vezető első indítási engedélysegéd.
+- Magyarázatot ad és kéri a mikrofonengedélyt, kezeli az értesítési engedélyt, valamint segít az akkumulátor-optimalizálás alóli kivétel beállításában.
+- A hiányzó engedélyek később is ellenőrizhetők és megadhatók; az USB/FTDI-hozzáférés továbbra is külön Android USB-engedélykéréssel működik.
+- Az engedélysegéd magyar, angol, német és orosz nyelven érhető el.
+- A meglévő FTDI-, USB-, RTS-, CTS- és PTT-vezérlési logika változatlan.
+
+**Version Code:** 100 · **Minimum Android:** 6.0 (API 23)
+
+A kiadás APK-ja: [Orfeusz.Gateway_v1.10.63.apk](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/download/1.10.63/Orfeusz.Gateway_v1.10.63.apk).
 
 ## 1.10.62 – Kiadási megjegyzések
 
