@@ -47,12 +47,12 @@ ul{padding-left:22px}footer{padding:28px 0 45px;color:var(--muted)}
 <p>Install Zello on the same Android device and complete the account and channel configuration required for your intended use.</p>
 <p><strong>Important:</strong> before using Orfeusz Gateway, enable <strong>Do Not Disturb</strong> on this device. Otherwise, phone notification sounds may be transmitted over the radio.</p>
 <p class="muted">Zello account and channel setup are not part of the Orfeusz Gateway installer; configure them separately in the Zello application.</p>
-<p><a class="btn secondary" href="./zello-settings-en.html">Detailed illustrated Zello settings guide</a></p>
+<p><a class="btn secondary" data-preserve-scroll href="./zello-settings-en.html">Detailed illustrated Zello settings guide</a></p>
 </div></article>
 
 <article class="step"><div class="step-no">04</div><div><h2>Connect the radio interface</h2>
 <p>Connect the radio, dedicated radio interface and FTDI FT232R adapter according to the documented wiring, then connect the adapter to the Android device.</p>
-<p>When Android asks for USB access, verify the device and grant permission. The wiring guide contains the connector pin assignments and parts list.</p>
+<p>When Android asks for USB access, verify the device and grant permission. The wiring guide contains the connector pin assignments and parts list.</p>\n<p><a class="btn secondary" data-preserve-scroll href="./wiring-en.html">Open wiring diagram and parts list</a></p>
 </div></article>
 
 <article class="step"><div class="step-no">05</div><div><h2>Check the status before first use</h2>
@@ -71,4 +71,21 @@ ul{padding-left:22px}footer{padding:28px 0 45px;color:var(--muted)}
 </section>
 </main>
 <footer><a href="./index-en.html">← Back to home page</a> · Orfeusz Gateway</footer>
-</div></body></html>
+</div><script>
+(() => {
+  const key = "orfeusz-start-here-return-scroll";
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[data-preserve-scroll]");
+    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    sessionStorage.setItem(key, String(window.scrollY));
+  });
+  window.addEventListener("pageshow", () => {
+    const saved = sessionStorage.getItem(key);
+    if (saved === null) return;
+    sessionStorage.removeItem(key);
+    const y = Number(saved);
+    if (!Number.isFinite(y)) return;
+    requestAnimationFrame(() => window.scrollTo(0, y));
+  });
+})();
+</script>\n</body></html>
