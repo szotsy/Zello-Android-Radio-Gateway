@@ -7,9 +7,9 @@
     "What's new: two-column interface on large screens and Samsung DeX; single-column layout retained on phones; conditional scroll indicator; event-driven Zello installation status; fixed Zello Play Store link and improved launch button.",
     "Neu: zweispaltige Oberfläche auf großen Bildschirmen und unter Samsung DeX; einspaltiges Layout auf Smartphones; bedingter Scroll-Hinweis; ereignisgesteuerte Aktualisierung des Zello-Installationsstatus; korrigierter Play-Store-Link und verbesserter Startbutton.",
     "Новое: двухколоночный интерфейс на больших экранах и Samsung DeX; одноколоночный интерфейс на телефонах; условный индикатор прокрутки; обновление статуса установки Zello по событиям; исправленная ссылка Play Маркета и улучшенная кнопка запуска.",
-    "A minimálisan támogatott Android-verzió Android 6.0 (API 23), Version Code: 99. Az FTDI-, USB-, RTS-, CTS- és PTT-vezérlési logika változatlan.",
-    "Minimum Android: 6.0 (API 23), Version Code: 99. FTDI, USB, RTS, CTS and PTT control logic remains unchanged.",
-    "Mindestversion: Android 6.0 (API 23), Version Code: 99. Die FTDI-, USB-, RTS-, CTS- und PTT-Steuerungslogik bleibt unverändert.",
-    "Минимальная версия Android: 6.0 (API 23), Version Code: 99. Логика управления FTDI, USB, RTS, CTS и PTT не изменена."
+    "A minimálisan támogatott Android-verzió Android 6.0 (API 23), Version Code: 99. Az USB–UART-, RTS-, CTS- és PTT-vezérlési logika változatlan.",
+    "Minimum Android: 6.0 (API 23), Version Code: 99. USB–UART, RTS, CTS and PTT control logic remains unchanged.",
+    "Mindestversion: Android 6.0 (API 23), Version Code: 99. Die USB–UART-, RTS-, CTS- und PTT-Steuerungslogik bleibt unverändert.",
+    "Минимальная версия Android: 6.0 (API 23), Version Code: 99. Логика управления USB–UART, RTS, CTS и PTT не изменена."
   ]
 }
