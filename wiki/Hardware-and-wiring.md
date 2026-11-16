@@ -40,7 +40,7 @@ További USB–UART eszközök kompatibilitási vizsgálata folyamatban van. A m
 ### Később hozzáadandó képek
 - A Con1 és Con2 csatlakozók fényképe, nézeti iránnyal.
 - A projekt ellenőrzött kapcsolási rajza.
-- FTDI FT232R adapter fényképe.
+- USB–UART adapter fényképe (a jelenleg megbízhatóan működő FTDI FT232R típusról).
 - Rádióoldali csatlakozás részletei.
 
 ## English
@@ -75,5 +75,5 @@ Compatibility testing of additional USB–UART devices is ongoing. Models still 
 ### Images to add later
 - Photos of Con1 and Con2 with viewing orientation.
 - The project's verified wiring diagram.
-- FTDI FT232R adapter photo.
+- USB–UART adapter photo (the currently reliable FTDI FT232R model).
 - Radio-side connector details.
