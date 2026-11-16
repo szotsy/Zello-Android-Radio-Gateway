@@ -53,8 +53,8 @@ If an earlier version is already installed, a newer official APK can normally be
 ### 3. First launch and radio connection
 
 1. On first launch, review and grant the Android permissions actually requested by the application.
-2. Connect the verified **FTDI FT232R USB–UART adapter** to the radio interface and the Android device. Approve Android's USB-device access prompt.
-3. Radio operation requires the following hardware: a modified **Baofeng UV-5R or BF-888S**, a separate radio interface, and an FTDI FT232R adapter (VID: 0403, PID: 6001). See the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html) for the detailed connections.
+2. Connect the USB–UART adapter to the radio interface and the Android device. Approve Android's USB-device access prompt.
+3. Radio operation requires the following hardware: a modified **Baofeng UV-5R or BF-888S**, a separate radio interface, and, for currently verified reliable operation, an FTDI FT232R adapter (VID: 0403, PID: 6001). See the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html) for the detailed connections.
 4. The Zello app must also be installed and configured for use on the Android device.
 5. Check the connection status indicators in Orfeusz Gateway before starting radio traffic.
 
@@ -78,7 +78,7 @@ And the possibilities do not stop there. If another Zello gateway is operating i
 
 Orfeusz Gateway therefore **combines the simplicity of conventional radio with the geographical reach of the internet**, creating a genuine two-way communication link between radio and Zello.
 
-> **Important – additional radio hardware required:** a stock Baofeng radio and a simple connection cable are not sufficient. The setup requires a **modified Baofeng UV-5R or BF-888S radio**, a separate radio interface, and a USB–UART adapter connected to that interface. The verified USB–UART adapter is the **FTDI FT232R (VID: 0403, PID: 6001)**. The radio interface wiring diagram and parts list are available in the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html); the [Hungarian guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) is also available.
+> **Important – additional radio hardware required:** a stock Baofeng radio and a simple connection cable are not sufficient. The setup requires a **modified Baofeng UV-5R or BF-888S radio**, a separate radio interface, and a USB–UART adapter connected to that interface. The system currently operates reliably with the **FTDI FT232R USB–UART adapter** (VID: 0403, PID: 6001). Compatibility with other USB–UART devices has not yet been verified. The radio interface wiring diagram and parts list are available in the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html); the [Hungarian guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) is also available.
 
 ## Replacing legacy PC-based Zello gateways
 
@@ -173,7 +173,7 @@ For the application to work correctly, grant the Android permissions that it act
 - The Zello connection status panel is clickable: it launches Zello or brings it to the foreground if it is already running.
 - A warning is displayed if Zello cannot be launched.
 - Notifications are available in Hungarian, English, German and Russian.
-- Existing FTDI, USB, RTS, CTS and PTT control logic remains unchanged.
+- Existing USB–UART, RTS, CTS and PTT control logic remains unchanged.
 
 ## Update architecture
 
@@ -225,7 +225,7 @@ This list includes devices that have actually been tested. Compatibility with ot
 - Guides microphone and notification permissions and battery-optimization exemption.
 - Missing permissions can be checked and granted later; USB/FTDI access remains separate.
 - Permission guidance is available in Hungarian, English, German and Russian.
-- Existing FTDI, USB, RTS, CTS and PTT control logic remains unchanged.
+- Existing USB–UART, RTS, CTS and PTT control logic remains unchanged.
 
 **Version Code:** 100 · **Minimum Android:** 6.0 (API 23)
 
