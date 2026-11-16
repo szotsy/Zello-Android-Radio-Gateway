@@ -233,7 +233,7 @@ APK: [Orfeusz.Gateway_v1.10.63.apk](https://github.com/szotsy/Zello-Android-Radi
 
 ## 1.10.62 – Release notes
 
-- Large screens (available width of at least 700 dp) use a two-column layout: FTDI, radio and Zello status indicators on the left; action buttons on the right.
+- Large screens (available width of at least 700 dp) use a two-column layout: USB–UART, radio and Zello status indicators on the left; action buttons on the right.
 - Narrow phone screens retain the original single-column layout.
 - The scroll-down arrow is shown only when additional scrollable content exists.
 - Zello installation state refresh is event-driven; no continuous polling is used.
