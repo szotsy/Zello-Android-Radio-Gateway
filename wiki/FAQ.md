@@ -4,8 +4,8 @@
 
 ## Magyar
 
-### Milyen USB–soros adapter támogatott?
-A jelenleg igazolt adapter az FTDI FT232R (VID 0403, PID 6001). További USB–UART eszközök kompatibilitási vizsgálata folyamatban van; a támogatott eszközök köre a tesztelések lezárása után bővülhet.
+### Milyen USB–UART adapter használható megbízhatóan?
+A rendszer jelenleg megbízhatóan az FTDI FT232R USB–UART adapterrel működik (VID 0403, PID 6001). Más USB–UART eszközök kompatibilitása még nem igazolt.
 
 ### Hol tölthetem le az alkalmazást?
 A [legfrissebb stabil APK innen tölthető le](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk).
@@ -18,8 +18,8 @@ A [Hardver és bekötés](Hardware-and-wiring.md) oldalon. A csatlakozó tájol�
 
 ## English
 
-### Which USB-to-serial adapter is supported?
-The currently verified adapter is FTDI FT232R (VID 0403, PID 6001). Compatibility testing of additional USB–UART devices is ongoing; the supported device range may expand as testing is completed.
+### Which USB–UART adapter is currently reliable?
+The system currently operates reliably with the FTDI FT232R USB–UART adapter (VID 0403, PID 6001). Compatibility with other USB–UART devices has not yet been verified.
 
 ### Where can I download the app?
 Download the [latest stable APK here](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk).
