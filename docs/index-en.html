@@ -144,7 +144,7 @@
         <section>
           <h2>Project information</h2>
           <div class="grid">
-            <article class="card"><h3>Latest published version</h3><p><strong>1.10.63</strong> · Version Code 99</p><a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/releases">View all releases</a></article>
+            <article class="card" id="latest-release-card"><h3>Latest published version</h3><p id="latest-release-version"><strong>Loading release information…</strong></p><a id="latest-release-link" href="https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest">View latest release</a></article>
             <article class="card"><h3>Tested devices</h3><p>Samsung Galaxy S23<br>Samsung Galaxy Tab A7<br>Xiaomi Redmi Note 8</p></article>
             <article class="card"><h3>Documentation and source</h3><p>Project information, updates and source packages are available on GitHub.</p><a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/blob/main/README.md">English documentation</a></article>
           </div>
@@ -160,4 +160,28 @@
       <p>Orfeusz Gateway · Android / Zello / Radio Gateway</p>
       <p><a href="https://github.com/szotsy/Zello-Android-Radio-Gateway">GitHub repository</a> · <a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest">Releases</a></p>
 </footer>
-</div></body></html>
+</div>
+<script>
+(async function(){
+  const versionEl=document.getElementById('latest-release-version');
+  const linkEl=document.getElementById('latest-release-link');
+  if(!versionEl||!linkEl)return;
+  try{
+    const response=await fetch('https://api.github.com/repos/szotsy/Zello-Android-Radio-Gateway/releases/latest',{headers:{'Accept':'application/vnd.github+json'}});
+    if(!response.ok)throw new Error('GitHub API response: '+response.status);
+    const release=await response.json();
+    const tag=(release.tag_name||'').replace(/^v/i,'');
+    if(!tag)throw new Error('Missing release tag');
+    const codeMatch=(release.body||'').match(/(?:version\\s*code|versionCode)\\s*[:：]\\s*(\\d+)/i);
+    versionEl.replaceChildren();
+    const strong=document.createElement('strong');
+    strong.textContent=tag;
+    versionEl.append(strong);
+    if(codeMatch)versionEl.append(document.createTextNode(' · Version Code '+codeMatch[1]));
+    linkEl.href=release.html_url||'https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest';
+  }catch(error){
+    versionEl.textContent='Release information is currently unavailable.';
+  }
+})();
+</script>
+</body></html>
