@@ -15,7 +15,7 @@
 - Ne változtass találomra a lábkiosztáson.
 
 ### A PTT / adás nem működik
-- Ellenőrizd a PTT-vezeték és az FTDI-illesztés dokumentált bekötését.
+- Ellenőrizd a PTT-vezeték és az USB–UART kapcsolat dokumentált bekötését.
 - Ellenőrizd a csatlakozó tájolását és a rádió kompatibilitását.
 - Ne tesztelj adást olyan frekvencián vagy módon, amelyre nincs jogosultságod.
 
@@ -39,7 +39,7 @@ Ha a hiba továbbra is fennáll, a [GitHub hibabejelentő sablonok](https://gith
 - Do not guess or randomly change pin assignments.
 
 ### PTT / transmit does not work
-- Check the documented PTT wiring and FTDI interface.
+- Check the documented PTT wiring and USB–UART connection.
 - Verify connector orientation and radio compatibility.
 - Do not transmit on frequencies or in ways for which you are not authorized.
 
