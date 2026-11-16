@@ -251,6 +251,12 @@ A kiadás APK-ja: [Orfeusz.Gateway_v1.10.62.apk](https://github.com/szotsy/Zello
 
 A rendszer jelenleg megbízhatóan az FTDI FT232R USB–UART adapterrel működik (VID: 0403, PID: 6001). Más USB–UART eszközök kompatibilitása még nem igazolt.
 
+## USB–UART adapter-kompatibilitás és vizsgálati kérelem
+
+A [nyilvános kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) mutatja az adapterek aktuális vizsgálati állapotát. Az FTDI FT232R (VID: 0403, PID: 6001) megbízható működése igazolt; a CH340G vizsgálat alatt áll; a CP2102 kompatibilitása egyelőre nem igazolt. A „nem igazolt” nem jelent inkompatibilitást.
+
+Új adapter vizsgálatát a [kompatibilitási kérelem űrlapján](https://github.com/szotsy/Zello-Android-Radio-Gateway/issues/new?template=usb_uart_compatibility.yml) kérheted. A kérelmek GitHub Issue-ként követhetők.
+
 ## Üzembiztonság
 
 - Az USB–UART RTS/CTS és PTT vezérlés a kapuállomás kritikus működési része.
