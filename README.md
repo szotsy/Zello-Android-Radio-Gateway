@@ -12,6 +12,8 @@
 
 Android-based two-way Zello ↔ radio gateway application.
 
+> **OPERATING REQUIREMENT:** Always enable **Do Not Disturb** on the Android device running Orfeusz Gateway. Otherwise, notification sounds from the device – including message and system alerts – may be transmitted over the radio.
+
 ![Android](https://img.shields.io/badge/ANDROID-3D3D3D?style=for-the-badge&logo=android&logoColor=white) ![Zello](https://img.shields.io/badge/ZELLO-F36C21?style=for-the-badge&logoColor=white) ![Radio Gateway](https://img.shields.io/badge/RADIO_GATEWAY-171717?style=for-the-badge&logoColor=white) ![Version](https://img.shields.io/github/v/release/szotsy/Zello-Android-Radio-Gateway?display_name=tag&style=for-the-badge&label=VERSION&color=F36C21)
 
 **[📚 HU / EN documentation and knowledge base](wiki/README.md)** – Photos and screenshots will be added in a later update.
@@ -140,6 +142,12 @@ The following screenshots show the Orfeusz Gateway interface and its radio/FTDI 
 Orfeusz Gateway is distributed through GitHub Releases rather than the Google Play Store. For that reason, Android or Google Play Protect may display a security notice during installation or request an additional scan. **Such a notice alone does not prove that an application is malicious.**
 
 I develop this app specifically to provide two-way audio communication between Zello and a connected radio, and to control the FTDI radio interface. It is not designed to damage the device or deceive the user. Before installing, make sure you downloaded the APK from the project's official [GitHub Releases page](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest). I do not recommend installing renamed, modified or third-party APK files. If Android identifies a specific threat, do not dismiss the alert automatically; verify the file's origin and the authenticity of the release.
+
+### Do Not Disturb – required operating setting
+
+Keep **Do Not Disturb** enabled on the Android device running Orfeusz Gateway throughout radio operation. If it is disabled, notification sounds from the phone – including message alerts, app notifications and system sounds – may be routed to the radio audio output and transmitted. This can disrupt radio traffic and put unintended audio on the radio network.
+
+Enable Do Not Disturb before starting the gateway and make sure it does not turn off automatically during operation. The exact menu path may vary by Android version and device manufacturer.
 
 ### Required Android permissions
 
