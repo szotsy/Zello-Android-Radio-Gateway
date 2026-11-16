@@ -12,6 +12,8 @@
 
 Androidos, kétirányú Zello–rádió kapuállomás.
 
+> **ÜZEMELTETÉSI ALAPFELTÉTEL:** az Orfeusz Gateway-t futtató Android-eszközön mindig kapcsold be a **Ne zavarjanak** módot! Ellenkező esetben a készülék értesítési hangjai – például üzenet- és rendszerértesítések – a rádió adásába kerülhetnek.
+
 ![Android](https://img.shields.io/badge/ANDROID-3D3D3D?style=for-the-badge&logo=android&logoColor=white) ![Zello](https://img.shields.io/badge/ZELLO-F36C21?style=for-the-badge&logoColor=white) ![Radio Gateway](https://img.shields.io/badge/RADIO_GATEWAY-171717?style=for-the-badge&logoColor=white) ![Version](https://img.shields.io/github/v/release/szotsy/Zello-Android-Radio-Gateway?display_name=tag&style=for-the-badge&label=VERSION&color=F36C21)
 
 **[📚 Magyar és angol tudásbázis / HU & EN documentation](wiki/README.md)** – A dokumentáció képekkel és képernyőképekkel később bővül. / Images and screenshots will be added later.
@@ -57,6 +59,7 @@ Ha korábban már telepítve van az alkalmazás, az újabb hivatalos APK által�
 3. A rádiós működéshez szükséges hardver: átalakított **Baofeng UV-5R vagy BF-888S**, külön rádióinterfész és FTDI FT232R adapter (VID: 0403, PID: 6001). A részletes bekötést a [magyar bekötési útmutató](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) ismerteti.
 4. A Zello alkalmazásnak is telepítve és használatra beállítva kell lennie az Android-eszközön.
 5. Ellenőrizd az Orfeusz Gateway felületén a csatlakozási állapotokat, mielőtt rádiós forgalmazást kezdesz.
+6. Kapcsold be az Android-eszközön a **Ne zavarjanak** módot, és ellenőrizd, hogy aktív marad. Ez kötelező üzemi beállítás: másként a telefon értesítési hangjai is kimehetnek a rádió adásába.
 
 **Fontos:** a telepítés önmagában nem elegendő a rádiós gateway működéséhez. Szükséges a kompatibilis, megfelelően bekötött rádiós hardver, a Zello alkalmazás, valamint stabil tápellátás és internetkapcsolat.
 
@@ -142,6 +145,12 @@ Az alábbi képek az Orfeusz Gateway felületét, valamint a rádió és az FTDI
 Az Orfeusz Gateway-t a GitHub Releases oldalról, a Google Play Áruházon kívül lehet letölteni és telepíteni. Emiatt az Android vagy a Google Play Protect a telepítéskor biztonsági figyelmeztetést jeleníthet meg, illetve külön ellenőrzést kérhet. **Egy ilyen figyelmeztetés önmagában nem bizonyítja, hogy az alkalmazás kártékony.**
 
 Az alkalmazást kifejezetten a Zello és a csatlakoztatott rádió közötti kétirányú hangkapcsolat, valamint az FTDI rádióinterfész vezérlésére fejlesztem. Nem célja a készülék károsítása vagy a felhasználó megtévesztése. A telepítés előtt mindig ellenőrizd, hogy az APK-t a projekt hivatalos [GitHub Releases oldaláról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest) töltötted-e le. Ismeretlen forrásból származó, átnevezett vagy módosított APK telepítését nem javaslom. Ha a rendszer konkrét kártevőt azonosít, ne hagyd figyelmen kívül a jelzést; ellenőrizd a fájl eredetét és a kiadás hitelességét.
+
+### Ne zavarjanak mód – kötelező üzemi beállítás
+
+Az Orfeusz Gateway-t futtató Android-eszközön a rádiós üzem teljes ideje alatt legyen bekapcsolva a **Ne zavarjanak** mód. Ha ez nincs aktiválva, a telefon értesítési hangjai – például üzenetjelzések, alkalmazásértesítések vagy rendszerhangok – a rádió hangkimenetén keresztül adásba kerülhetnek. Ez zavarhatja a rádióforgalmazást, és nem kívánt hangot juttathat a rádióhálózatba.
+
+A Ne zavarjanak módot még a gateway használatának megkezdése előtt kapcsold be, és ellenőrizd, hogy az üzemeltetés alatt nem kapcsol ki automatikusan. A pontos menüútvonal Android-verziónként és gyártónként eltérhet.
 
 ### Szükséges Android-engedélyek
 
