@@ -87,7 +87,7 @@ Az Orfeusz Gateway tehát **összekapcsolja a hagyományos rádiózás egyszerű
 
 Az Orfeusz Gateway a korábbi, PC-n futó Zello-kliensre épülő rádiós kapuállomások Android-alapú alternatívája. A régi PC-s Zello-kliens kivezetése után sem kell feltétlenül lemondanod a már meglévő rádiós kapuállomásodról: az Orfeusz Gateway segítségével ismét használatba veheted, és a kapuállomás működését egy Android-eszközre helyezheted át.
 
-Így a korábban kiépített rádiós rendszered – megfelelő, kompatibilis rádióval és interfésszel – tovább használható, PC-s Zello-kliens nélkül. **Fontos:** a meglévő hardver közvetlen újrahasználhatósága a kialakításától függ; az alkalmazás jelenleg az átalakított Baofeng UV-5R vagy BF-888S rádióval és az USB–UART adapterrel tesztelt; a megbízható működés jelenleg FTDI FT232R adapterrel igazolt.
+Így a korábban kiépített rádiós rendszered – megfelelő, kompatibilis rádióval és interfésszel – tovább használható, PC-s Zello-kliens nélkül. **Fontos:** a meglévő hardver közvetlen újrahasználhatósága a kialakításától függ; az alkalmazás jelenleg az átalakított Baofeng UV-5R vagy BF-888S rádióval és USB–UART adapterrel tesztelt; megbízható működése jelenleg FTDI FT232R adapterrel igazolt.
 
 ## Kompakt, önálló mobil kapuállomás – számítógép nélkül
 
@@ -133,7 +133,7 @@ Az alábbi képek az Orfeusz Gateway felületét, valamint a rádió és az USB�
 
 | USB–UART nincs csatlakoztatva | USB–UART csatlakoztatva / készenlét |
 |---|---|
-| ![FTDI nincs csatlakoztatva](docs/screenshots/Screenshot_20261114_134559.jpg) | ![FTDI csatlakoztatva](docs/screenshots/Screenshot_20261114_134649.jpg) |
+| ![USB–UART nincs csatlakoztatva](docs/screenshots/Screenshot_20261114_134559.jpg) | ![USB–UART csatlakoztatva](docs/screenshots/Screenshot_20261114_134649.jpg) |
 
 | Rádió vétel | Rádió adás |
 |---|---|
@@ -249,7 +249,7 @@ A kiadás APK-ja: [Orfeusz.Gateway_v1.10.62.apk](https://github.com/szotsy/Zello
 
 **Jelenleg megbízhatóan működő USB–UART adapter: FTDI FT232R – VID: 0403, PID: 6001.**
 
-Az alkalmazással jelenleg igazoltan működő USB–UART adapter az FTDI FT232R (VID: 0403, PID: 6001). További USB–UART eszközök kompatibilitási vizsgálata folyamatban van. A tesztelések eredményei alapján a támogatott eszközök köre később bővülhet. A vizsgálat alatt álló eszközök működése egyelőre nem tekinthető igazoltnak.
+A rendszer jelenleg megbízhatóan az FTDI FT232R USB–UART adapterrel működik (VID: 0403, PID: 6001). Más USB–UART eszközök kompatibilitása még nem igazolt.
 
 ## Üzembiztonság
 
