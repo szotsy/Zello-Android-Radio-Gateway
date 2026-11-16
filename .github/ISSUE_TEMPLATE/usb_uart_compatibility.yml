@@ -1,0 +1,87 @@
+name: "USB–UART kompatibilitási kérelem"
+description: "USB–UART adapter kompatibilitásának vizsgálati kérelme az Orfeusz Gateway projekthez."
+title: "[USB-UART COMPAT] "
+labels: ["hardware", "compatibility-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Köszönjük, hogy segítesz bővíteni az ellenőrzött USB–UART adapterek körét!
+
+        **Fontos:** a kérelem nem jelenti azt, hogy az adapter már támogatott. A kompatibilitás csak dokumentált teszt után igazolható. Jelenleg az FTDI FT232R (VID: 0403, PID: 6001) működése igazolt.
+
+        Ne adj meg személyes adatot, privát rádióforgalmat vagy érzékeny frekvenciát. Feszültség alatt álló berendezést ne bonts meg.
+  - type: input
+    id: manufacturer
+    attributes:
+      label: "Gyártó / márka"
+      placeholder: "Adapter gyártója vagy márkája"
+    validations:
+      required: true
+  - type: input
+    id: adapter_model
+    attributes:
+      label: "Adapter típusa / modellje"
+      placeholder: "USB–UART adapter modell"
+    validations:
+      required: true
+  - type: input
+    id: chip
+    attributes:
+      label: "USB–UART chip típusa"
+      placeholder: "CH340G, FT232R, CP2102..."
+    validations:
+      required: true
+  - type: input
+    id: vid_pid
+    attributes:
+      label: "USB VID / PID"
+      description: "Ha nem ismert, írd: ismeretlen."
+      placeholder: "VID: xxxx, PID: xxxx"
+  - type: input
+    id: android_device
+    attributes:
+      label: "Android-eszköz típusa"
+      placeholder: "Samsung Galaxy S23"
+    validations:
+      required: true
+  - type: input
+    id: android_version
+    attributes:
+      label: "Android-verzió"
+      placeholder: "Android-verzió"
+    validations:
+      required: true
+  - type: dropdown
+    id: rts_cts
+    attributes:
+      label: "RTS és CTS kivezetés"
+      options:
+        - "Mindkettő kivezetve"
+        - "Csak RTS"
+        - "Csak CTS"
+        - "Nem tudom"
+    validations:
+      required: true
+  - type: dropdown
+    id: test_level
+    attributes:
+      label: "Milyen tesztet tudsz vállalni?"
+      options:
+        - "Csak az adapter felismerését"
+        - "RTS és CTS jel ellenőrzését"
+        - "PTT vezérlés ellenőrzését"
+        - "Teljes rádiós RX/TX tesztet"
+        - "Még nincs nálam az adapter"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Megjegyzés, tapasztalat, bekötés"
+      description: "Írd le az Android-felismerést és a használt rádióinterfészt."
+  - type: textarea
+    id: photos
+    attributes:
+      label: "Fénykép vagy további információ (opcionális)"
+      description: "Képet a GitHub issue létrehozása után is csatolhatsz."
