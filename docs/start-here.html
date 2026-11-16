@@ -47,12 +47,12 @@ ul{padding-left:22px}footer{padding:28px 0 45px;color:var(--muted)}
 <p>Telepítsd a Zello alkalmazást ugyanarra az Android-eszközre, és végezd el benne a saját fiókodhoz és a használni kívánt csatornához szükséges beállításokat.</p>
 <p><strong>Fontos:</strong> az Orfeusz Gateway használata előtt kapcsold be ezen az eszközön a <strong>Ne zavarjanak</strong> módot. Enélkül a telefon értesítési hangjai is a rádió adásába kerülhetnek.</p>
 <p class="muted">A Zello-fiók és csatorna beállítása nem része az Orfeusz Gateway telepítőjének; ezeket külön, a Zello alkalmazásban kell elvégezni.</p>
-<p><a class="btn secondary" href="./zello-settings.html">Részletes, képes Zello-beállítási útmutató</a></p>
+<p><a class="btn secondary" data-preserve-scroll href="./zello-settings.html">Részletes, képes Zello-beállítási útmutató</a></p>
 </div></article>
 
 <article class="step"><div class="step-no">04</div><div><h2>Csatlakoztasd a rádióinterfészt</h2>
 <p>Kapcsold össze a rádiót, a külön rádióinterfészt és az FTDI FT232R adaptert a dokumentáció szerinti bekötéssel, majd csatlakoztasd az adaptert az Android-eszközhöz.</p>
-<p>Amikor az Android USB-hozzáférési engedélyt kér, ellenőrizd az eszközt, majd engedélyezd a hozzáférést. A csatlakozók pontos kiosztását és az alkatrészlistát a bekötési útmutató tartalmazza.</p>
+<p>Amikor az Android USB-hozzáférési engedélyt kér, ellenőrizd az eszközt, majd engedélyezd a hozzáférést. A csatlakozók pontos kiosztását és az alkatrészlistát a bekötési útmutató tartalmazza.</p>\n<p><a class="btn secondary" data-preserve-scroll href="./wiring.html">Kapcsolási rajz és alkatrészlista megnyitása</a></p>
 </div></article>
 
 <article class="step"><div class="step-no">05</div><div><h2>Ellenőrizd az állapotokat az első használat előtt</h2>
@@ -71,4 +71,21 @@ ul{padding-left:22px}footer{padding:28px 0 45px;color:var(--muted)}
 </section>
 </main>
 <footer><a href="./">← Vissza a főoldalra</a> · Orfeusz Gateway</footer>
-</div></body></html>
+</div><script>
+(() => {
+  const key = "orfeusz-start-here-return-scroll";
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[data-preserve-scroll]");
+    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    sessionStorage.setItem(key, String(window.scrollY));
+  });
+  window.addEventListener("pageshow", () => {
+    const saved = sessionStorage.getItem(key);
+    if (saved === null) return;
+    sessionStorage.removeItem(key);
+    const y = Number(saved);
+    if (!Number.isFinite(y)) return;
+    requestAnimationFrame(() => window.scrollTo(0, y));
+  });
+})();
+</script>\n</body></html>
