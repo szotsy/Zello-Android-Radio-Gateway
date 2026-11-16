@@ -1,7 +1,7 @@
 name: "USB–UART kompatibilitási kérelem"
 description: "USB–UART adapter kompatibilitásának vizsgálati kérelme az Orfeusz Gateway projekthez."
 title: "[USB-UART COMPAT] "
-labels: ["hardware", "compatibility-request"]
+labels: ["hardware"]
 body:
   - type: markdown
     attributes:
