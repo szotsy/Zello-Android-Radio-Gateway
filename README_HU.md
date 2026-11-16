@@ -87,7 +87,7 @@ Az Orfeusz Gateway tehát **összekapcsolja a hagyományos rádiózás egyszerű
 
 Az Orfeusz Gateway a korábbi, PC-n futó Zello-kliensre épülő rádiós kapuállomások Android-alapú alternatívája. A régi PC-s Zello-kliens kivezetése után sem kell feltétlenül lemondanod a már meglévő rádiós kapuállomásodról: az Orfeusz Gateway segítségével ismét használatba veheted, és a kapuállomás működését egy Android-eszközre helyezheted át.
 
-Így a korábban kiépített rádiós rendszered – megfelelő, kompatibilis rádióval és interfésszel – tovább használható, PC-s Zello-kliens nélkül. **Fontos:** a meglévő hardver közvetlen újrahasználhatósága a kialakításától függ; az alkalmazás jelenleg az átalakított Baofeng UV-5R vagy BF-888S rádióval és az igazolt FTDI FT232R USB–UART adapterrel tesztelt.
+Így a korábban kiépített rádiós rendszered – megfelelő, kompatibilis rádióval és interfésszel – tovább használható, PC-s Zello-kliens nélkül. **Fontos:** a meglévő hardver közvetlen újrahasználhatósága a kialakításától függ; az alkalmazás jelenleg az átalakított Baofeng UV-5R vagy BF-888S rádióval és az USB–UART adapterrel tesztelt; a megbízható működés jelenleg FTDI FT232R adapterrel igazolt.
 
 ## Kompakt, önálló mobil kapuállomás – számítógép nélkül
 
@@ -107,7 +107,7 @@ A terepi használatnál a készülékeket védeni kell az esőtől, portól, tú
 
 - Átalakított Baofeng UV-5R vagy BF-888S rádió.
 - Külön rádióinterfész.
-- Jelenleg igazolt USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).
+- USB–UART csatlakozás; a rendszer jelenleg megbízhatóan FTDI FT232R adapterrel működik (VID: 0403, PID: 6001).
 - További USB–UART eszközök kompatibilitási vizsgálata folyamatban van; a tesztelések eredményei alapján a támogatott eszközök köre később bővülhet.
 
 **Bekötési dokumentáció:** a rádióinterfész kapcsolási rajza és részletes alkatrészlistája a [magyar bekötési útmutatóban](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html), az angol változat pedig [itt](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html) érhető el.
@@ -145,7 +145,7 @@ Az alábbi képek az Orfeusz Gateway felületét, valamint a rádió és az USB�
 
 Az Orfeusz Gateway-t a GitHub Releases oldalról, a Google Play Áruházon kívül lehet letölteni és telepíteni. Emiatt az Android vagy a Google Play Protect a telepítéskor biztonsági figyelmeztetést jeleníthet meg, illetve külön ellenőrzést kérhet. **Egy ilyen figyelmeztetés önmagában nem bizonyítja, hogy az alkalmazás kártékony.**
 
-Az alkalmazást kifejezetten a Zello és a csatlakoztatott rádió közötti kétirányú hangkapcsolat, valamint az FTDI rádióinterfész vezérlésére fejlesztem. Nem célja a készülék károsítása vagy a felhasználó megtévesztése. A telepítés előtt mindig ellenőrizd, hogy az APK-t a projekt hivatalos [GitHub Releases oldaláról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest) töltötted-e le. Ismeretlen forrásból származó, átnevezett vagy módosított APK telepítését nem javaslom. Ha a rendszer konkrét kártevőt azonosít, ne hagyd figyelmen kívül a jelzést; ellenőrizd a fájl eredetét és a kiadás hitelességét.
+Az alkalmazást kifejezetten a Zello és a csatlakoztatott rádió közötti kétirányú hangkapcsolat, valamint az USB–UART kapcsolat és a rádióinterfész vezérlésére fejlesztem. Nem célja a készülék károsítása vagy a felhasználó megtévesztése. A telepítés előtt mindig ellenőrizd, hogy az APK-t a projekt hivatalos [GitHub Releases oldaláról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest) töltötted-e le. Ismeretlen forrásból származó, átnevezett vagy módosított APK telepítését nem javaslom. Ha a rendszer konkrét kártevőt azonosít, ne hagyd figyelmen kívül a jelzést; ellenőrizd a fájl eredetét és a kiadás hitelességét.
 
 ### Ne zavarjanak mód – kötelező üzemi beállítás
 
@@ -158,7 +158,7 @@ A Ne zavarjanak módot még a gateway használatának megkezdése előtt kapcsol
 A hibátlan működéshez az alkalmazás által ténylegesen kért Android-engedélyeket meg kell adni. Az engedélyek megtagadása vagy későbbi visszavonása egyes funkciókat – például a hangkezelést vagy a háttérben történő működést – korlátozhatja, ezért a Zello és a rádió közötti kapcsolat nem feltétlenül fog megfelelően működni.
 
 - Első indításkor olvasd el az Android engedélykéréseit, és add meg az alkalmazás működéséhez kért engedélyeket.
-- USB-s FTDI adapter csatlakoztatásakor engedélyezd az Android által megjelenített USB-eszköz-hozzáférést is.
+- USB–UART adapter csatlakoztatásakor engedélyezd az Android által megjelenített USB-eszköz-hozzáférést is.
 - Ha korábban megtagadtál egy engedélyt, az Android **Beállítások → Alkalmazások → Orfeusz Gateway → Engedélyek** menüpontjában ellenőrizheted és módosíthatod. A menüpontok neve Android-verziónként és gyártónként eltérhet.
 - Az engedélyeket csak a hivatalos alkalmazásnak add meg, és csak az Android által ténylegesen felkínált kéréseket hagyd jóvá.
 
@@ -176,7 +176,7 @@ A hibátlan működéshez az alkalmazás által ténylegesen kért Android-enged
 - A Zello-kapcsolati állapotjelző panel kattintható: elindítja a Zello alkalmazást, vagy előtérbe hozza, ha már fut.
 - Figyelmeztetés jelenik meg, ha a Zello nem indítható el.
 - Az értesítések magyar, angol, német és orosz nyelven érhetők el.
-- A meglévő FTDI-, USB-, RTS-, CTS- és PTT-vezérlési logika változatlan maradt.
+- A meglévő USB–UART-, RTS-, CTS- és PTT-vezérlési logika változatlan maradt.
 
 ## Frissítési rendszer
 
@@ -224,9 +224,9 @@ A felsorolás a ténylegesen tesztelt készülékeket tartalmazza. Más készül
 
 - Új, lépésről lépésre vezető első indítási engedélysegéd.
 - Magyarázatot ad és kéri a mikrofonengedélyt, kezeli az értesítési engedélyt, valamint segít az akkumulátor-optimalizálás alóli kivétel beállításában.
-- A hiányzó engedélyek később is ellenőrizhetők és megadhatók; az USB/FTDI-hozzáférés továbbra is külön Android USB-engedélykéréssel működik.
+- A hiányzó engedélyek később is ellenőrizhetők és megadhatók; az USB/USB–UART-hozzáférés továbbra is külön Android USB-engedélykéréssel működik.
 - Az engedélysegéd magyar, angol, német és orosz nyelven érhető el.
-- A meglévő FTDI-, USB-, RTS-, CTS- és PTT-vezérlési logika változatlan.
+- A meglévő USB–UART-, RTS-, CTS- és PTT-vezérlési logika változatlan.
 
 **Version Code:** 100 · **Minimum Android:** 6.0 (API 23)
 
@@ -234,12 +234,12 @@ A kiadás APK-ja: [Orfeusz.Gateway_v1.10.63.apk](https://github.com/szotsy/Zello
 
 ## 1.10.62 – Kiadási megjegyzések
 
-- Nagy képernyőkön (legalább 700 dp rendelkezésre álló szélességnél) kétoszlopos elrendezés: bal oldalon az FTDI-, rádió- és Zello-állapotjelzések, jobb oldalon a kezelőgombok.
+- Nagy képernyőkön (legalább 700 dp rendelkezésre álló szélességnél) kétoszlopos elrendezés: bal oldalon az USB–UART-, rádió- és Zello-állapotjelzések, jobb oldalon a kezelőgombok.
 - Keskeny, telefonos képernyőkön megmarad az eredeti egyoszlopos elrendezés.
 - A lefelé görgetést jelző nyíl csak akkor látható, ha további görgethető tartalom van.
 - A Zello telepítettségi állapotának frissítése eseményvezérelt; nincs folyamatos lekérdezés.
 - A Zello Play Áruház-hivatkozása a `com.loudtalks` csomagazonosítót használja.
-- Az FTDI-, USB-, RTS-, CTS- és PTT-vezérlési logika változatlan.
+- Az USB–UART-, RTS-, CTS- és PTT-vezérlési logika változatlan.
 
 **Version Code:** 99 · **Minimum Android:** 6.0 (API 23)
 
@@ -247,13 +247,13 @@ A kiadás APK-ja: [Orfeusz.Gateway_v1.10.62.apk](https://github.com/szotsy/Zello
 
 ## Hardverkompatibilitás
 
-**Igazolt adapter: FTDI FT232R – VID: 0403, PID: 6001.**
+**Jelenleg megbízhatóan működő USB–UART adapter: FTDI FT232R – VID: 0403, PID: 6001.**
 
 Az alkalmazással jelenleg igazoltan működő USB–UART adapter az FTDI FT232R (VID: 0403, PID: 6001). További USB–UART eszközök kompatibilitási vizsgálata folyamatban van. A tesztelések eredményei alapján a támogatott eszközök köre később bővülhet. A vizsgálat alatt álló eszközök működése egyelőre nem tekinthető igazoltnak.
 
 ## Üzembiztonság
 
-- Az FTDI RTS/CTS és PTT vezérlés a kapuállomás kritikus működési része.
+- Az USB–UART RTS/CTS és PTT vezérlés a kapuállomás kritikus működési része.
 - Más funkciók vagy felületi elemek módosításakor a rádióvezérlési logikát nem szabad indokolatlanul megváltoztatni.
 - A „Zello telepítve” jelzés nem bizonyítja az élő Zello-kapcsolatot.
 - A frissítés kézzel indítható; automatikus háttér-ellenőrzés és automatikus telepítés nincs.
