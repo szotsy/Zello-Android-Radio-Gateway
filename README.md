@@ -104,7 +104,8 @@ For field use, the equipment must be protected against rain, dust, overheating a
 
 - Modified Baofeng UV-5R or BF-888S radio.
 - Separate radio interface.
-- Verified USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).
+- Currently verified USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).
+- Compatibility testing of additional USB–UART adapters and radio-interface solutions is ongoing; the range of supported hardware may expand as testing is completed.
 
 **Wiring documentation:** the radio interface diagram and detailed parts list are available in the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html). The [Hungarian guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) is also available.
 
@@ -249,7 +250,7 @@ APK: [Orfeusz.Gateway_v1.10.62.apk](https://github.com/szotsy/Zello-Android-Radi
 
 **Verified adapter: FTDI FT232R – VID: 0403, PID: 6001.**
 
-The application has been tested and verified to work with the FTDI FT232R USB–UART adapter only. Other FTDI models, CH340G and other USB–UART adapters are not verified or guaranteed to work.
+The USB–UART adapter currently verified with the application is the FTDI FT232R (VID: 0403, PID: 6001). Compatibility testing of additional USB–UART adapters and radio-interface solutions is ongoing. The supported hardware range may expand as testing is completed. Devices still under evaluation should not yet be considered verified.
 
 ### 🇩🇪 Deutsch
 
