@@ -14,11 +14,11 @@
 <meta property="og:site_name" content="Orfeusz Gateway">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Orfeusz Gateway – Android Zello-to-Radio Gateway">
-<meta property="og:description" content="Orfeusz Gateway is an Android-based, bidirectional Zello-to-radio gateway. Explore its features, compatibility and FTDI radio-interface wiring.">
+<meta property="og:description" content="Orfeusz Gateway is an Android-based, bidirectional Zello-to-radio gateway. Explore its features, USB–UART compatibility and radio-interface wiring.">
 <meta property="og:url" content="https://szotsy.github.io/Zello-Android-Radio-Gateway/index-en.html">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Orfeusz Gateway – Android Zello-to-Radio Gateway">
-<meta name="twitter:description" content="Orfeusz Gateway is an Android-based, bidirectional Zello-to-radio gateway. Explore its features, compatibility and FTDI radio-interface wiring.">
+<meta name="twitter:description" content="Orfeusz Gateway is an Android-based, bidirectional Zello-to-radio gateway. Explore its features, USB–UART compatibility and radio-interface wiring.">
 <title>Orfeusz Gateway – Android Zello-to-Radio Gateway</title>
 <style>
     :root{color-scheme:dark;--bg:#111;--panel:#1b1b1b;--line:#303030;--text:#f3f3f3;--muted:#b7b7b7;--orange:#f36c21}
@@ -112,10 +112,10 @@
           <ul>
             <li>Modified Baofeng UV-5R or BF-888S radio.</li>
             <li>Dedicated radio interface.</li>
-            <li>Currently verified USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).</li>
-            <li>Compatibility testing of additional USB–UART devices is ongoing.</li>
+            <li>USB–UART adapter.</li>
+            
           </ul>
-          <p class="note"><strong>Hardware compatibility:</strong> the setup using the FTDI FT232R adapter is currently verified. Additional USB–UART devices are being evaluated and tested; the list of compatible devices will be updated when testing is complete. Boards still under evaluation are not yet considered verified.</p>
+          <p class="note"><strong>USB–UART compatibility:</strong> the application connects to the radio interface through a USB–UART adapter. The system currently operates reliably with the FTDI FT232R adapter (VID: 0403, PID: 6001). Compatibility with other USB–UART devices has not yet been verified.</p>
           <p class="note">A stock Baofeng radio and a simple USB cable are not sufficient. See the <a href="./wiring-en.html">wiring guide</a> for the radio interface diagram and detailed hardware documentation.</p>
         </section>
         <section class="gallery">
@@ -132,10 +132,10 @@
           <ul>
             <li>Guided first-launch permission assistant with explanations for microphone and notifications.</li>
             <li>Guidance for requesting exemption from battery optimization.</li>
-            <li>Missing permissions can be reviewed later; USB/FTDI access remains a separate Android prompt.</li>
+            <li>Missing permissions can be reviewed later; USB/USB–UART access remains a separate Android prompt.</li>
             <li>Permission guidance in Hungarian, English, German and Russian.</li>
             <li>Minimum Android 6.0 (API 23), Version Code 100.</li>
-            <li>FTDI, USB, RTS, CTS and PTT control logic remains unchanged.</li>
+            <li>USB–UART, RTS, CTS and PTT control logic remains unchanged.</li>
           </ul>
           <p class="note">Version 1.10.63 is available as a published GitHub Release.</p>
         </section>
