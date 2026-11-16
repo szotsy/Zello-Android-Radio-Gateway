@@ -107,7 +107,8 @@ A terepi használatnál a készülékeket védeni kell az esőtől, portól, tú
 
 - Átalakított Baofeng UV-5R vagy BF-888S rádió.
 - Külön rádióinterfész.
-- Igazolt USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).
+- Jelenleg igazolt USB–UART adapter: FTDI FT232R (VID: 0403, PID: 6001).
+- További USB–UART adapterek és rádióinterfész-megoldások kompatibilitási vizsgálata folyamatban van; a tesztelések eredményei alapján a támogatott hardverek köre később bővülhet.
 
 **Bekötési dokumentáció:** a rádióinterfész kapcsolási rajza és részletes alkatrészlistája a [magyar bekötési útmutatóban](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html), az angol változat pedig [itt](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html) érhető el.
 
@@ -248,7 +249,7 @@ A kiadás APK-ja: [Orfeusz.Gateway_v1.10.62.apk](https://github.com/szotsy/Zello
 
 **Igazolt adapter: FTDI FT232R – VID: 0403, PID: 6001.**
 
-Az alkalmazás jelenleg kizárólag az FTDI FT232R USB–UART adapterrel tesztelt és igazoltan működőképes. Más FTDI típusok, CH340G és egyéb USB–UART adapterek támogatása nem igazolt, működésük nem garantált.
+Az alkalmazással jelenleg igazoltan működő USB–UART adapter az FTDI FT232R (VID: 0403, PID: 6001). További USB–UART adapterek és rádióinterfész-megoldások kompatibilitási vizsgálata folyamatban van. A tesztelések eredményei alapján a támogatott hardverek köre később bővülhet. A vizsgálat alatt álló eszközök működése egyelőre nem tekinthető igazoltnak.
 
 ## Üzembiztonság
 
