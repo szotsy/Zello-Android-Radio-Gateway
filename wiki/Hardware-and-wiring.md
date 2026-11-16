@@ -28,7 +28,7 @@ További USB–UART eszközök kompatibilitási vizsgálata folyamatban van. A m
 | 4 | Speaker |
 | 5 | MIC |
 
-**Con2 – FTDI csatlakozó**
+**Con2 – USB–UART adapter felőli csatlakozó**
 | Érintkező | Funkció |
 |---|---|
 | A | CTS |
@@ -63,7 +63,7 @@ Compatibility testing of additional USB–UART devices is ongoing. Models still 
 | 4 | Speaker |
 | 5 | MIC |
 
-**Con2 – FTDI connector**
+**Con2 – USB–UART adapter-side connector**
 | Pin | Function |
 |---|---|
 | A | CTS |
