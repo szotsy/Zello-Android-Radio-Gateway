@@ -166,9 +166,9 @@ A hibátlan működéshez az alkalmazás által ténylegesen kért Android-enged
 
 ## Kiadási állapot
 
-- Legfrissebb publikált GitHub Release: **1.10.63**.
+- A legfrissebb stabil kiadás verziója automatikusan követhető a [GitHub Releases oldalon](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
 - Version Code: **100**.
-- Az 1.10.63 APK letölthető a [GitHub Releases oldalról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest).
+- A legfrissebb APK a [GitHub Releases oldalról](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest) tölthető le.
 - Új GitHub Release csak a ténylegesen lefordított és ellenőrzött APK-val készüljön.
 
 ## 1.10.57 – Kiadási megjegyzések
