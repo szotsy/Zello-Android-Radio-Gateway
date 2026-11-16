@@ -1,4 +1,4 @@
-name: "FTDI / rádió hardverhiba — FTDI / radio hardware report"
+name: "USB–UART / rádió hardverhiba — USB–UART / radio hardware report"
 description: "Rádiókapcsolati vagy illesztőprobléma bejelentése / Report a radio connection or interface problem."
 title: "[HARDWARE] "
 labels: ["hardware"]
@@ -24,8 +24,8 @@ body:
     id: adapter
     attributes:
       label: "USB–UART adapter"
-      description: "Az ellenőrzött adapter az FTDI FT232R (VID 0403, PID 6001). Más adapterek nincsenek ellenőrizve. / The verified adapter is FTDI FT232R (VID 0403, PID 6001). Other adapters are not verified."
-      placeholder: "FTDI FT232R"
+      description: "A rendszer jelenleg megbízhatóan az FTDI FT232R adapterrel működik (VID 0403, PID 6001); más USB–UART eszközök kompatibilitása még nem igazolt. / The system currently operates reliably with the FTDI FT232R adapter (VID 0403, PID 6001); other USB–UART devices are not yet verified."
+      placeholder: "USB–UART adapter típusa / model"
     validations:
       required: true
   - type: input
