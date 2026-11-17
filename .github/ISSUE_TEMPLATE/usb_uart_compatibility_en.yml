@@ -8,7 +8,7 @@ body:
       value: |
         Thank you for helping expand the verified USB–UART adapter list.
 
-        **Important:** a request does not mean the adapter is supported. Compatibility is confirmed only after documented testing. Reliable operation is currently verified with FTDI FT232R (VID: 0403, PID: 6001).
+        **Important:** a request does not mean the adapter is supported. Compatibility is confirmed only after documented testing. Current adapter statuses are maintained in the [central compatibility registry](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html).
 
         Do not post personal information, private radio traffic or sensitive frequencies. Never open powered equipment.
   - type: input
