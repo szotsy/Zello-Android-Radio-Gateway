@@ -25,24 +25,13 @@
       "engine_supported": true
     },
     {
-      "name": "CP2102",
-      "chip": "CP2102",
-      "vid": null,
-      "pid": null,
+      "name": "Silicon Labs CP2102 / CP2102N",
+      "chip": "CP2102 / CP2102N",
+      "vid": "10C4",
+      "pid": "EA60",
       "status": "not_verified",
-      "note_hu": "Nincs közzétett kompatibilitási teszteredmény. Az aktuális alkalmazás USB-engine-je még nem engedélyezi.",
-      "note_en": "No compatibility test result has been published. The current application USB engine does not enable this adapter yet.",
-      "app_supported": false,
-      "engine_supported": false
-    },
-    {
-      "name": "CP2102N",
-      "chip": "CP2102N",
-      "vid": null,
-      "pid": null,
-      "status": "under_investigation",
-      "note_hu": "Alternatív USB–UART adapter; teljes RTS/CTS-teszt még folyamatban. Az aktuális alkalmazás USB-engine-je még nem engedélyezi.",
-      "note_en": "Alternative USB–UART adapter; full RTS/CTS testing is pending. The current application USB engine does not enable this adapter yet.",
+      "note_hu": "Közös CP2102/CP2102N adaptercsalád. Az alkalmazás aktuális USB-engine-jében nincs engedélyezve; kompatibilitási teszteredmény még nincs közzétéve.",
+      "note_en": "Combined CP2102/CP2102N adapter family. It is not enabled in the current application USB engine; no compatibility test result has been published.",
       "app_supported": false,
       "engine_supported": false
     },
