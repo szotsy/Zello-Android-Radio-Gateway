@@ -12,8 +12,8 @@ Ez az oldal az alkalmazás Zello- és rádiókapcsolati beállításait foglalja
 - A kapcsolat állapotát az Orfeusz Gateway felületén ellenőrizd.
 
 ### USB–UART kapcsolat
-- A rendszer jelenleg megbízhatóan az **FTDI FT232R USB–UART adapterrel** működik (VID **0403**, PID **6001**).
-- Más USB–UART eszközök kompatibilitása még nem igazolt.
+- Az adapterek aktuális igazolt / tesztelés alatt / nem igazolt státuszát a [kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) tartalmazza.
+- Vásárlás előtt ellenőrizd a konkrét adapterpanelt: a CTS, GND és RTS jeleknek ténylegesen elérhetőknek kell lenniük.
 - USB-csatlakoztatáskor kezeld az Android USB-engedélykérését.
 
 ### Később hozzáadandó képek
@@ -31,8 +31,8 @@ This page summarizes the application's Zello and radio connection configuration.
 - Check the connection status in the Orfeusz Gateway interface.
 
 ### USB–UART connection
-- The system currently operates reliably with the **FTDI FT232R USB–UART adapter** (VID **0403**, PID **6001**).
-- Compatibility with other USB–UART devices has not yet been verified.
+- Current verified / under-test / not-yet-verified adapter status is published in the [compatibility list](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html).
+- Before purchasing, check the exact breakout board: CTS, GND and RTS must be physically accessible.
 - Handle Android's USB permission prompt when connecting the device.
 
 ### Images to add later
