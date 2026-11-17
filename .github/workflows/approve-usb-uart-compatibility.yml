@@ -47,7 +47,7 @@ jobs:
               core.setFailed('No exact adapter match found in the central registry: ' + adapterName);
               return;
             }
-            if (adapter.app_supported !== true) {
+            if (adapter.engine_supported !== true) {
               core.setFailed('This adapter is not enabled in the current app engine, so its test report cannot be approved.');
               return;
             }
