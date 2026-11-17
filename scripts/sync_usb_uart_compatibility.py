@@ -52,7 +52,7 @@ def replace_between(text, start, end, replacement, file):
         raise SystemExit(f"Missing generation markers in {file}")
     before, rest = text.split(start, 1)
     _, after = rest.split(end, 1)
-    return before + start + "\n".join(replacement) + end + after
+    return before + start + "\n" + "\n".join(replacement) + "\n" + end + after
 
 def update_html(path, adapters, lang):
     text = path.read_text(encoding="utf-8")
