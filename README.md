@@ -84,7 +84,7 @@ Orfeusz Gateway therefore **combines the simplicity of conventional radio with t
 
 ## USB–UART adapter compatibility and testing requests
 
-The [public compatibility list](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html) shows the current evaluation status. FTDI FT232R and one tested WCH CH340G adapter are verified; CP2102 is not yet verified, while additional models are under test. “Not verified” does not mean incompatible. Check the list for the latest per-model status.
+Adapter names, identifiers, test status and notes are supplied by the [central USB–UART compatibility registry](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html). This is the single source of truth; always check it before purchasing.
 
 Request an evaluation through the [USB–UART compatibility request form](https://github.com/szotsy/Zello-Android-Radio-Gateway/issues/new?template=usb_uart_compatibility.yml). Requests are tracked as GitHub Issues.
 
