@@ -1,0 +1,69 @@
+name: "Új USB–UART adapter vizsgálati / beépítési kérelem"
+description: "Kérd egy nálad lévő USB–UART adapter megvizsgálását és esetleges Orfeusz Gateway engine-integrációját."
+title: "[ADAPTERIGÉNY] "
+labels: ["usb-uart", "adapter-request"]
+body:
+  - type: markdown
+    attributes:
+      value: "Ezzel az űrlappal új adapter támogatását kérheted. A beküldés nem jelent automatikus támogatást vagy kompatibilitási ígéretet. A projekt karbantartója először megvizsgálja a típust, az azonosítókat és a CTS/RTS képességeket."
+  - type: input
+    id: manufacturer
+    attributes:
+      label: "Gyártó"
+      placeholder: "FTDI, Silicon Labs, WCH, Prolific..."
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: "Adapter / chip pontos típusa"
+      placeholder: "FT232H, CP2102N, CH340C..."
+    validations:
+      required: true
+  - type: input
+    id: vid_pid
+    attributes:
+      label: "USB VID / PID (ha ismert)"
+      placeholder: "0403:6014"
+    validations:
+      required: false
+  - type: checkboxes
+    id: possession
+    attributes:
+      label: "Rendelkezel az adapterrel?"
+      options:
+        - label: "Igen, nálam van, és tesztelésre rendelkezésre tudom bocsátani."
+          required: false
+        - label: "Még nincs nálam, csak a támogatását javaslom."
+          required: false
+  - type: dropdown
+    id: test_help
+    attributes:
+      label: "Tudsz segíteni a tesztelésben?"
+      options:
+        - "Igen, Android-eszközön tudom tesztelni."
+        - "Igen, RTS/CTS és PTT tesztet is tudok végezni."
+        - "Csak az adapter adatait tudom megadni."
+        - "Nem tudok tesztelni."
+    validations:
+      required: true
+  - type: input
+    id: product_link
+    attributes:
+      label: "Terméklink (opcionális)"
+      placeholder: "https://..."
+    validations:
+      required: false
+  - type: textarea
+    id: markings
+    attributes:
+      label: "Feliratok, panelváltozat, fénykép vagy további azonosítók"
+      description: "A panelen látható chipfeliratok és a csatlakozók jelölései segítenek a pontos azonosításban. Képet csatolhatsz az Issue-hoz."
+    validations:
+      required: false
+  - type: textarea
+    id: reason
+    attributes:
+      label: "Miért lenne hasznos ennek az adapternek a támogatása?"
+    validations:
+      required: false
