@@ -56,8 +56,15 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
-          yes | sdkmanager --licenses
-          sdkmanager "platforms;android-30" "build-tools;30.0.3"
+          export ANDROID_HOME="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          export ANDROID_SDK_ROOT="$ANDROID_HOME"
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -path '*/bin/sdkmanager' -print 2>/dev/null | sort -V | tail -n 1)"
+          if [[ -z "$SDKMANAGER" ]]; then
+            echo "::error::Android sdkmanager was not found under $ANDROID_HOME/cmdline-tools."
+            exit 1
+          fi
+          yes | "$SDKMANAGER" --licenses
+          "$SDKMANAGER" "platforms;android-30" "build-tools;30.0.3"
 
       - name: Download source archive from release
         env:
