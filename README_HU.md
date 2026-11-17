@@ -58,7 +58,7 @@ Ha korábban már telepítve van az alkalmazás, az újabb hivatalos APK által�
 
 1. Első indításkor olvasd el, és add meg az alkalmazás által ténylegesen kért Android-engedélyeket.
 2. Csatlakoztasd az USB–UART adaptert a rádióinterfészhez és az Android-eszközhöz. Az Android USB-hozzáférési kérdését engedélyezd.
-3. A rádiós működéshez szükséges hardver: átalakított **Baofeng UV-5R vagy BF-888S**, külön rádióinterfész és jelenleg megbízhatóan az FTDI FT232R adapter (VID: 0403, PID: 6001). A részletes bekötést a [magyar bekötési útmutató](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) ismerteti.
+3. A rádiós működéshez szükséges hardver: átalakított **Baofeng UV-5R vagy BF-888S**, külön rádióinterfész és a nyilvános <a href="https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html">USB–UART kompatibilitási listán</a> szereplő adapter. A részletes bekötést a [magyar bekötési útmutató](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) ismerteti.
 4. A Zello alkalmazásnak is telepítve és használatra beállítva kell lennie az Android-eszközön.
 5. Ellenőrizd az Orfeusz Gateway felületén a csatlakozási állapotokat, mielőtt rádiós forgalmazást kezdesz.
 6. Kapcsold be az Android-eszközön a **Ne zavarjanak** módot, és ellenőrizd, hogy aktív marad. Ez kötelező üzemi beállítás: másként a telefon értesítési hangjai is kimehetnek a rádió adásába.
@@ -83,13 +83,13 @@ A lehetőségek azonban itt nem érnek véget! Ha egy másik földrajzi helyen i
 
 Az Orfeusz Gateway tehát **összekapcsolja a hagyományos rádiózás egyszerűségét az internet által biztosított földrajzi szabadsággal**, valódi, kétirányú kommunikációs lehetőséget teremtve a rádió és a Zello között.
 
-> **Fontos – szükséges rádiós hardver:** az alkalmazás használatához nem elegendő egy gyári Baofeng rádió és egy egyszerű csatlakozókábel. **Átalakított Baofeng UV-5R vagy BF-888S rádió szükséges**, továbbá egy külön rádióinterfész és az interfészhez csatlakozó USB–UART adapter. A rendszer jelenleg megbízhatóan az **FTDI FT232R USB–UART adapterrel** működik (VID: 0403, PID: 6001). Más USB–UART eszközök kompatibilitása még nem igazolt. A rádióinterfész bekötési rajza és részletes alkatrészlistája már elérhető a [bekötési útmutatóban](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html).
+> **Fontos – szükséges rádiós hardver:** az alkalmazás használatához nem elegendő egy gyári Baofeng rádió és egy egyszerű csatlakozókábel. **Átalakított Baofeng UV-5R vagy BF-888S rádió szükséges**, továbbá egy külön rádióinterfész és az interfészhez csatlakozó USB–UART adapter. A támogatott és vizsgálat alatt álló adapterek aktuális állapotát a [nyilvános USB–UART kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) tartalmazza. Vásárlás előtt mindig ezt ellenőrizd, és győződj meg róla, hogy a konkrét adapterpanelen a CTS, GND és RTS jelek ténylegesen elérhetők. A rádióinterfész bekötési rajza és részletes alkatrészlistája már elérhető a [bekötési útmutatóban](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html).
 
 ## A régi PC-s Zello-kapuállomások kiváltása
 
 Az Orfeusz Gateway a korábbi, PC-n futó Zello-kliensre épülő rádiós kapuállomások Android-alapú alternatívája. A régi PC-s Zello-kliens kivezetése után sem kell feltétlenül lemondanod a már meglévő rádiós kapuállomásodról: az Orfeusz Gateway segítségével ismét használatba veheted, és a kapuállomás működését egy Android-eszközre helyezheted át.
 
-Így a korábban kiépített rádiós rendszered – megfelelő, kompatibilis rádióval és interfésszel – tovább használható, PC-s Zello-kliens nélkül. **Fontos:** a meglévő hardver közvetlen újrahasználhatósága a kialakításától függ; az alkalmazás jelenleg az átalakított Baofeng UV-5R vagy BF-888S rádióval és USB–UART adapterrel tesztelt; megbízható működése jelenleg FTDI FT232R adapterrel igazolt.
+Így a korábban kiépített rádiós rendszered – megfelelő, kompatibilis rádióval és interfésszel – tovább használható, PC-s Zello-kliens nélkül. **Fontos:** a meglévő hardver közvetlen újrahasználhatósága a kialakításától függ; az alkalmazás jelenleg az átalakított Baofeng UV-5R vagy BF-888S rádióval és USB–UART adapterrel tesztelt; a kompatibilitási listán szereplő, megfelelő CTS/RTS kivezetésekkel rendelkező adapterrel használható.
 
 ## Kompakt, önálló mobil kapuállomás – számítógép nélkül
 
@@ -109,7 +109,7 @@ A terepi használatnál a készülékeket védeni kell az esőtől, portól, tú
 
 - Átalakított Baofeng UV-5R vagy BF-888S rádió.
 - Külön rádióinterfész.
-- USB–UART csatlakozás; a rendszer jelenleg megbízhatóan FTDI FT232R adapterrel működik (VID: 0403, PID: 6001).
+- USB–UART csatlakozás; az aktuálisan igazolt és vizsgálat alatt álló típusokat a nyilvános kompatibilitási lista tartalmazza.
 - További USB–UART eszközök kompatibilitási vizsgálata folyamatban van; a tesztelések eredményei alapján a támogatott eszközök köre később bővülhet.
 
 **Bekötési dokumentáció:** a rádióinterfész kapcsolási rajza és részletes alkatrészlistája a [magyar bekötési útmutatóban](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html), az angol változat pedig [itt](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html) érhető el.
@@ -250,13 +250,13 @@ A kiadás APK-ja: [Orfeusz.Gateway_v1.10.62.apk](https://github.com/szotsy/Zello
 
 ## Hardverkompatibilitás
 
-**Jelenleg megbízhatóan működő USB–UART adapter: FTDI FT232R – VID: 0403, PID: 6001.**
+**USB–UART adapterek:** a kompatibilitási lista mutatja az igazolt, tesztelés alatt álló és még nem igazolt típusokat.
 
-A rendszer jelenleg megbízhatóan az FTDI FT232R USB–UART adapterrel működik (VID: 0403, PID: 6001). Más USB–UART eszközök kompatibilitása még nem igazolt.
+Vásárlás előtt ellenőrizd a [nyilvános USB–UART kompatibilitási listát](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html). Az adapterpanelnek a CTS, GND és RTS jeleket ténylegesen ki kell vezetnie.
 
 ## USB–UART adapter-kompatibilitás és vizsgálati kérelem
 
-A [nyilvános kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) mutatja az adapterek aktuális vizsgálati állapotát. Az FTDI FT232R (VID: 0403, PID: 6001) megbízható működése igazolt; a CH340G vizsgálat alatt áll; a CP2102 kompatibilitása egyelőre nem igazolt. A „nem igazolt” nem jelent inkompatibilitást.
+A [nyilvános kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) mutatja az adapterek aktuális vizsgálati állapotát. Az FTDI FT232R és egy tesztelt WCH CH340G adapter működése igazolt; a CP2102 még nem igazolt, míg további típusok tesztelés alatt állnak. A részletes, naprakész státuszokat mindig a kompatibilitási lista tartalmazza. A „nem igazolt” nem jelent inkompatibilitást.
 
 Új adapter vizsgálatát a [kompatibilitási kérelem űrlapján](https://github.com/szotsy/Zello-Android-Radio-Gateway/issues/new?template=usb_uart_compatibility.yml) kérheted. A kérelmek GitHub Issue-ként követhetők.
 
