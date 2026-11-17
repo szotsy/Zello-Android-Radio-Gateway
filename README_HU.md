@@ -52,7 +52,7 @@ A fenti hivatkozás mindig a legfrissebb stabil kiadás telepítőjét tölti le
 3. Lépj vissza a telepítőhöz, majd válaszd a **Telepítés** lehetőséget.
 4. A telepítés befejezése után nyisd meg az **Orfeusz Gateway** alkalmazást.
 
-Ha korábban már telepítve van az alkalmazás, az újabb hivatalos APK általában frissítésként telepíthető. Ha az Android aláírási vagy csomagütközési hibát jelez, ne töröld automatikusan a meglévő alkalmazást: előbb ellenőrizd, hogy a megfelelő, hivatalos kiadást töltötted-e le.
+**Fontos – egyszeri átállás a hivatalos 1.10.67-es kiadásra:** A projekt a debug aláírású tesztverziókról átállt a hivatalos kiadói aláírókulcs használatára. Emiatt az Android nem tudja frissítésként telepíteni a hivatalos 1.10.67-es APK-t a korábbi debug kulccsal aláírt alkalmazásra. Az 1.10.67-es verzió hivatalos projektoldalról történő telepítése előtt **távolítsd el a jelenleg telepített Orfeusz Gateway alkalmazást**, majd telepítsd a letöltött 1.10.67-es APK-t. Az eltávolítás törli az alkalmazás helyi adatait és beállításait, ezért előtte jegyezd fel azokat a beállításokat, amelyeket később vissza szeretnél állítani. Ez egyszeri átállás: a későbbi, ugyanazzal a hivatalos kiadói kulccsal aláírt verziók már normál frissítésként telepíthetők.
 
 ### 3. Első indítás és rádió csatlakoztatása
 
