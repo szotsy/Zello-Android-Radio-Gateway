@@ -17,9 +17,11 @@ body:
       label: "Adapter supported by the app"
       description: "Only adapters currently enabled in the app engine can be selected."
       options:
+      # USB_UART_OPTIONS_START
         - "FTDI FT232R"
         - "CH340G"
         - "Silicon Labs CP2102 / CP2102N"
+      # USB_UART_OPTIONS_END
     validations:
       required: true
   - type: input
