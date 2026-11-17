@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "description": "Only USB-UART adapters explicitly enabled by the Orfeusz Gateway application engine belong in this list.",
+  "adapters": [
+    {
+      "name": "FTDI FT232R",
+      "chip": "FT232R",
+      "vid": "0403",
+      "pid": "6001"
+    },
+    {
+      "name": "CH340G",
+      "chip": "CH340G",
+      "vid": "1A86",
+      "pid": "7523"
+    }
+  ]
+}
