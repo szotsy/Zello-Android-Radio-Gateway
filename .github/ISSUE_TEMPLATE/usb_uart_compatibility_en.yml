@@ -19,6 +19,11 @@ body:
       options:
         - "FTDI FT232R"
         - "CH340G"
+        - "CP2102"
+        - "CP2102N"
+        - "FTDI FT231X"
+        - "WCH CH340C"
+        - "Prolific PL2303GC"
     validations:
       required: true
   - type: input
