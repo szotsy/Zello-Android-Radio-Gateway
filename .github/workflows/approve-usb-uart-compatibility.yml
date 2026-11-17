@@ -1,0 +1,65 @@
+name: Approve USB-UART compatibility test
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  approve-adapter:
+    if: github.event.label.name == 'compatibility-approved'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update central compatibility registry
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const allowed = ['OWNER', 'MEMBER', 'COLLABORATOR'];
+            if (!allowed.includes(issue.author_association)) {
+              core.setFailed('Only a repository owner, member or collaborator may submit a report for approval.');
+              return;
+            }
+
+            const prefix = '[USB-UART TEST] ';
+            const huPrefix = '[USB-UART TESZT] ';
+            const title = issue.title || '';
+            const adapterName = title.startsWith(prefix) ? title.slice(prefix.length).trim()
+              : title.startsWith(huPrefix) ? title.slice(huPrefix.length).trim() : null;
+            if (!adapterName) {
+              core.setFailed('Issue title must start with [USB-UART TEST] or [USB-UART TESZT].');
+              return;
+            }
+
+            const path = 'docs/usb-uart-compatibility.json';
+            const { data: file } = await github.rest.repos.getContent({
+              owner: context.repo.owner, repo: context.repo.repo, path
+            });
+            const registry = JSON.parse(Buffer.from(file.content, 'base64').toString('utf8'));
+            const adapter = registry.adapters.find(item => item.name.toLowerCase() === adapterName.toLowerCase());
+            if (!adapter) {
+              core.setFailed('No exact adapter match found in the central registry: ' + adapterName);
+              return;
+            }
+
+            adapter.status = 'verified';
+            adapter.note_hu = (adapter.note_hu || '') + ' Közösségi tesztjelentés elfogadva: #' + issue.number + '.';
+            adapter.note_en = (adapter.note_en || '') + ' Community test report approved: #' + issue.number + '.';
+            registry.last_updated = new Date().toISOString().slice(0, 10);
+
+            await github.rest.repos.createOrUpdateFileContents({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              path,
+              message: 'Approve USB-UART adapter: ' + adapter.name,
+              content: Buffer.from(JSON.stringify(registry, null, 2) + '\n').toString('base64'),
+              sha: file.sha
+            });
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number,
+              body: 'The compatibility report was approved by a maintainer. **' + adapter.name + '** is now marked as verified in the central registry.'
+            });
