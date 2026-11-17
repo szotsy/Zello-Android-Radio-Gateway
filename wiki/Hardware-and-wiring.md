@@ -5,11 +5,7 @@
 ## Magyar
 
 ### USB–UART adapter
-A rendszer jelenleg megbízhatóan az **FTDI FT232R USB–UART adapterrel** működik:
-- VID: `0403`
-- PID: `6001`
-
-További USB–UART eszközök kompatibilitási vizsgálata folyamatban van. A még tesztelés alatt álló típusok működése egyelőre nem tekinthető igazoltnak; az eredményeket a vizsgálatok lezárása után dokumentáljuk.
+A támogatott, tesztelés alatt álló és még nem igazolt adapterek aktuális státuszát a [nyilvános USB–UART kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) tartalmazza. Vásárlás előtt mindig ezt ellenőrizd. A konkrét adapterpanelen a CTS, GND és RTS jeleknek ténylegesen elérhetőknek kell lenniük; a chip neve önmagában nem garantálja a kompatibilitást.
 
 ### Kapcsolási rajz
 
@@ -40,17 +36,13 @@ További USB–UART eszközök kompatibilitási vizsgálata folyamatban van. A m
 ### Később hozzáadandó képek
 - A Con1 és Con2 csatlakozók fényképe, nézeti iránnyal.
 - A projekt ellenőrzött kapcsolási rajza.
-- USB–UART adapter fényképe (a jelenleg megbízhatóan működő FTDI FT232R típusról).
+- USB–UART adapter fényképe (szemléltető; vásárlás előtt ellenőrizd a kompatibilitási listát).
 - Rádióoldali csatlakozás részletei.
 
 ## English
 
 ### USB–UART adapter
-The system currently operates reliably with the **FTDI FT232R USB–UART adapter**:
-- VID: `0403`
-- PID: `6001`
-
-Compatibility testing of additional USB–UART devices is ongoing. Models still under evaluation should not yet be considered verified; results will be documented when testing is complete.
+The current status of verified, under-test and not-yet-verified adapters is published in the [public USB–UART compatibility list](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html). Always check it before purchasing. The exact breakout board must physically expose CTS, GND and RTS; the chip name alone does not guarantee compatibility.
 
 ### Connectors
 
@@ -75,5 +67,5 @@ Compatibility testing of additional USB–UART devices is ongoing. Models still 
 ### Images to add later
 - Photos of Con1 and Con2 with viewing orientation.
 - The project's verified wiring diagram.
-- USB–UART adapter photo (the currently reliable FTDI FT232R model).
+- USB–UART adapter photo (illustrative only; check the compatibility list before purchasing).
 - Radio-side connector details.
