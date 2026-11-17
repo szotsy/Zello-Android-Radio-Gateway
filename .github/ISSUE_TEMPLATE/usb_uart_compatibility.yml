@@ -8,7 +8,7 @@ body:
       value: |
         Köszönjük, hogy segítesz bővíteni az ellenőrzött USB–UART adapterek körét!
 
-        **Fontos:** a kérelem nem jelenti azt, hogy az adapter már támogatott. A kompatibilitás csak dokumentált teszt után igazolható. Az aktuális státuszokat a [központi kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) tartalmazza.
+        **Fontos:** a kérelem nem jelenti azt, hogy az adapter már támogatott. A kompatibilitás csak dokumentált teszt és karbantartói ellenőrzés után igazolható. A jelentés soha nem módosítja automatikusan a nyilvános státuszt. Az aktuális státuszokat a [központi kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) tartalmazza.
 
         Ne adj meg személyes adatot, privát rádióforgalmat vagy érzékeny frekvenciát. Feszültség alatt álló berendezést ne bonts meg.
   - type: input
@@ -75,13 +75,65 @@ body:
         - "Még nincs nálam az adapter"
     validations:
       required: true
+  - type: dropdown
+    id: usb_detection
+    attributes:
+      label: "Felismerte az adaptert az Android?"
+      options:
+        - "Igen"
+        - "Nem"
+        - "Nem teszteltem"
+    validations:
+      required: true
+  - type: dropdown
+    id: rts_result
+    attributes:
+      label: "RTS jel tesztje"
+      options:
+        - "Sikeres"
+        - "Sikertelen"
+        - "Nem teszteltem"
+    validations:
+      required: true
+  - type: dropdown
+    id: cts_result
+    attributes:
+      label: "CTS jel tesztje"
+      options:
+        - "Sikeres"
+        - "Sikertelen"
+        - "Nem teszteltem"
+    validations:
+      required: true
+  - type: dropdown
+    id: ptt_result
+    attributes:
+      label: "PTT vezérlés tesztje"
+      options:
+        - "Sikeres"
+        - "Sikertelen"
+        - "Nem teszteltem"
+    validations:
+      required: true
+  - type: dropdown
+    id: radio_result
+    attributes:
+      label: "Rádiós RX/TX teszt"
+      options:
+        - "Sikeres"
+        - "Sikertelen"
+        - "Nem teszteltem"
+    validations:
+      required: true
   - type: textarea
     id: notes
     attributes:
-      label: "Megjegyzés, tapasztalat, bekötés"
-      description: "Írd le az Android-felismerést és a használt rádióinterfészt."
+      label: "Tesztjegyzet és bekötés"
+      description: "Írd le a konkrét adapterpanelt, az Android-felismerést, a teszt menetét és eredményeit."
+    validations:
+      required: true
   - type: textarea
     id: photos
     attributes:
-      label: "Fénykép vagy további információ (opcionális)"
-      description: "Képet a GitHub issue létrehozása után is csatolhatsz."
+      label: "Bizonyíték (opcionális)"
+      description: "Az issue létrehozása után csatolj jól látható fotót az adapterpanelről és képernyőképeket a teszteredményekről. Takard ki a személyes adatokat."
