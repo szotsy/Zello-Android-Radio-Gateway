@@ -10,7 +10,8 @@
       "status": "verified",
       "note_hu": "Igazolt adapter. VID: 0403, PID: 6001. A kompatibilitás a megfelelő CTS/RTS kivezetésekkel rendelkező adapterpanelre vonatkozik.",
       "note_en": "Verified adapter. VID: 0403, PID: 6001. Compatibility applies to adapter boards with the required CTS/RTS pins exposed.",
-      "app_supported": true
+      "app_supported": true,
+      "engine_supported": true
     },
     {
       "name": "CH340G",
@@ -20,7 +21,8 @@
       "status": "verified",
       "note_hu": "Igazolt adapter. Egy WCH CH340G adapterrel az RTS/CTS és a PTT működése sikeresen tesztelve. Az eredmény a tesztelt adapterre vonatkozik; az adapterpanelek kialakítása eltérhet.",
       "note_en": "Verified adapter. RTS/CTS and PTT operation successfully tested with one WCH CH340G adapter. This result applies to the tested adapter; breakout-board implementations may differ.",
-      "app_supported": true
+      "app_supported": true,
+      "engine_supported": true
     },
     {
       "name": "CP2102",
@@ -30,7 +32,8 @@
       "status": "not_verified",
       "note_hu": "Nincs közzétett kompatibilitási teszteredmény.",
       "note_en": "No compatibility test result has been published.",
-      "app_supported": false
+      "app_supported": false,
+      "engine_supported": true
     },
     {
       "name": "CP2102N",
@@ -40,7 +43,8 @@
       "status": "under_investigation",
       "note_hu": "Alternatív USB–UART adapter; teljes RTS/CTS-teszt még folyamatban.",
       "note_en": "Alternative USB–UART adapter; full RTS/CTS testing is pending.",
-      "app_supported": false
+      "app_supported": false,
+      "engine_supported": true
     },
     {
       "name": "FTDI FT231X",
@@ -50,7 +54,8 @@
       "status": "under_investigation",
       "note_hu": "FTDI-család bővítése; tesztelés alatt.",
       "note_en": "FTDI family expansion; testing in progress.",
-      "app_supported": false
+      "app_supported": false,
+      "engine_supported": true
     },
     {
       "name": "WCH CH340C",
@@ -60,7 +65,8 @@
       "status": "under_investigation",
       "note_hu": "CH340 család bővítése; tesztelés alatt.",
       "note_en": "CH340 family expansion; testing in progress.",
-      "app_supported": false
+      "app_supported": false,
+      "engine_supported": true
     },
     {
       "name": "Prolific PL2303GC",
@@ -70,7 +76,8 @@
       "status": "under_investigation",
       "note_hu": "További gyártó bevonása; tesztelés alatt.",
       "note_en": "Additional manufacturer; testing in progress.",
-      "app_supported": false
+      "app_supported": false,
+      "engine_supported": true
     }
   ]
 }
