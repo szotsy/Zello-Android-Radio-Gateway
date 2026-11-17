@@ -19,12 +19,14 @@ jobs:
     steps:
       - name: Resolve release tag
         id: release
+        env:
+          INPUT_RELEASE_TAG: ${{ inputs.release_tag }}
         shell: bash
         run: |
           if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
-            TAG="${{ inputs.release_tag }}"
+            TAG="$INPUT_RELEASE_TAG"
           else
-            TAG="${GITHUB_REF_NAME}"
+            TAG="$GITHUB_REF_NAME"
           fi
           if [[ ! "$TAG" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
             echo "::error::Release tag must use MAJOR.MINOR.PATCH format."
@@ -34,11 +36,12 @@ jobs:
           echo "source=Orfeusz.Gateway_Source_v${TAG}.zip" >> "$GITHUB_OUTPUT"
           echo "apk=Orfeusz.Gateway_v${TAG}.apk" >> "$GITHUB_OUTPUT"
 
-      - name: Set up Java 8
+      # The current Android SDK command-line tools require JDK 17.
+      - name: Set up Java 17 for Android SDK
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '8'
+          java-version: '17'
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
@@ -62,7 +65,10 @@ jobs:
             echo "::error::The source ZIP does not contain gradlew."
             exit 1
           fi
-          echo "PROJECT_DIR=$(dirname "$WRAPPER")" >> "$GITHUB_ENV"
+          PROJECT_DIR="$(dirname "$WRAPPER")"
+          test -f "$PROJECT_DIR/gradle/wrapper/gradle-wrapper.properties"
+          test -f "$PROJECT_DIR/app/build.gradle"
+          echo "PROJECT_DIR=$PROJECT_DIR" >> "$GITHUB_ENV"
 
       - name: Prepare signing keystore
         env:
@@ -71,6 +77,13 @@ jobs:
           test -n "$KEYSTORE_B64" || { echo "::error::Missing ANDROID_KEYSTORE_BASE64 secret."; exit 1; }
           echo "$KEYSTORE_B64" | base64 --decode > "$RUNNER_TEMP/orfeusz-release.jks"
           test -s "$RUNNER_TEMP/orfeusz-release.jks"
+
+      # AGP 4.0.1 / Gradle 6.1.1 are built with the Java 8 toolchain.
+      - name: Set up Java 8 for Gradle build
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '8'
 
       - name: Build unsigned Release APK
         working-directory: ${{ env.PROJECT_DIR }}
@@ -94,16 +107,30 @@ jobs:
             --ks-key-alias "$KEY_ALIAS" \
             --ks-pass env:STORE_PASSWORD \
             --key-pass env:KEY_PASSWORD \
-            --out "$RUNNER_TEMP/Orfeusz.Gateway_v${{ steps.release.outputs.tag }}.apk" \
+            --out "$RUNNER_TEMP/${{ steps.release.outputs.apk }}" \
             "$RUNNER_TEMP/aligned.apk"
-          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs "$RUNNER_TEMP/Orfeusz.Gateway_v${{ steps.release.outputs.tag }}.apk"
-          sha256sum "$RUNNER_TEMP/Orfeusz.Gateway_v${{ steps.release.outputs.tag }}.apk" > "$RUNNER_TEMP/Orfeusz.Gateway_v${{ steps.release.outputs.tag }}.apk.sha256"
+          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs "$RUNNER_TEMP/${{ steps.release.outputs.apk }}"
+          sha256sum "$RUNNER_TEMP/${{ steps.release.outputs.apk }}" > "$RUNNER_TEMP/${{ steps.release.outputs.apk }}.sha256"
 
-      - name: Upload signed APK to GitHub Release
+      - name: Upload signed APK and checksum
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release upload "${{ steps.release.outputs.tag }}" \
-            "$RUNNER_TEMP/Orfeusz.Gateway_v${{ steps.release.outputs.tag }}.apk" \
-            "$RUNNER_TEMP/Orfeusz.Gateway_v${{ steps.release.outputs.tag }}.apk.sha256" \
+            "$RUNNER_TEMP/${{ steps.release.outputs.apk }}" \
+            "$RUNNER_TEMP/${{ steps.release.outputs.apk }}.sha256" \
+            --repo "${{ github.repository }}" --clobber
+
+      # Publish the stable alias only after the signed APK has passed apksigner verification.
+      - name: Create and upload stable APK alias
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp "$RUNNER_TEMP/${{ steps.release.outputs.apk }}" "$RUNNER_TEMP/Orfeusz.Gateway.apk"
+          (cd "$RUNNER_TEMP" && sha256sum Orfeusz.Gateway.apk > Orfeusz.Gateway.apk.sha256)
+          cmp --silent "$RUNNER_TEMP/${{ steps.release.outputs.apk }}" "$RUNNER_TEMP/Orfeusz.Gateway.apk"
+          (cd "$RUNNER_TEMP" && sha256sum --check Orfeusz.Gateway.apk.sha256)
+          gh release upload "${{ steps.release.outputs.tag }}" \
+            "$RUNNER_TEMP/Orfeusz.Gateway.apk" \
+            "$RUNNER_TEMP/Orfeusz.Gateway.apk.sha256" \
             --repo "${{ github.repository }}" --clobber
