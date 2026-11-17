@@ -50,11 +50,14 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Install Android 30 build tools
-        run: sdkmanager "platforms;android-30" "build-tools;30.0.3"
+      # GitHub-hosted Ubuntu images already include Android command-line tools.
+      # Avoid setup-android@v3: it requests the removed legacy "tools" package.
+      - name: Accept Android SDK licenses and install build tools
+        shell: bash
+        run: |
+          set -o pipefail
+          yes | sdkmanager --licenses
+          sdkmanager "platforms;android-30" "build-tools;30.0.3"
 
       - name: Download source archive from release
         env:
