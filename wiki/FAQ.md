@@ -5,7 +5,7 @@
 ## Magyar
 
 ### Milyen USB–UART adapter használható megbízhatóan?
-A rendszer jelenleg megbízhatóan az FTDI FT232R USB–UART adapterrel működik (VID 0403, PID 6001). Más USB–UART eszközök kompatibilitása még nem igazolt.
+A használható adapterek aktuális státuszát a [USB–UART kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) mutatja. Vásárlás előtt ellenőrizd a konkrét típust és azt, hogy a panelen a CTS, GND és RTS jelek elérhetők-e.
 
 ### Hol tölthetem le az alkalmazást?
 A [legfrissebb stabil APK innen tölthető le](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk).
@@ -19,7 +19,7 @@ A [Hardver és bekötés](Hardware-and-wiring.md) oldalon. A csatlakozó tájol�
 ## English
 
 ### Which USB–UART adapter is currently reliable?
-The system currently operates reliably with the FTDI FT232R USB–UART adapter (VID 0403, PID 6001). Compatibility with other USB–UART devices has not yet been verified.
+See the [USB–UART compatibility list](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html) for current adapter status. Before purchasing, verify the exact model and make sure CTS, GND and RTS are physically exposed on the breakout board.
 
 ### Where can I download the app?
 Download the [latest stable APK here](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk).
