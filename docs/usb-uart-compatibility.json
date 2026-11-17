@@ -16,8 +16,8 @@
     {
       "name": "CH340G",
       "chip": "CH340G",
-      "vid": null,
-      "pid": null,
+      "vid": "1A86",
+      "pid": "7523",
       "status": "verified",
       "note_hu": "Igazolt adapter. Egy WCH CH340G adapterrel az RTS/CTS és a PTT működése sikeresen tesztelve. Az eredmény a tesztelt adapterre vonatkozik; az adapterpanelek kialakítása eltérhet.",
       "note_en": "Verified adapter. RTS/CTS and PTT operation successfully tested with one WCH CH340G adapter. This result applies to the tested adapter; breakout-board implementations may differ.",
@@ -30,10 +30,10 @@
       "vid": null,
       "pid": null,
       "status": "not_verified",
-      "note_hu": "Nincs közzétett kompatibilitási teszteredmény.",
-      "note_en": "No compatibility test result has been published.",
+      "note_hu": "Nincs közzétett kompatibilitási teszteredmény. Az aktuális alkalmazás USB-engine-je még nem engedélyezi.",
+      "note_en": "No compatibility test result has been published. The current application USB engine does not enable this adapter yet.",
       "app_supported": false,
-      "engine_supported": true
+      "engine_supported": false
     },
     {
       "name": "CP2102N",
@@ -41,10 +41,10 @@
       "vid": null,
       "pid": null,
       "status": "under_investigation",
-      "note_hu": "Alternatív USB–UART adapter; teljes RTS/CTS-teszt még folyamatban.",
-      "note_en": "Alternative USB–UART adapter; full RTS/CTS testing is pending.",
+      "note_hu": "Alternatív USB–UART adapter; teljes RTS/CTS-teszt még folyamatban. Az aktuális alkalmazás USB-engine-je még nem engedélyezi.",
+      "note_en": "Alternative USB–UART adapter; full RTS/CTS testing is pending. The current application USB engine does not enable this adapter yet.",
       "app_supported": false,
-      "engine_supported": true
+      "engine_supported": false
     },
     {
       "name": "FTDI FT231X",
@@ -52,10 +52,10 @@
       "vid": null,
       "pid": null,
       "status": "under_investigation",
-      "note_hu": "FTDI-család bővítése; tesztelés alatt.",
-      "note_en": "FTDI family expansion; testing in progress.",
+      "note_hu": "FTDI-család bővítése; tesztelés alatt. Az aktuális alkalmazás USB-engine-je még nem engedélyezi.",
+      "note_en": "FTDI family expansion; testing in progress. The current application USB engine does not enable this adapter yet.",
       "app_supported": false,
-      "engine_supported": true
+      "engine_supported": false
     },
     {
       "name": "WCH CH340C",
@@ -63,10 +63,10 @@
       "vid": null,
       "pid": null,
       "status": "under_investigation",
-      "note_hu": "CH340 család bővítése; tesztelés alatt.",
-      "note_en": "CH340 family expansion; testing in progress.",
+      "note_hu": "CH340 család bővítése; tesztelés alatt. Az aktuális alkalmazás USB-engine-je még nem engedélyezi.",
+      "note_en": "CH340 family expansion; testing in progress. The current application USB engine does not enable this adapter yet.",
       "app_supported": false,
-      "engine_supported": true
+      "engine_supported": false
     },
     {
       "name": "Prolific PL2303GC",
@@ -74,10 +74,10 @@
       "vid": null,
       "pid": null,
       "status": "under_investigation",
-      "note_hu": "További gyártó bevonása; tesztelés alatt.",
-      "note_en": "Additional manufacturer; testing in progress.",
+      "note_hu": "További gyártó bevonása; tesztelés alatt. Az aktuális alkalmazás USB-engine-je még nem engedélyezi.",
+      "note_en": "Additional manufacturer; testing in progress. The current application USB engine does not enable this adapter yet.",
       "app_supported": false,
-      "engine_supported": true
+      "engine_supported": false
     }
   ]
 }
