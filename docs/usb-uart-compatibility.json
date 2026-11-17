@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-11-16",
+  "last_updated": "2026-11-17",
   "adapters": [
     {
       "name": "FTDI FT232R",
@@ -8,8 +8,8 @@
       "vid": "0403",
       "pid": "6001",
       "status": "verified",
-      "note_hu": "Jelenleg ezzel az adapterrel igazolt a megbízható működés.",
-      "note_en": "Reliable operation is currently verified with this adapter."
+      "note_hu": "Igazolt adapter. VID: 0403, PID: 6001. A kompatibilitás a megfelelő CTS/RTS kivezetésekkel rendelkező adapterpanelre vonatkozik.",
+      "note_en": "Verified adapter. VID: 0403, PID: 6001. Compatibility applies to adapter boards with the required CTS/RTS pins exposed."
     },
     {
       "name": "CH340G",
@@ -17,8 +17,8 @@
       "vid": null,
       "pid": null,
       "status": "verified",
-      "note_hu": "Egy WCH CH340G adapterrel az RTS/CTS és a PTT működése sikeresen tesztelve. Az eredmény a tesztelt adapterre vonatkozik; az adapterpanelek kialakítása eltérhet.",
-      "note_en": "RTS/CTS and PTT operation successfully tested with one WCH CH340G adapter. This result applies to the tested adapter; breakout-board implementations may differ."
+      "note_hu": "Igazolt adapter. Egy WCH CH340G adapterrel az RTS/CTS és a PTT működése sikeresen tesztelve. Az eredmény a tesztelt adapterre vonatkozik; az adapterpanelek kialakítása eltérhet.",
+      "note_en": "Verified adapter. RTS/CTS and PTT operation successfully tested with one WCH CH340G adapter. This result applies to the tested adapter; breakout-board implementations may differ."
     },
     {
       "name": "CP2102",
