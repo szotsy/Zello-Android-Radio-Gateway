@@ -17,9 +17,11 @@ body:
       label: "Az alkalmazásban támogatott adapter"
       description: "Csak az engine-ben jelenleg engedélyezett adapterek választhatók."
       options:
-      # USB_UART_OPTIONS_START        - "FTDI FT232R"
+      # USB_UART_OPTIONS_START
+        - "FTDI FT232R"
         - "CH340G"
-        - "Silicon Labs CP2102 / CP2102N"      # USB_UART_OPTIONS_END
+        - "Silicon Labs CP2102 / CP2102N"
+      # USB_UART_OPTIONS_END
     validations:
       required: true
   - type: input
