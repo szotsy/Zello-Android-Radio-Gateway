@@ -73,6 +73,56 @@ def main():
     adapters = data.get("adapters")
     if not isinstance(adapters, list) or not adapters:
         raise SystemExit("Registry must contain a non-empty adapters array")
+
+    manifest_path = ROOT / "app/src/main/assets/usb-uart-adapters.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    engine_adapters = manifest.get("adapters")
+    if not isinstance(engine_adapters, list):
+        raise SystemExit("Engine manifest must contain an adapters array")
+
+    by_vid_pid = {}
+    for item in engine_adapters:
+        vid = str(item.get("vid", "")).upper().replace("0X", "")
+        pid = str(item.get("pid", "")).upper().replace("0X", "")
+        if not item.get("id") or not item.get("display_name") or len(vid) != 4 or len(pid) != 4:
+            raise SystemExit(f"Invalid engine adapter profile: {item}")
+        if item.get("engine_supported") is not True:
+            raise SystemExit(f"Manifest entry is present but engine_supported is not true: {item.get('id')}")
+        key = (vid, pid)
+        if key in by_vid_pid:
+            raise SystemExit(f"Duplicate engine VID/PID: {vid}:{pid}")
+        by_vid_pid[key] = item
+
+    registry_by_vid_pid = {}
+    for adapter in adapters:
+        if adapter.get("vid") and adapter.get("pid"):
+            registry_by_vid_pid[(str(adapter["vid"]).upper(), str(adapter["pid"]).upper())] = adapter
+
+    for adapter in adapters:
+        key = (str(adapter.get("vid") or "").upper(), str(adapter.get("pid") or "").upper())
+        engine_item = by_vid_pid.get(key)
+        adapter["engine_supported"] = engine_item is not None
+        adapter["app_supported"] = engine_item is not None
+        if engine_item:
+            adapter["chip"] = engine_item["display_name"]
+            adapter["vid"], adapter["pid"] = key
+
+    for (vid, pid), item in by_vid_pid.items():
+        if (vid, pid) not in registry_by_vid_pid:
+            created = {
+                "name": item["display_name"],
+                "chip": item["display_name"],
+                "vid": vid,
+                "pid": pid,
+                "status": "not_verified",
+                "note_hu": "Az alkalmazás közös USB-UART engine-je támogatja; fizikai adapterteszt még nincs jóváhagyva.",
+                "note_en": "Supported by the common application USB-UART engine; physical adapter testing has not yet been approved.",
+                "app_supported": True,
+                "engine_supported": True
+            }
+            adapters.append(created)
+            registry_by_vid_pid[(vid, pid)] = created
+
     names = set()
     for a in adapters:
         if not a.get("name") or not a.get("chip"):
@@ -81,14 +131,12 @@ def main():
         if key in names:
             raise SystemExit(f"Duplicate adapter name: {a['name']}")
         names.add(key)
-        if a.get("engine_supported") and a.get("app_supported"):
-            if not a.get("vid") or not a.get("pid"):
-                raise SystemExit(f"Engine-enabled adapter requires VID/PID: {a['name']}")
+
     update_html(HU, adapters, "hu")
     update_html(EN, adapters, "en")
     update_form(HU_FORM, adapters)
     update_form(EN_FORM, adapters)
-    print(f"Generated compatibility pages and issue forms for {len(adapters)} adapters.")
+    print(f"Generated compatibility pages and issue forms for {len(adapters)} adapters; {len(by_vid_pid)} enabled in engine.")
 
 if __name__ == "__main__":
     main()
