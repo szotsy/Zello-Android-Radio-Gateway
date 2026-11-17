@@ -1,18 +1,32 @@
 {
   "schema_version": 1,
-  "description": "Only USB-UART adapters explicitly enabled by the Orfeusz Gateway application engine belong in this list.",
   "adapters": [
     {
-      "name": "FTDI FT232R",
-      "chip": "FT232R",
+      "id": "ftdi-ft232r",
+      "display_name": "FTDI FT232R",
       "vid": "0403",
-      "pid": "6001"
+      "pid": "6001",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
     },
     {
-      "name": "CH340G",
-      "chip": "CH340G",
+      "id": "wch-ch340g",
+      "display_name": "WCH CH340G",
       "vid": "1A86",
-      "pid": "7523"
+      "pid": "7523",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "silabs-cp2102",
+      "display_name": "Silicon Labs CP2102/CP2102N",
+      "vid": "10C4",
+      "pid": "EA60",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
     }
   ]
 }
