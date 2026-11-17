@@ -3,10 +3,6 @@ name: Build signed Android release
 on:
   release:
     types: [published]
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/build-signed-release.yml"
   workflow_dispatch:
     inputs:
       release_tag:
@@ -63,7 +59,7 @@ jobs:
             exit 1
           fi
           yes | "$SDKMANAGER" --licenses || true
-          "$SDKMANAGER" "platforms;android-30" "build-tools;30.0.3"
+          "$SDKMANAGER" "platforms;android-35" "build-tools;35.0.0"
 
       - name: Download source archive from release
         env:
@@ -100,13 +96,6 @@ jobs:
           echo "$KEYSTORE_B64" | base64 --decode > "$RUNNER_TEMP/orfeusz-release.jks"
           test -s "$RUNNER_TEMP/orfeusz-release.jks"
 
-      # AGP 4.0.1 / Gradle 6.1.1 are built with the Java 8 toolchain.
-      - name: Set up Java 8 for Gradle build
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: '8'
-
       - name: Build unsigned Release APK
         working-directory: ${{ env.PROJECT_DIR }}
         run: |
@@ -122,7 +111,7 @@ jobs:
         run: |
           UNSIGNED="$(find app/build/outputs/apk/release -type f -name '*.apk' ! -name '*unaligned*' -print -quit)"
           test -n "$UNSIGNED" || { echo "::error::Release APK was not produced."; exit 1; }
-          BUILD_TOOLS="$ANDROID_HOME/build-tools/30.0.3"
+          BUILD_TOOLS="$ANDROID_HOME/build-tools/35.0.0"
           "$BUILD_TOOLS/zipalign" -f -v 4 "$UNSIGNED" "$RUNNER_TEMP/aligned.apk"
           "$BUILD_TOOLS/apksigner" sign \
             --ks "$RUNNER_TEMP/orfeusz-release.jks" \
