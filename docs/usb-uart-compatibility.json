@@ -30,10 +30,10 @@
       "vid": "10C4",
       "pid": "EA60",
       "status": "not_verified",
-      "note_hu": "Közös CP2102/CP2102N adaptercsalád. Az alkalmazás aktuális USB-engine-jében nincs engedélyezve; kompatibilitási teszteredmény még nincs közzétéve.",
-      "note_en": "Combined CP2102/CP2102N adapter family. It is not enabled in the current application USB engine; no compatibility test result has been published.",
-      "app_supported": false,
-      "engine_supported": false
+      "note_hu": "A CP2102/CP2102N adaptercsalád engedélyezve van az alkalmazás közös USB-UART engine-jében (VID: 10C4, PID: EA60). A tényleges adapterpanel RTS/CTS és PTT működése még nincs igazolva.",
+      "note_en": "The CP2102/CP2102N adapter family is enabled in the application's common USB-UART engine (VID: 10C4, PID: EA60). Actual RTS/CTS and PTT operation has not yet been verified on a physical adapter board.",
+      "app_supported": true,
+      "engine_supported": true
     },
     {
       "name": "FTDI FT231X",
