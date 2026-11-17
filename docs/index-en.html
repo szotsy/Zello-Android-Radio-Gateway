@@ -166,6 +166,7 @@
   const sizeWrap=text('download-file-size-wrap');
   const sizeEl=text('download-file-size');
   const metadata=text('software-metadata');
+  const downloadButton=document.querySelector('.download-primary');
   const repo='szotsy/Zello-Android-Radio-Gateway';
   try{
     const response=await fetch('https://api.github.com/repos/'+repo+'/releases/latest?cachebust='+Date.now(),{cache:'no-store',headers:{'Accept':'application/vnd.github+json'}});
@@ -177,7 +178,6 @@
     const body=release.body||'';
     const codeMatch=body.match(/(?:version\s*code|versionCode)\s*[:：]\s*(\d+)/i);
     const asset=(release.assets||[]).find(a=>a.name==='Orfeusz.Gateway.apk')||(release.assets||[]).find(a=>/^Orfeusz\.Gateway.*\.apk$/i.test(a.name||''));
-    const downloadButton=document.querySelector('.download-primary');
     if(downloadButton&&asset&&asset.browser_download_url)downloadButton.href=asset.browser_download_url;
     if(versionEl){
       versionEl.replaceChildren();
