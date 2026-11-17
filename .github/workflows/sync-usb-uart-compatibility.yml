@@ -1,0 +1,91 @@
+name: Sync USB-UART compatibility registry
+
+on:
+  push:
+    paths:
+      - 'app/src/main/assets/usb-uart-adapters.json'
+      - '.github/workflows/sync-usb-uart-compatibility.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-registry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync engine adapters into public registry
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const manifestPath = 'app/src/main/assets/usb-uart-adapters.json';
+            const registryPath = 'docs/usb-uart-compatibility.json';
+
+            async function readJson(path) {
+              const { data } = await github.rest.repos.getContent({
+                owner: context.repo.owner, repo: context.repo.repo, path
+              });
+              return {
+                value: JSON.parse(Buffer.from(data.content, 'base64').toString('utf8')),
+                sha: data.sha
+              };
+            }
+
+            const { value: manifest } = await readJson(manifestPath);
+            const { value: registry, sha } = await readJson(registryPath);
+            if (!Array.isArray(manifest.adapters)) {
+              core.setFailed('Engine manifest must contain an adapters array.');
+              return;
+            }
+
+            const existing = new Map(registry.adapters.map(a => [a.name.toLowerCase(), a]));
+            const engineNames = new Set();
+
+            for (const item of manifest.adapters) {
+              if (!item.name || !item.chip || !/^[0-9A-Fa-f]{4}$/.test(item.vid) ||
+                  !/^[0-9A-Fa-f]{4}$/.test(item.pid)) {
+                core.setFailed('Every engine adapter must have name, chip, four-digit VID and four-digit PID: ' + JSON.stringify(item));
+                return;
+              }
+              const key = item.name.toLowerCase();
+              engineNames.add(key);
+              const prior = existing.get(key);
+              if (prior) {
+                prior.chip = item.chip;
+                prior.vid = item.vid.toUpperCase();
+                prior.pid = item.pid.toUpperCase();
+                prior.engine_supported = true;
+                prior.app_supported = true;
+              } else {
+                const created = {
+                  name: item.name,
+                  chip: item.chip,
+                  vid: item.vid.toUpperCase(),
+                  pid: item.pid.toUpperCase(),
+                  status: 'not_verified',
+                  note_hu: 'Az alkalmazás USB-engine-je támogatja; kompatibilitási teszt még nem érkezett.',
+                  note_en: 'Supported by the application USB engine; no compatibility test has been approved yet.',
+                  app_supported: true,
+                  engine_supported: true
+                };
+                registry.adapters.push(created);
+                existing.set(key, created);
+              }
+            }
+
+            for (const adapter of registry.adapters) {
+              if (!engineNames.has(adapter.name.toLowerCase())) {
+                adapter.engine_supported = false;
+                adapter.app_supported = false;
+              }
+            }
+
+            registry.last_updated = new Date().toISOString().slice(0, 10);
+            await github.rest.repos.createOrUpdateFileContents({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              path: registryPath,
+              message: 'Sync USB-UART compatibility registry from app engine manifest',
+              content: Buffer.from(JSON.stringify(registry, null, 2) + '\n').toString('base64'),
+              sha
+            });
