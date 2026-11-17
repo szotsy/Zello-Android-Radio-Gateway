@@ -229,7 +229,7 @@
     if(notesEl){
       const marker='🇭🇺 Magyar';
       const chunk=body.split(/\n\s*---\s*\n/).find(part=>part.includes(marker));
-      if(!chunk)throw new Error('Localized release notes not found');
+      if(!chunk){notesEl.textContent='A kiadási megjegyzések jelenleg nem érhetők el.';return;}
       const lines=chunk.split(/\r?\n/).map(line=>line.trim()).filter(Boolean);
       const nodes=[];
       let list=null;
