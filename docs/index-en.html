@@ -208,7 +208,7 @@
     if(notesEl){
       const marker='🇬🇧 English';
       const chunk=body.split(/\n\s*---\s*\n/).find(part=>part.includes(marker));
-      if(!chunk)throw new Error('Localized release notes not found');
+      if(!chunk){notesEl.textContent='Release notes are currently unavailable.';return;}
       const lines=chunk.split(/\r?\n/).map(line=>line.trim()).filter(Boolean);
       const nodes=[];
       let list=null;
