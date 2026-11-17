@@ -5,8 +5,9 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/latest-apk-alias.yml"
-  release:
-    types: [published]
+  workflow_run:
+    workflows: ["Build signed Android release"]
+    types: [completed]
   workflow_dispatch:
     inputs:
       release_tag:
@@ -21,7 +22,7 @@ jobs:
   publish-stable-apk-alias:
     # The /releases/latest/download URL must always point to a stable release,
     # not to a prerelease.
-    if: github.event_name == 'workflow_dispatch' || !github.event.release.prerelease
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') || github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Resolve release tag and APK filename
@@ -34,6 +35,8 @@ jobs:
             TAG="${{ inputs.release_tag }}"
           elif [[ "${GITHUB_EVENT_NAME}" == "push" ]]; then
             TAG="$(gh release view --repo "${GITHUB_REPOSITORY}" --json tagName --jq .tagName)"
+          elif [[ "${GITHUB_EVENT_NAME}" == "workflow_run" ]]; then
+            TAG="${{ github.event.workflow_run.head_branch }}"
           else
             TAG="${GITHUB_REF_NAME}"
           fi
