@@ -8,7 +8,7 @@ body:
       value: |
         Thank you for helping expand the verified USB–UART adapter list.
 
-        **Important:** a request does not mean the adapter is supported. Compatibility is confirmed only after documented testing. Current adapter statuses are maintained in the [central compatibility registry](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html).
+        **Important:** a request does not mean the adapter is supported. Compatibility is confirmed only after documented testing and maintainer review. Reports never change the public status automatically. Current adapter statuses are maintained in the [central compatibility registry](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html).
 
         Do not post personal information, private radio traffic or sensitive frequencies. Never open powered equipment.
   - type: input
@@ -75,13 +75,65 @@ body:
         - "I do not have the adapter yet"
     validations:
       required: true
+  - type: dropdown
+    id: usb_detection
+    attributes:
+      label: "Was the adapter detected by Android?"
+      options:
+        - "Yes"
+        - "No"
+        - "Not tested"
+    validations:
+      required: true
+  - type: dropdown
+    id: rts_result
+    attributes:
+      label: "RTS signal test"
+      options:
+        - "Passed"
+        - "Failed"
+        - "Not tested"
+    validations:
+      required: true
+  - type: dropdown
+    id: cts_result
+    attributes:
+      label: "CTS signal test"
+      options:
+        - "Passed"
+        - "Failed"
+        - "Not tested"
+    validations:
+      required: true
+  - type: dropdown
+    id: ptt_result
+    attributes:
+      label: "PTT control test"
+      options:
+        - "Passed"
+        - "Failed"
+        - "Not tested"
+    validations:
+      required: true
+  - type: dropdown
+    id: radio_result
+    attributes:
+      label: "Radio RX/TX test"
+      options:
+        - "Passed"
+        - "Failed"
+        - "Not tested"
+    validations:
+      required: true
   - type: textarea
     id: notes
     attributes:
-      label: "Notes, experience and wiring"
-      description: "Describe Android detection and the radio interface you intend to use."
+      label: "Test notes and wiring"
+      description: "Describe the exact adapter board, Android detection, test procedure and results."
+    validations:
+      required: true
   - type: textarea
     id: photos
     attributes:
-      label: "Photos or additional information (optional)"
-      description: "You can also attach images after creating the issue."
+      label: "Evidence (optional)"
+      description: "After creating the issue, attach clear photos of the adapter board and screenshots of test results. Hide personal information."
