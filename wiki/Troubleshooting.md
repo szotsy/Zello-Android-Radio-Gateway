@@ -6,7 +6,7 @@
 
 ### Az USB–UART adapter nem jelenik meg
 - Ellenőrizd az USB-kábelt és az OTG/USB-csatlakozást.
-- A megbízható működés jelenleg az FTDI FT232R adapterrel igazolt (VID 0403, PID 6001); más adapterek kompatibilitása még nem igazolt.
+- Ellenőrizd az adapter aktuális státuszát a [kompatibilitási listán](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html). A konkrét panelen a CTS, GND és RTS jeleknek elérhetőknek kell lenniük.
 - Csatlakoztatáskor fogadd el az Android USB-engedélykérését, ha megjelenik.
 
 ### Nincs rádióvétel (RX)
@@ -30,7 +30,7 @@ Ha a hiba továbbra is fennáll, a [GitHub hibabejelentő sablonok](https://gith
 
 ### USB–UART adapter is not detected
 - Check the USB cable and OTG/USB connection.
-- Reliable operation is currently verified with the FTDI FT232R adapter (VID 0403, PID 6001); other adapters are not yet verified.
+- Check the adapter status in the [compatibility list](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html). CTS, GND and RTS must be physically accessible on the exact breakout board.
 - Accept Android's USB permission prompt when it appears.
 
 ### No radio receive (RX)
