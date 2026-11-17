@@ -104,7 +104,6 @@ def main():
         adapter["engine_supported"] = engine_item is not None
         adapter["app_supported"] = engine_item is not None
         if engine_item:
-            adapter["chip"] = engine_item["display_name"]
             adapter["vid"], adapter["pid"] = key
 
     for (vid, pid), item in by_vid_pid.items():
