@@ -16,8 +16,8 @@
    const template=en?"usb_uart_compatibility_en.yml":"usb_uart_compatibility.yml";
    const title=(en?"[USB-UART TEST] ":"[USB-UART TESZT] ")+adapter.name;
    const reportUrl="https://github.com/szotsy/Zello-Android-Radio-Gateway/issues/new?template="+template+"&title="+encodeURIComponent(title);
-   const reportLabel=en?"Submit test report":"Tesztjelentés küldése";
-   return "<tr><td><strong>"+esc(adapter.name)+"</strong><br><small>"+esc(adapter.chip)+" USB–UART</small></td><td>"+id+"</td><td class=\"status "+(classes[adapter.status]||"pending")+"\">"+esc(labels[adapter.status]||adapter.status)+"</td><td>"+note+"</td><td><a class=\"report-link\" href=\""+esc(reportUrl)+"\" target=\"_blank\" rel=\"noopener\">"+reportLabel+"</a></td></tr>";
+   const reportCell=adapter.status==="verified"?"—":"<a class=\"report-link\" href=\""+esc(reportUrl)+"\" target=\"_blank\" rel=\"noopener\">"+(en?"Submit test report":"Tesztjelentés küldése")+"</a>";
+   return "<tr><td><strong>"+esc(adapter.name)+"</strong><br><small>"+esc(adapter.chip)+" USB–UART</small></td><td>"+id+"</td><td class=\"status "+(classes[adapter.status]||"pending")+"\">"+esc(labels[adapter.status]||adapter.status)+"</td><td>"+note+"</td><td>"+reportCell+"</td></tr>";
   }).join("");
   updated.textContent=(en?"Registry last updated: ":"A nyilvántartás utolsó frissítése: ")+esc(registry.last_updated||"");
  }catch(error){
