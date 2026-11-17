@@ -8,7 +8,7 @@ body:
       value: |
         Köszönjük, hogy segítesz bővíteni az ellenőrzött USB–UART adapterek körét!
 
-        **Fontos:** a kérelem nem jelenti azt, hogy az adapter már támogatott. A kompatibilitás csak dokumentált teszt után igazolható. Jelenleg az FTDI FT232R (VID: 0403, PID: 6001) működése igazolt.
+        **Fontos:** a kérelem nem jelenti azt, hogy az adapter már támogatott. A kompatibilitás csak dokumentált teszt után igazolható. Az aktuális státuszokat a [központi kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) tartalmazza.
 
         Ne adj meg személyes adatot, privát rádióforgalmat vagy érzékeny frekvenciát. Feszültség alatt álló berendezést ne bonts meg.
   - type: input
