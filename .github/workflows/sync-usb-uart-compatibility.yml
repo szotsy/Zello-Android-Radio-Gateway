@@ -42,4 +42,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/usb-uart-compatibility.html docs/usb-uart-compatibility-en.html .github/ISSUE_TEMPLATE/usb_uart_compatibility.yml .github/ISSUE_TEMPLATE/usb_uart_compatibility_en.yml
           git commit -m "Automate USB-UART compatibility pages and forms"
+          git pull --rebase origin main
           git push
