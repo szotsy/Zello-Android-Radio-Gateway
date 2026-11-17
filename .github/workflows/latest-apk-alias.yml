@@ -5,13 +5,10 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/latest-apk-alias.yml"
-  workflow_run:
-    workflows: ["Build signed Android release"]
-    types: [completed]
   workflow_dispatch:
     inputs:
       release_tag:
-        description: "Release tag containing the versioned APK (for example: 1.10.62)"
+        description: "Release tag containing the versioned APK (for example: 1.10.67)"
         required: true
         type: string
 
@@ -20,32 +17,24 @@ permissions:
 
 jobs:
   publish-stable-apk-alias:
-    # The /releases/latest/download URL must always point to a stable release,
-    # not to a prerelease.
-    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') || github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Resolve release tag and APK filename
         id: release
         env:
+          INPUT_RELEASE_TAG: ${{ inputs.release_tag }}
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
-            TAG="${{ inputs.release_tag }}"
-          elif [[ "${GITHUB_EVENT_NAME}" == "push" ]]; then
-            TAG="$(gh release view --repo "${GITHUB_REPOSITORY}" --json tagName --jq .tagName)"
-          elif [[ "${GITHUB_EVENT_NAME}" == "workflow_run" ]]; then
-            TAG="${{ github.event.workflow_run.head_branch }}"
+            TAG="$INPUT_RELEASE_TAG"
           else
-            TAG="${GITHUB_REF_NAME}"
+            TAG="$(gh release view --repo "${GITHUB_REPOSITORY}" --json tagName --jq .tagName)"
           fi
-
           if [[ ! "$TAG" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            echo "::error::Release tag must use MAJOR.MINOR.PATCH format (for example 1.10.62)."
+            echo "::error::Release tag must use MAJOR.MINOR.PATCH format."
             exit 1
           fi
-
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
           echo "apk=Orfeusz.Gateway_v${TAG}.apk" >> "$GITHUB_OUTPUT"
 
@@ -59,30 +48,19 @@ jobs:
             --repo "${{ github.repository }}" \
             --pattern "${{ steps.release.outputs.apk }}" \
             --dir dist
-
           APK="dist/${{ steps.release.outputs.apk }}"
-          if [[ ! -s "$APK" ]]; then
-            echo "::error::The versioned APK is missing or empty."
-            exit 1
-          fi
-          file "$APK"
+          test -s "$APK" || { echo "::error::The versioned APK is missing or empty."; exit 1; }
           unzip -tq "$APK"
           cp "$APK" dist/Orfeusz.Gateway.apk
           (cd dist && sha256sum Orfeusz.Gateway.apk > Orfeusz.Gateway.apk.sha256)
-
-      - name: Create and verify stable-name APK alias
-        shell: bash
-        run: |
-          cmp --silent "dist/${{ steps.release.outputs.apk }}" dist/Orfeusz.Gateway.apk
+          cmp --silent "$APK" dist/Orfeusz.Gateway.apk
           (cd dist && sha256sum --check Orfeusz.Gateway.apk.sha256)
-          echo "Validated APK size: $(stat -c%s dist/Orfeusz.Gateway.apk) bytes"
 
-      - name: Upload stable APK and SHA-256 checksum
+      - name: Upload stable APK and checksum
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release upload "${{ steps.release.outputs.tag }}" \
             dist/Orfeusz.Gateway.apk \
             dist/Orfeusz.Gateway.apk.sha256 \
-            --repo "${{ github.repository }}" \
-            --clobber
+            --repo "${{ github.repository }}" --clobber
