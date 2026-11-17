@@ -29,7 +29,7 @@ body:
     id: chip
     attributes:
       label: "USB–UART chip típusa"
-      placeholder: "CH340G, FT232R, CP2102..."
+      placeholder: "Az adapteren feltüntetett chip / típus"
     validations:
       required: true
   - type: input
