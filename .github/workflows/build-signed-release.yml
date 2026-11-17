@@ -3,6 +3,10 @@ name: Build signed Android release
 on:
   release:
     types: [published]
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/build-signed-release.yml"
   workflow_dispatch:
     inputs:
       release_tag:
@@ -25,6 +29,8 @@ jobs:
         run: |
           if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
             TAG="$INPUT_RELEASE_TAG"
+          elif [[ "${GITHUB_EVENT_NAME}" == "push" ]]; then
+            TAG="$(gh release view --repo "${GITHUB_REPOSITORY}" --json tagName --jq .tagName)"
           else
             TAG="$GITHUB_REF_NAME"
           fi
@@ -69,6 +75,12 @@ jobs:
           test -f "$PROJECT_DIR/gradle/wrapper/gradle-wrapper.properties"
           test -f "$PROJECT_DIR/app/build.gradle"
           echo "PROJECT_DIR=$PROJECT_DIR" >> "$GITHUB_ENV"
+          NOTES="source/project/RELEASE_NOTES_${{ steps.release.outputs.tag }}.txt"
+          if [[ -s "$NOTES" ]]; then
+            gh release edit "${{ steps.release.outputs.tag }}" --repo "${GITHUB_REPOSITORY}" --notes-file "$NOTES"
+          else
+            echo "::warning::Release notes file not found: $NOTES"
+          fi
 
       - name: Prepare signing keystore
         env:
