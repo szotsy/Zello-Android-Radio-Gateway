@@ -11,6 +11,16 @@ body:
         **Important:** a request does not mean the adapter is supported. Compatibility is confirmed only after documented testing and maintainer review. Reports never change the public status automatically. Current adapter statuses are maintained in the [central compatibility registry](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html).
 
         Do not post personal information, private radio traffic or sensitive frequencies. Never open powered equipment.
+  - type: dropdown
+    id: supported_adapter
+    attributes:
+      label: "Adapter supported by the app"
+      description: "Only adapters currently enabled in the app engine can be selected."
+      options:
+        - "FTDI FT232R"
+        - "CH340G"
+    validations:
+      required: true
   - type: input
     id: manufacturer
     attributes:
