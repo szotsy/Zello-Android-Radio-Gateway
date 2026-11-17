@@ -7,7 +7,7 @@
  const classes={verified:"verified",under_investigation:"testing",not_verified:"pending"};
  const esc=value=>String(value??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
  try{
-  const response=await fetch("./usb-uart-compatibility.json",{cache:"no-store"});
+  const response=await fetch("https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.json",{cache:"no-store"});
   if(!response.ok) throw new Error("HTTP "+response.status);
   const registry=await response.json();
   body.innerHTML=registry.adapters.map(adapter=>{
@@ -16,7 +16,7 @@
    const template=en?"usb_uart_compatibility_en.yml":"usb_uart_compatibility.yml";
    const title=(en?"[USB-UART TEST] ":"[USB-UART TESZT] ")+adapter.name;
    const reportUrl="https://github.com/szotsy/Zello-Android-Radio-Gateway/issues/new?template="+template+"&title="+encodeURIComponent(title);
-   const reportCell=adapter.status==="verified"?"<span class=\\\"verified-check\\\" role=\\\"img\\\" aria-label=\\\""+(en?"Verified":"Igazolt")+"\\\" title=\\\""+(en?"Verified":"Igazolt")+"\\\">✓</span>":(adapter.engine_supported===true?"<a class=\\\"report-link\\\" href=\\\""+esc(reportUrl)+"\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">"+(en?"Submit test report":"Tesztjelentés küldése")+"</a>":"<span class=\\\"pending\\\">"+(en?"Not supported by the current app engine":"A jelenlegi app engine nem támogatja")+"</span>");
+   const reportCell=adapter.status==="verified"?`<span class="verified-check" role="img" aria-label="${en?"Verified":"Igazolt"}" title="${en?"Verified":"Igazolt"}">✓</span>`:(adapter.engine_supported===true?`<a class="report-link" href="${esc(reportUrl)}" target="_blank" rel="noopener">${en?"Submit test report":"Tesztjelentés küldése"}</a>`:`<span class="pending">${en?"Not supported by the current app engine":"A jelenlegi app engine nem támogatja"}</span>`);
    return "<tr><td><strong>"+esc(adapter.name)+"</strong><br><small>"+esc(adapter.chip)+" USB–UART</small></td><td>"+id+"</td><td class=\"status "+(classes[adapter.status]||"pending")+"\">"+esc(labels[adapter.status]||adapter.status)+"</td><td>"+note+"</td><td>"+reportCell+"</td></tr>";
   }).join("");
   updated.textContent=(en?"Registry last updated: ":"A nyilvántartás utolsó frissítése: ")+esc(registry.last_updated||"");
