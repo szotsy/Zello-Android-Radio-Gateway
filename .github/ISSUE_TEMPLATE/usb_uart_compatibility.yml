@@ -11,6 +11,16 @@ body:
         **Fontos:** a kérelem nem jelenti azt, hogy az adapter már támogatott. A kompatibilitás csak dokumentált teszt és karbantartói ellenőrzés után igazolható. A jelentés soha nem módosítja automatikusan a nyilvános státuszt. Az aktuális státuszokat a [központi kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) tartalmazza.
 
         Ne adj meg személyes adatot, privát rádióforgalmat vagy érzékeny frekvenciát. Feszültség alatt álló berendezést ne bonts meg.
+  - type: dropdown
+    id: supported_adapter
+    attributes:
+      label: "Az alkalmazásban támogatott adapter"
+      description: "Csak az engine-ben jelenleg engedélyezett adapterek választhatók."
+      options:
+        - "FTDI FT232R"
+        - "CH340G"
+    validations:
+      required: true
   - type: input
     id: manufacturer
     attributes:
