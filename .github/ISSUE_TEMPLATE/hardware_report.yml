@@ -24,7 +24,7 @@ body:
     id: adapter
     attributes:
       label: "USB–UART adapter"
-      description: "A rendszer jelenleg megbízhatóan az FTDI FT232R adapterrel működik (VID 0403, PID 6001); más USB–UART eszközök kompatibilitása még nem igazolt. / The system currently operates reliably with the FTDI FT232R adapter (VID 0403, PID 6001); other USB–UART devices are not yet verified."
+      description: "Az adapterek aktuális állapotát a központi kompatibilitási lista tartalmazza; beküldés előtt ellenőrizd: https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html / Check the central compatibility registry for current adapter status before submitting: https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html"
       placeholder: "USB–UART adapter típusa / model"
     validations:
       required: true
