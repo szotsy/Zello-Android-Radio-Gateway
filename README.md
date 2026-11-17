@@ -56,7 +56,7 @@ If an earlier version is already installed, a newer official APK can normally be
 
 1. On first launch, review and grant the Android permissions actually requested by the application.
 2. Connect the USB–UART adapter to the radio interface and the Android device. Approve Android's USB-device access prompt.
-3. Radio operation requires the following hardware: a modified **Baofeng UV-5R or BF-888S**, a separate radio interface, and, for currently verified reliable operation, an FTDI FT232R adapter (VID: 0403, PID: 6001). See the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html) for the detailed connections.
+3. Radio operation requires the following hardware: a modified **Baofeng UV-5R or BF-888S**, a separate radio interface, and a USB–UART adapter listed on the public compatibility page. See the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html) for the detailed connections.
 4. The Zello app must also be installed and configured for use on the Android device.
 5. Check the connection status indicators in Orfeusz Gateway before starting radio traffic.
 
@@ -80,7 +80,7 @@ And the possibilities do not stop there. If another Zello gateway is operating i
 
 Orfeusz Gateway therefore **combines the simplicity of conventional radio with the geographical reach of the internet**, creating a genuine two-way communication link between radio and Zello.
 
-> **Important – additional radio hardware required:** a stock Baofeng radio and a simple connection cable are not sufficient. The setup requires a **modified Baofeng UV-5R or BF-888S radio**, a separate radio interface, and a USB–UART adapter connected to that interface. The system currently operates reliably with the **FTDI FT232R USB–UART adapter** (VID: 0403, PID: 6001). Compatibility with other USB–UART devices has not yet been verified. The radio interface wiring diagram and parts list are available in the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html); the [Hungarian guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) is also available.
+> **Important – additional radio hardware required:** a stock Baofeng radio and a simple connection cable are not sufficient. The setup requires a **modified Baofeng UV-5R or BF-888S radio**, a separate radio interface, and a USB–UART adapter connected to that interface. The current status of verified and under-test adapters is published in the [USB–UART compatibility list](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html). Always check it before purchasing and make sure the exact breakout board physically exposes CTS, GND and RTS. The radio interface wiring diagram and parts list are available in the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html); the [Hungarian guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) is also available.
 
 ## USB–UART adapter compatibility and testing requests
 
@@ -92,7 +92,7 @@ Request an evaluation through the [USB–UART compatibility request form](https:
 
 Orfeusz Gateway is an Android-based alternative to legacy radio gateways built around the PC version of the Zello client. With the retirement of the old PC client, you do not necessarily have to abandon a radio gateway you already own: Orfeusz Gateway can bring a compatible existing setup back into service by moving the gateway operation to an Android device.
 
-This lets you continue using your previously built radio system without relying on the PC-based Zello client, provided that its radio and interface hardware are compatible. **Important:** direct reuse depends on the existing hardware design; the application has currently been tested with a modified Baofeng UV-5R or BF-888S radio and a USB–UART adapter; reliable operation is currently verified with the FTDI FT232R.
+This lets you continue using your previously built radio system without relying on the PC-based Zello client, provided that its radio and interface hardware are compatible. **Important:** direct reuse depends on the existing hardware design; the application has currently been tested with a modified Baofeng UV-5R or BF-888S radio and a USB–UART adapter; operation depends on selecting an adapter from the compatibility list with the required CTS/RTS signals physically exposed.
 
 ## Compact, self-contained mobile gateway – no PC required
 
@@ -112,7 +112,7 @@ For field use, the equipment must be protected against rain, dust, overheating a
 
 - Modified Baofeng UV-5R or BF-888S radio.
 - Separate radio interface.
-- USB–UART adapter; reliable operation is currently verified with the FTDI FT232R (VID: 0403, PID: 6001).
+- USB–UART adapter; check the public compatibility list for verified and under-test models.
 - Compatibility testing of additional USB–UART devices is ongoing; the range of supported devices may expand as testing is completed.
 
 **Wiring documentation:** the radio interface diagram and detailed parts list are available in the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html). The [Hungarian guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) is also available.
@@ -257,21 +257,21 @@ APK: [Orfeusz.Gateway_v1.10.62.apk](https://github.com/szotsy/Zello-Android-Radi
 
 ### 🇬🇧 English
 
-**USB–UART adapter currently verified for reliable operation: FTDI FT232R – VID: 0403, PID: 6001.**
+**USB–UART adapters:** see the compatibility list for verified, under-test and not-yet-verified models.
 
-The system currently operates reliably with the FTDI FT232R USB–UART adapter (VID: 0403, PID: 6001). Compatibility with other USB–UART devices has not yet been verified.
+Always check the [public USB–UART compatibility list](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html) before purchasing. The exact breakout board must physically expose CTS, GND and RTS.
 
 ### 🇩🇪 Deutsch
 
 **Bestätigter Adapter: FTDI FT232R – VID: 0403, PID: 6001.**
 
-Die Anwendung wurde ausschließlich mit dem FTDI FT232R USB–UART-Adapter getestet und dessen Funktion bestätigt. Andere FTDI-Modelle, CH340G und sonstige USB–UART-Adapter sind nicht verifiziert; ihre Funktion ist nicht garantiert.
+Der aktuelle Prüfstatus der USB–UART-Adapter ist in der öffentlichen Kompatibilitätsliste dokumentiert. Vor dem Kauf bitte die Liste und die tatsächlich herausgeführten CTS-/RTS-Anschlüsse des konkreten Adapterboards prüfen.
 
 ### 🇷🇺 Русский
 
 **Проверенный адаптер: FTDI FT232R – VID: 0403, PID: 6001.**
 
-Работа приложения проверена и подтверждена только с USB–UART адаптером FTDI FT232R. Совместимость с другими моделями FTDI, CH340G и другими USB–UART адаптерами не подтверждена и не гарантируется.
+Актуальный статус проверки USB–UART адаптеров указан в публичном списке совместимости. Перед покупкой проверьте список и наличие реально выведенных линий CTS/RTS на конкретной плате адаптера.
 
 ## Radio gateway safety
 
