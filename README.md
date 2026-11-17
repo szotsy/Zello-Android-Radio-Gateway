@@ -50,7 +50,7 @@ The link above always downloads the installer from the latest stable release. Yo
 3. Return to the installer and tap **Install**.
 4. When installation is complete, open **Orfeusz Gateway**.
 
-If an earlier version is already installed, a newer official APK can normally be installed as an update. If Android reports a signature or package conflict, do not automatically uninstall the existing app; first verify that you downloaded the correct official release.
+**Important – one-time migration to the official 1.10.67 release:** The signing key changed when the project moved from debug-signed test builds to the official release-signing key. Android cannot install the 1.10.67 official APK as an update over an older installation signed with the previous debug key. Before installing 1.10.67 from the official project website, **uninstall the currently installed Orfeusz Gateway app**, then install the downloaded 1.10.67 APK. Uninstalling removes the app's local data and settings; make a note of any settings you need to restore before proceeding. This is a one-time migration: subsequent releases signed with the same official release key should install as normal updates.
 
 ### 3. First launch and radio connection
 
