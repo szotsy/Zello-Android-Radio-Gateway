@@ -18,9 +18,12 @@ jobs:
         with:
           script: |
             const issue = context.payload.issue;
-            const allowed = ['OWNER', 'MEMBER', 'COLLABORATOR'];
-            if (!allowed.includes(issue.author_association)) {
-              core.setFailed('Only a repository owner, member or collaborator may submit a report for approval.');
+            const actor = context.payload.sender?.login;
+            const permission = await github.rest.repos.getCollaboratorPermissionLevel({
+              owner: context.repo.owner, repo: context.repo.repo, username: actor
+            });
+            if (!['admin', 'write', 'maintain'].includes(permission.data.permission)) {
+              core.setFailed('Only a repository maintainer with write access may approve a compatibility report.');
               return;
             }
 
