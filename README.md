@@ -84,7 +84,7 @@ Orfeusz Gateway therefore **combines the simplicity of conventional radio with t
 
 ## USB–UART adapter compatibility and testing requests
 
-The [public compatibility list](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html) shows the current evaluation status. Reliable operation is verified with FTDI FT232R (VID: 0403, PID: 6001); CH340G is under investigation; CP2102 is not yet verified. “Not verified” does not mean incompatible.
+The [public compatibility list](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html) shows the current evaluation status. FTDI FT232R and one tested WCH CH340G adapter are verified; CP2102 is not yet verified, while additional models are under test. “Not verified” does not mean incompatible. Check the list for the latest per-model status.
 
 Request an evaluation through the [USB–UART compatibility request form](https://github.com/szotsy/Zello-Android-Radio-Gateway/issues/new?template=usb_uart_compatibility.yml). Requests are tracked as GitHub Issues.
 
@@ -263,13 +263,13 @@ Always check the [public USB–UART compatibility list](https://szotsy.github.io
 
 ### 🇩🇪 Deutsch
 
-**Bestätigter Adapter: FTDI FT232R – VID: 0403, PID: 6001.**
+**USB–UART-Adapter-Kompatibilität:** Den aktuellen Prüfstatus finden Sie in der öffentlichen Kompatibilitätsliste.
 
 Der aktuelle Prüfstatus der USB–UART-Adapter ist in der öffentlichen Kompatibilitätsliste dokumentiert. Vor dem Kauf bitte die Liste und die tatsächlich herausgeführten CTS-/RTS-Anschlüsse des konkreten Adapterboards prüfen.
 
 ### 🇷🇺 Русский
 
-**Проверенный адаптер: FTDI FT232R – VID: 0403, PID: 6001.**
+**Совместимость USB–UART адаптеров:** актуальный статус проверки приведён в публичном списке совместимости.
 
 Актуальный статус проверки USB–UART адаптеров указан в публичном списке совместимости. Перед покупкой проверьте список и наличие реально выведенных линий CTS/RTS на конкретной плате адаптера.
 
