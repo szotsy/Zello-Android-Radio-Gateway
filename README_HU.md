@@ -256,7 +256,7 @@ Vásárlás előtt ellenőrizd a [nyilvános USB–UART kompatibilitási listát
 
 ## USB–UART adapter-kompatibilitás és vizsgálati kérelem
 
-A [nyilvános kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) mutatja az adapterek aktuális vizsgálati állapotát. Az FTDI FT232R és egy tesztelt WCH CH340G adapter működése igazolt; a CP2102 még nem igazolt, míg további típusok tesztelés alatt állnak. A részletes, naprakész státuszokat mindig a kompatibilitási lista tartalmazza. A „nem igazolt” nem jelent inkompatibilitást.
+Az adapterek neveit, azonosítóit, tesztállapotát és megjegyzéseit a [központi USB–UART kompatibilitási nyilvántartás](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) szolgáltatja. Ez az egyetlen hiteles adatforrás; vásárlás előtt mindig ezt ellenőrizd.
 
 Új adapter vizsgálatát a [kompatibilitási kérelem űrlapján](https://github.com/szotsy/Zello-Android-Radio-Gateway/issues/new?template=usb_uart_compatibility.yml) kérheted. A kérelmek GitHub Issue-ként követhetők.
 
