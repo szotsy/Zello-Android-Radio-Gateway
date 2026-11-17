@@ -6,7 +6,7 @@
 
 ## Magyar
 
-Az Orfeusz Gateway egy Android-alapú alkalmazás, amely a Zello és egy külső rádió összekapcsolását szolgálja kompatibilis rádióinterfészen keresztül. A rendszer jelenleg megbízhatóan az FTDI FT232R USB–UART adapterrel működik; más USB–UART eszközök kompatibilitása még nem igazolt.
+Az Orfeusz Gateway egy Android-alapú alkalmazás, amely a Zello és egy külső rádió összekapcsolását szolgálja kompatibilis rádióinterfészen keresztül. Az adapterek aktuális igazolt és tesztelési státuszát a [USB–UART kompatibilitási lista](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility.html) tartalmazza.
 
 ### Gyors hivatkozások
 - [Telepítés](Installation.md)
@@ -20,7 +20,7 @@ Az Orfeusz Gateway egy Android-alapú alkalmazás, amely a Zello és egy külső
 
 ## English
 
-Orfeusz Gateway is an Android application designed to connect Zello with an external radio through a compatible radio interface. The system currently operates reliably with the FTDI FT232R USB–UART adapter; compatibility with other USB–UART devices has not yet been verified.
+Orfeusz Gateway is an Android application designed to connect Zello with an external radio through a compatible radio interface. See the [USB–UART compatibility list](https://szotsy.github.io/Zello-Android-Radio-Gateway/usb-uart-compatibility-en.html) for current verified and under-test adapter status.
 
 ### Quick links
 - [Installation](Installation.md)
