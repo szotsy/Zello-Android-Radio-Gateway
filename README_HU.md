@@ -31,7 +31,7 @@ A fenti hivatkozás mindig a legfrissebb stabil kiadás telepítőjét tölti le
 
 [Összes kiadás és korábbi verziók megtekintése](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases)
 
-> **Licenc:** a forráskód a **GNU GPL-3.0-only** licenc alatt érhető el. A kód a licenc feltételei szerint használható, módosítható és továbbterjeszthető; bináris változat terjesztésekor a GPL forráskódra és licencmegjelölésekre vonatkozó követelményeit is teljesíteni kell. A hivatalos licencszöveg az angol [LICENSE](LICENSE) fájlban található; magyar összefoglaló a [LICENC_HU.md](LICENC_HU.md), a külső összetevők jegyzéke a [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md), a márkaszabályzat pedig a [TRADEMARK.md](TRADEMARK.md) fájlban olvasható. A GPL nem ad engedélyt az Orfeusz Gateway név és embléma védjegyszerű használatára.
+> **Licenc:** az **1.10.72-es verziótól** a forráskód **GNU GPL-3.0-only** licenc alatt érhető el. A kód a licenc feltételei szerint használható, módosítható és továbbterjeszthető; bináris változat terjesztésekor a GPL forráskódra és licencmegjelölésekre vonatkozó követelményeit is teljesíteni kell. A korábbi kiadásokra az eredeti közzétételükkor mellékelt licencfeltételek vonatkoznak. A hivatalos licencszöveg az angol [LICENSE](LICENSE) fájlban található; magyar összefoglaló a [LICENC_HU.md](LICENC_HU.md), a váltás hatóköre a [LICENSING.md](LICENSING.md), a külső összetevők jegyzéke a [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md), a márkaszabályzat pedig a [TRADEMARK.md](TRADEMARK.md) fájlban olvasható. A GPL nem ad engedélyt az Orfeusz Gateway név és embléma védjegyszerű használatára.
 
 
 ## Letöltés és telepítés
