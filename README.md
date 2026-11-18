@@ -134,15 +134,19 @@ The following presentation images were AI-re-rendered from photographs of the or
 
 ## Screenshots
 
-The following screenshots show the Orfeusz Gateway interface and its radio/USB–UART status indicators.
+The following current application screenshots show the main gateway states and settings.
 
-| USB–UART disconnected | USB–UART connected / standby |
+| Receive gateway | No connection |
 |---|---|
-| ![USB–UART disconnected](docs/screenshots/Screenshot_20261114_134559.jpg) | ![USB–UART connected](docs/screenshots/Screenshot_20261114_134649.jpg) |
+| ![Receive gateway](images/Vetelezakapu.jpg) | ![No connection](images/Nincskapcsolat.jpg) |
 
-| Radio receiving | Radio transmitting |
+| Additional menu | Connected |
 |---|---|
-| ![Radio receiving](docs/screenshots/Screenshot_20261114_134721.jpg) | ![Radio transmitting](docs/screenshots/Screenshot_20261114_134735.jpg) |
+| ![Additional menu](images/Egyebekmenü.jpg) | ![Connected](images/Csatlakozva.jpg) |
+
+| Settings | Transmitting |
+|---|---|
+| ![Settings](images/Beállítások.jpg) | ![Transmitting](images/Adásbanakapu.jpg) |
 
 ## Android security warnings and permissions
 
