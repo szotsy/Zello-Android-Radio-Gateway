@@ -135,6 +135,16 @@ The following wiring applies to the **Baofeng UV-5R 5R-ver22 / 160402 mainboard 
 
 **Important:** wiring points may differ between mainboard revisions. Always identify and verify the points on your own radio before soldering. The radio’s original microphone and speaker must be removed.
 
+### Optional cooling – for continuous 24/7 operation
+
+Optional cooling can be added to the radio interface. Consider it if the gateway is intended to run continuously, including around the clock (24/7). It is not a required part of the basic circuit.
+
+![Orfeusz Gateway optional cooling – image 1](images/Opcionális1.jpg)
+
+![Orfeusz Gateway optional cooling – image 2](images/Opcionális2.jpg)
+
+See the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html) for the images and additional details.
+
 **Don't be intimidated by the build!** If you have soldered before, you should be able to assemble it by following the wiring diagrams with only basic soldering and electronics knowledge. You do not need advanced electronics skills – just a little patience and basic hands-on ability.
 
 **Repository:** `szotsy/Zello-Android-Radio-Gateway`  
