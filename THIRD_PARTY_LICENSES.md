@@ -48,7 +48,7 @@ by the project (8.6.1) is also distributed under the Apache License 2.0.
 These are build-time tools and are not bundled as application runtime
 libraries by the declared app dependency configuration.
 
-Apache License 2.0: https://www.apache.org/licenses/LICENSE-2.0
+The full Apache License 2.0 text is included at [licenses/Apache-2.0.txt](licenses/Apache-2.0.txt).
 
 ## Android platform
 
