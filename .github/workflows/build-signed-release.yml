@@ -83,9 +83,9 @@ jobs:
 
           # GPL-3.0-only licensing starts with the first post-transition release.
           # Keep historical release rebuilds possible, but require the full
-          # corresponding-source notices for 1.10.72 and every later version.
+          # corresponding-source notices for 1.10.75 and every later version.
           IFS=. read -r MAJOR MINOR PATCH <<< "${{ steps.release.outputs.tag }}"
-          if (( MAJOR > 1 || (MAJOR == 1 && MINOR > 10) || (MAJOR == 1 && MINOR == 10 && PATCH >= 72) )); then
+          if (( MAJOR > 1 || (MAJOR == 1 && MINOR > 10) || (MAJOR == 1 && MINOR == 10 && PATCH >= 75) )); then
             test -s "$PROJECT_DIR/LICENSE" || { echo "::error::GPL release source archive is missing LICENSE."; exit 1; }
             grep -q "GNU GENERAL PUBLIC LICENSE" "$PROJECT_DIR/LICENSE" || { echo "::error::LICENSE is not the expected GNU GPL text."; exit 1; }
             grep -q "Version 3" "$PROJECT_DIR/LICENSE" || { echo "::error::LICENSE does not identify GPL version 3."; exit 1; }
