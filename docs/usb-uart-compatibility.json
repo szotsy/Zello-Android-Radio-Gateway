@@ -68,5 +68,19 @@
       "app_supported": false,
       "engine_supported": false
     }
+  ],
+  "tested_devices": [
+    {
+      "name": "Samsung Galaxy S23",
+      "status": "tested"
+    },
+    {
+      "name": "Samsung Galaxy Tab A7",
+      "status": "tested"
+    },
+    {
+      "name": "Xiaomi Redmi Note 8",
+      "status": "tested"
+    }
   ]
 }
