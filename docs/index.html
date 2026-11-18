@@ -41,6 +41,7 @@
     .download-meta{display:flex;flex-wrap:wrap;gap:9px 18px;margin-top:12px;color:#c8c8c8;font-size:.92rem}
     .download-links{margin-top:9px;font-size:.93rem}
     @media(max-width:600px){.download-primary{display:flex;width:100%;text-align:center}.download-panel{padding:17px}}
+    .network-hub{margin:26px 0 30px;padding:22px;border:1px solid #8b431f;border-radius:14px;background:linear-gradient(135deg,#2a1b14,#1b1b1b)}.network-hub h2{margin:0 0 10px}.network-hub p{color:#e2e2e2}.network-hub .channel-link{display:inline-flex;align-items:center;justify-content:center;margin:8px 0 16px;padding:12px 18px;border-radius:9px;background:var(--orange);color:#111;font-weight:800}.channel-player{width:100%;height:180px;border:1px solid #444;border-radius:10px;background:#080808}
     .badges{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:20px 0}.badges img{display:block;width:auto;max-width:100%;height:28px;flex:0 0 auto;border:0;border-radius:0}
     section{padding:30px 0;border-top:1px solid var(--line)}h2{font-size:1.65rem;margin:0 0 14px}p{color:#ddd}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
@@ -99,6 +100,15 @@
           <a class="download-primary" href="https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk" aria-label="Orfeusz Gateway legfrissebb stabil APK letöltése">⬇ APK LETÖLTÉSE</a>
           <div class="download-meta"><span>Verzió: <strong id="download-version-meta">Betöltés…</strong></span><span id="download-version-code-wrap" hidden>Version Code: <strong id="download-version-code"></strong></span><span id="download-file-size-wrap" hidden>Fájlméret: <strong id="download-file-size"></strong></span><span>Minimum: <strong>Android 6.0</strong></span></div>
           <p class="download-links"><a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/releases">Korábbi verziók és kiadási megjegyzések</a> · <a href="https://github.com/szotsy/Zello-Android-Radio-Gateway/blob/main/README_HU.md#letöltés-és-telepítés">Telepítési útmutató</a></p>
+        <section class="network-hub" id="orfeusz-network">
+          <h2>Orfeusz Gateway – központi kapuhálózat</h2>
+          <p>Az <strong>Orfeusz Gateway</strong> Zello-csatorna a rendszer központi gyűjtőpontja: a különböző helyszíneken működő Orfeusz Gateway kapuk ezen a közös csatornán keresztül kapcsolódhatnak egymáshoz. Így a csatlakoztatott kapuk rádiós forgalma a hálózat többi résztvevője számára is elérhetővé válhat.</p>
+          <p><strong>Bármely Orfeusz Gateway üzemeltető kérheti a csatlakozást.</strong> A kapu csatlakoztatása és beszédjogának engedélyezése moderátori jóváhagyáshoz kötött. A csatorna nyilvánosan hallgatható, így böngészőből is követhető az éppen zajló forgalom.</p>
+          <a class="channel-link" href="https://zello.com/orfeuszgateway" target="_blank" rel="noopener noreferrer">Orfeusz Gateway csatorna megnyitása ↗</a>
+          <h3>Élő csatornahallgatás</h3>
+          <iframe class="channel-player" src="https://zello.com/channel-listen-widget?channel=orfeuszgateway" title="Orfeusz Gateway élő Zello-csatorna" loading="lazy" allow="autoplay"></iframe>
+          <p><small>Ha a beágyazott lejátszó nem jelenik meg, vagy a böngésző blokkolja a hangot, nyisd meg a csatornát közvetlenül a Zello oldalán.</small></p>
+        </section>
         </section>
         <div class="badges">
           <img src="https://img.shields.io/badge/ANDROID-3D3D3D?style=for-the-badge&logo=android&logoColor=white" alt="Android">
