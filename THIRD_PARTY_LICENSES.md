@@ -1,8 +1,8 @@
 # Third-party components and licences
 
-This file records third-party components identified in the Orfeusz Gateway
-1.10.71 source package and its Gradle build configuration. It is not a
-substitute for checking the exact dependency graph of a future release.
+This inventory was checked against the Orfeusz Gateway 1.10.74 source package
+and its Gradle build configuration. It is not a substitute for checking the
+resolved dependency graph of a future release.
 
 ## Runtime dependency
 
@@ -59,6 +59,6 @@ repository by the declared app dependency configuration.
 ## Maintenance note
 
 The list above is based on the dependencies explicitly declared in the
-1.10.71 source package. Before each release, inspect the resolved dependency
+1.10.74 source package. Before each release, inspect the resolved dependency
 graph and update this file if dependencies, versions, licences, or bundled
 components change. Preserve upstream copyright and licence notices.
