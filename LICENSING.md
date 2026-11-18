@@ -3,14 +3,15 @@
 ## Effective version
 
 The project adopts **GNU GPL-3.0-only starting with Orfeusz Gateway version
-1.10.72**. The complete, unmodified licence text is in [LICENSE](LICENSE).
+1.10.75**. The complete, unmodified licence text is in [LICENSE](LICENSE).
 
 This is a forward-looking licensing change. It does not retroactively change
 the licence terms under which earlier APKs or source archives were originally
-published. Releases earlier than 1.10.72 remain subject to the licence terms
-that accompanied those specific releases.
+published. Versions 1.10.72, 1.10.73, and 1.10.74 were already published under their
+original licence terms. Releases earlier than 1.10.75 remain subject to the
+licence terms that accompanied those specific releases.
 
-For version 1.10.72 and later, the matching source archive must include the
+For version 1.10.75 and later, the matching source archive must include the
 complete Android project source, this licensing documentation, the full
 LICENSE text, and third-party notices. The source archive must be made
 available alongside the corresponding APK.
