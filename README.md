@@ -217,11 +217,13 @@ The release tag and APK asset filename are separate values and both must match t
 
 I have tested the application on the following Android devices:
 
+<!-- TESTED_DEVICES_TABLE_START -->
 | Device | Test status |
 |---|---|
 | Samsung Galaxy S23 | Tested |
 | Samsung Galaxy Tab A7 | Tested |
 | Xiaomi Redmi Note 8 | Tested |
+<!-- TESTED_DEVICES_TABLE_END -->
 
 This list includes devices that have actually been tested. Compatibility with other devices and Android versions is not implied.
 
