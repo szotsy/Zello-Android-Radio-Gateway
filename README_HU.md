@@ -132,6 +132,16 @@ Az alábbi bekötés a **Baofeng UV-5R 5R-ver22 / 160402 alaplapváltozathoz** t
 
 **Fontos:** a bekötési pontok alaplapverziónként eltérhetnek. Forrasztás előtt minden esetben azonosítsd és ellenőrizd a pontokat a saját rádiódban! A rádió saját mikrofonját és hangszóróját el kell távolítani.
 
+### Opcionális hűtés – folyamatos, 0–24 órás üzemhez
+
+A rádióinterfészhez opcionális hűtés is kialakítható. Ezt akkor érdemes megfontolni, ha a gateway tartósan, folyamatosan, akár napi 24 órában fog működni. Az alapkapcsolásnak nem kötelező része.
+
+![Orfeusz Gateway opcionális hűtés – 1. kép](images/Opcionális1.jpg)
+
+![Orfeusz Gateway opcionális hűtés – 2. kép](images/Opcionális2.jpg)
+
+Részletek és a képek a [magyar bekötési útmutatóban](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) is megtalálhatók.
+
 **Nem kell megijedni az építéstől!** Ha forrasztottál már korábban, a kapcsolási rajzok alapján minimális forrasztási és elektronikai ismerettel is meg tudod építeni. Nem szükséges hozzá komoly elektronikai szaktudás – egy kis türelem és alapvető kézügyesség elegendő.
 
 - Csomagnév: `com.videotourzala.zellogateway`
