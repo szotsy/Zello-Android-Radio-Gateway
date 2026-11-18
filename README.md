@@ -29,7 +29,7 @@ The link above always downloads the installer from the latest stable release. Yo
 
 [View all releases and previous versions](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases)
 
-> **Licence:** this project uses a custom restrictive licence and is not distributed under an OSI-approved open-source licence. Use and unchanged redistribution of the APK are permitted; modifying the source code or distributing modified versions requires prior written permission. See [LICENSE](LICENSE) for the full terms.
+> **Licence:** this project uses a custom restrictive licence and is not distributed under an OSI-approved open-source licence. Use and unchanged redistribution of the APK are permitted; modifying the source code or distributing modified versions requires prior written permission. See [LICENSE](LICENSE) for the Hungarian original and [LICENSE_EN.md](LICENSE_EN.md) for the English translation.
 
 
 ## Download and installation
