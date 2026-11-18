@@ -136,6 +136,8 @@ Az alábbi bekötés a **Baofeng UV-5R 5R-ver22 / 160402 alaplapváltozathoz** t
 
 A rádióinterfészhez opcionális hűtés is kialakítható. Ezt akkor érdemes megfontolni, ha a gateway tartósan, folyamatosan, akár napi 24 órában fog működni. Az alapkapcsolásnak nem kötelező része.
 
+**Külső tápegység:** 0–24 órás üzemre kialakított rendszer esetén az UV-5R rádióhoz külön külső, **8,4 V / 2 A**-es tápegység szükséges.
+
 ![Orfeusz Gateway opcionális hűtés – 1. kép](images/Opcionális1.jpg)
 
 ![Orfeusz Gateway opcionális hűtés – 2. kép](images/Opcionális2.jpg)
