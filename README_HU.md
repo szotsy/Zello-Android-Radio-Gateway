@@ -212,11 +212,13 @@ A release tag és az APK neve egyezzen a kiadás verziójával. Például az 1.1
 
 Az alkalmazást az alábbi Android-eszközökön teszteltem:
 
+<!-- TESTED_DEVICES_TABLE_START -->
 | Készülék | Tesztállapot |
 |---|---|
 | Samsung Galaxy S23 | Tesztelve |
 | Samsung Galaxy Tab A7 | Tesztelve |
 | Xiaomi Redmi Note 8 | Tesztelve |
+<!-- TESTED_DEVICES_TABLE_END -->
 
 A felsorolás a ténylegesen tesztelt készülékeket tartalmazza. Más készülékeken és Android-verziókon a működés nincs automatikusan igazolva.
 
