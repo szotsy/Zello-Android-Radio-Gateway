@@ -139,6 +139,8 @@ The following wiring applies to the **Baofeng UV-5R 5R-ver22 / 160402 mainboard 
 
 Optional cooling can be added to the radio interface. Consider it if the gateway is intended to run continuously, including around the clock (24/7). It is not a required part of the basic circuit.
 
+**External power supply:** for a system configured for 24/7 operation, the UV-5R radio requires a separate external **8.4 V / 2 A** power supply.
+
 ![Orfeusz Gateway optional cooling – image 1](images/Opcionális1.jpg)
 
 ![Orfeusz Gateway optional cooling – image 2](images/Opcionális2.jpg)
