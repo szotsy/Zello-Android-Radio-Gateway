@@ -44,7 +44,7 @@ footer{padding:25px 0 45px;color:var(--muted)}@media(max-width:620px){.diagram{g
 <p>Az alábbi dokumentáció az Orfeusz Gateway optocsatolós rádióinterfészének bekötését és alkatrészeit mutatja be.</p>
 <section class="panel">
 <h2>Bekötési rajz</h2>
-<img src="./assets/OG-kapcsolasi-rajz.png" alt="Orfeusz Gateway optocsatolós rádióinterfész bekötési rajza" style="display:block;width:100%;height:auto;max-width:100%;object-fit:contain;background:#fff;border-radius:8px">
+<img class="wiring-diagram-img" tabindex="0" role="button" aria-label="A teljes Orfeusz Gateway rádióinterfész bekötési rajzának nagyítása" src="./assets/OG-kapcsolasi-rajz.png" alt="Orfeusz Gateway optocsatolós rádióinterfész bekötési rajza" style="display:block;width:100%;height:auto;max-width:100%;object-fit:contain;background:#fff;border-radius:8px">
 <p style="margin:10px 0 0;color:#bbb;font-size:.92rem;text-align:right">A rajzot EUROPA21 készítette ATI01DSZ rajza alapján.</p>
 </section>
 <section class="panel">
@@ -65,6 +65,7 @@ footer{padding:25px 0 45px;color:var(--muted)}@media(max-width:620px){.diagram{g
 <div class="pin"><b>1</b>Squelch</div><div class="pin"><b>2</b>GND</div><div class="pin"><b>3</b>PTT</div><div class="pin"><b>4</b>Speaker</div><div class="pin"><b>5</b>MIC</div>
 </div>
 <p>A számozás az eredeti, feltöltött interfészrajz szerinti kiosztást követi.</p>
+<p class="note"><strong>Közös GND:</strong> a rádióoldali Con1 2-es GND pontja és az USB–UART adapteroldali Con2 B pontja közös földelésen van.</p>
 </section>
 <section class="panel">
 <h2>USB–UART adapter felőli csatlakozó – Con2 (3 pólus)</h2>
@@ -112,7 +113,7 @@ footer{padding:25px 0 45px;color:var(--muted)}@media(max-width:620px){.diagram{g
  const close=document.getElementById('lightboxClose');
  function openImage(img){large.src=img.src;large.alt=img.alt;box.classList.add('open');document.body.style.overflow='hidden';close.focus();}
  function closeImage(){box.classList.remove('open');large.src='';document.body.style.overflow='';}
- document.querySelectorAll('.uv5r-pins ~ .parts img, .parts img[aria-label]').forEach(img=>{img.addEventListener('click',()=>openImage(img));img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openImage(img);}});});
+ document.querySelectorAll('.wiring-diagram-img, .uv5r-pins ~ .parts img, .parts img[aria-label]').forEach(img=>{img.addEventListener('click',()=>openImage(img));img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openImage(img);}});});
  close.addEventListener('click',closeImage);
  box.addEventListener('click',e=>{if(e.target===box)closeImage();});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('open'))closeImage();});
