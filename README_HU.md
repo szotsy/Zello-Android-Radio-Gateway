@@ -31,7 +31,7 @@ A fenti hivatkozás mindig a legfrissebb stabil kiadás telepítőjét tölti le
 
 [Összes kiadás és korábbi verziók megtekintése](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases)
 
-> **Licenc:** a projekt egyedi, korlátozó felhasználási licenc alatt áll, nem OSI-minősítésű nyílt forráskódú licenc. A módosítatlan APK használata és változatlan továbbadása engedélyezett; a forráskód módosítása vagy módosított változat terjesztése csak előzetes írásbeli engedéllyel lehetséges. Részletek a [LICENSE](LICENSE) fájlban.
+> **Licenc:** a projekt egyedi, korlátozó felhasználási licenc alatt áll, nem OSI-minősítésű nyílt forráskódú licenc. A módosítatlan APK használata és változatlan továbbadása engedélyezett; a forráskód módosítása vagy módosított változat terjesztése csak előzetes írásbeli engedéllyel lehetséges. Részletek a magyar [LICENSE](LICENSE) fájlban és az angol [LICENSE_EN.md](LICENSE_EN.md) fordításban.
 
 
 ## Letöltés és telepítés
