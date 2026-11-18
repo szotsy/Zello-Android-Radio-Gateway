@@ -1,9 +1,10 @@
 Orfeusz Gateway
 Copyright (c) 2026 Orfeusz Gateway project contributors
 
-Starting with Orfeusz Gateway version 1.10.72, the project source code is
+Starting with Orfeusz Gateway version 1.10.75, the project source code is
 licensed under the GNU General Public License, version 3.0 only. See LICENSE
-and LICENSING.md for the transition scope.
+and LICENSING.md for the transition scope. Versions 1.10.72–1.10.74 were
+published under their original licence terms.
 
 Third-party components retain their own copyright notices and license terms.
 See THIRD_PARTY_LICENSES.md.
