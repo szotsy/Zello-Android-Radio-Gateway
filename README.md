@@ -117,6 +117,24 @@ For field use, the equipment must be protected against rain, dust, overheating a
 
 **Wiring documentation:** the radio interface diagram and detailed parts list are available in the [English wiring guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html). The [Hungarian guide](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html) is also available.
 
+### Baofeng UV-5R – mainboard wiring points
+
+The following wiring applies to the **Baofeng UV-5R 5R-ver22 / 160402 mainboard revision**.
+
+| Pin | Wire colour | Function |
+|---:|---|---|
+| 1 | Green | Radio squelch |
+| 2 | Black | GND |
+| 3 | Red | PTT |
+| 4 | White | Radio speaker |
+| 5 | Yellow | Radio microphone (MIC) |
+
+![Baofeng UV-5R 5R-ver22 160402 mainboard wiring – photo 1](images/BF-UV5Rwiring.jpg)
+
+![Baofeng UV-5R 5R-ver22 160402 mainboard wiring – photo 2](images/BF-UV5Rwiring2.jpg)
+
+**Important:** wiring points may differ between mainboard revisions. Always identify and verify the points on your own radio before soldering. The radio’s original microphone and speaker must be removed.
+
 **Don't be intimidated by the build!** If you have soldered before, you should be able to assemble it by following the wiring diagrams with only basic soldering and electronics knowledge. You do not need advanced electronics skills – just a little patience and basic hands-on ability.
 
 **Repository:** `szotsy/Zello-Android-Radio-Gateway`  
