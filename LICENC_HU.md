@@ -1,6 +1,6 @@
 # Orfeusz Gateway – licencelési tájékoztató (magyar)
 
-Az Orfeusz Gateway forráskódja a **GNU General Public License v3.0 only (GPL-3.0-only)** feltételei szerint használható. A licenc teljes, irányadó szövege a repository gyökérkönyvtárában található [LICENSE](LICENSE) fájlban olvasható.
+Az Orfeusz Gateway projekt a **1.10.72-es verziótól** a **GNU General Public License v3.0 only (GPL-3.0-only)** feltételei szerint teszi közzé a forráskódot. A licenc teljes, irányadó szövege a repository gyökérkönyvtárában található [LICENSE](LICENSE) fájlban olvasható. A korábbi kiadásokra az eredeti közzétételükkor mellékelt licencfeltételek vonatkoznak; a váltás nem visszamenőleges. Részletek: [LICENSING.md](LICENSING.md).
 
 Ez a magyar dokumentum közérthető tájékoztató, **nem a GPL hivatalos vagy hiteles magyar fordítása**, és nem módosítja a LICENSE fájlban szereplő feltételeket. Eltérés esetén a LICENSE fájl teljes szövege az irányadó.
 
