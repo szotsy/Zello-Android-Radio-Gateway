@@ -114,6 +114,24 @@ A terepi használatnál a készülékeket védeni kell az esőtől, portól, tú
 
 **Bekötési dokumentáció:** a rádióinterfész kapcsolási rajza és részletes alkatrészlistája a [magyar bekötési útmutatóban](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring.html), az angol változat pedig [itt](https://szotsy.github.io/Zello-Android-Radio-Gateway/wiring-en.html) érhető el.
 
+### Baofeng UV-5R – alaplapi bekötési pontok
+
+Az alábbi bekötés a **Baofeng UV-5R 5R-ver22 / 160402 alaplapváltozathoz** tartozik.
+
+| Szám | Vezeték színe | Funkció |
+|---:|---|---|
+| 1 | Zöld | Rádió squelch |
+| 2 | Fekete | GND |
+| 3 | Piros | PTT |
+| 4 | Fehér | Rádió hangszóró |
+| 5 | Sárga | Rádió mikrofon (MIC) |
+
+![Baofeng UV-5R 5R-ver22 160402 alaplap bekötése – 1. kép](images/BF-UV5Rwiring.jpg)
+
+![Baofeng UV-5R 5R-ver22 160402 alaplap bekötése – 2. kép](images/BF-UV5Rwiring2.jpg)
+
+**Fontos:** a bekötési pontok alaplapverziónként eltérhetnek. Forrasztás előtt minden esetben azonosítsd és ellenőrizd a pontokat a saját rádiódban! A rádió saját mikrofonját és hangszóróját el kell távolítani.
+
 **Nem kell megijedni az építéstől!** Ha forrasztottál már korábban, a kapcsolási rajzok alapján minimális forrasztási és elektronikai ismerettel is meg tudod építeni. Nem szükséges hozzá komoly elektronikai szaktudás – egy kis türelem és alapvető kézügyesség elegendő.
 
 - Csomagnév: `com.videotourzala.zellogateway`
