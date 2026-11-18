@@ -80,6 +80,19 @@ jobs:
           PROJECT_DIR="$(dirname "$WRAPPER")"
           test -f "$PROJECT_DIR/gradle/wrapper/gradle-wrapper.properties"
           test -f "$PROJECT_DIR/app/build.gradle"
+
+          # GPL-3.0-only licensing starts with the first post-transition release.
+          # Keep historical release rebuilds possible, but require the full
+          # corresponding-source notices for 1.10.72 and every later version.
+          IFS=. read -r MAJOR MINOR PATCH <<< "${{ steps.release.outputs.tag }}"
+          if (( MAJOR > 1 || (MAJOR == 1 && MINOR > 10) || (MAJOR == 1 && MINOR == 10 && PATCH >= 72) )); then
+            test -s "$PROJECT_DIR/LICENSE" || { echo "::error::GPL release source archive is missing LICENSE."; exit 1; }
+            grep -q "GNU GENERAL PUBLIC LICENSE" "$PROJECT_DIR/LICENSE" || { echo "::error::LICENSE is not the expected GNU GPL text."; exit 1; }
+            grep -q "Version 3" "$PROJECT_DIR/LICENSE" || { echo "::error::LICENSE does not identify GPL version 3."; exit 1; }
+            test -s "$PROJECT_DIR/NOTICE" || { echo "::error::GPL release source archive is missing NOTICE."; exit 1; }
+            test -s "$PROJECT_DIR/THIRD_PARTY_LICENSES.md" || { echo "::error::GPL release source archive is missing THIRD_PARTY_LICENSES.md."; exit 1; }
+          fi
+
           echo "PROJECT_DIR=$PROJECT_DIR" >> "$GITHUB_ENV"
           NOTES="source/project/RELEASE_NOTES_${{ steps.release.outputs.tag }}.txt"
           if [[ -s "$NOTES" ]]; then
