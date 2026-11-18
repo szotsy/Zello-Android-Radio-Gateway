@@ -11,11 +11,29 @@ This checklist describes the repository's current release asset convention and t
 5. Name the versioned APK exactly `Orfeusz.Gateway_v<TAG>.apk`, for example `Orfeusz.Gateway_v1.10.63.apk`.
 6. Prepare the matching release notes. Do not publish an unbuilt, untested or placeholder APK.
 
+## Source archive and GPL compliance
+
+For every release made under GPL-3.0-only, prepare a matching source archive named
+`Orfeusz.Gateway_Source_v<TAG>.zip`. The archive must contain the complete
+Corresponding Source needed to build and modify that APK, including at minimum:
+
+- the Android project source and Gradle wrapper;
+- the root `LICENSE` file with the complete GPL-3.0-only text;
+- `NOTICE`, `COPYRIGHT.md`, and `THIRD_PARTY_LICENSES.md`;
+- the project documentation and any scripts needed to build the application.
+
+Do not rely only on GitHub's automatically generated repository source archive:
+the Android project is supplied as a versioned source ZIP release asset and the
+release build workflow builds from that archive.
+
 ## Publish the GitHub Release
 
 1. Create a GitHub Release using the version tag.
-2. Attach the versioned APK and release notes.
-3. Publish the release only after confirming the APK asset is present and correct.
+2. Attach the matching source archive `Orfeusz.Gateway_Source_v<TAG>.zip`.
+3. Attach the versioned APK and release notes.
+4. Publish the release only after confirming both the source archive and APK
+   assets are present, correctly named, and correspond to the same source revision.
+5. Keep the source archive available alongside the binary for GPL recipients.
 
 ## Automated stable download
 
