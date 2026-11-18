@@ -10,6 +10,10 @@ HU = ROOT / "docs/usb-uart-compatibility.html"
 EN = ROOT / "docs/usb-uart-compatibility-en.html"
 HU_FORM = ROOT / ".github/ISSUE_TEMPLATE/usb_uart_compatibility.yml"
 EN_FORM = ROOT / ".github/ISSUE_TEMPLATE/usb_uart_compatibility_en.yml"
+INDEX_HU = ROOT / "docs/index.html"
+INDEX_EN = ROOT / "docs/index-en.html"
+README_HU = ROOT / "README_HU.md"
+README_EN = ROOT / "README.md"
 
 def esc(value):
     return html.escape(str(value), quote=True)
@@ -67,6 +71,39 @@ def update_form(path, adapters):
     text = replace_between(text, "      # USB_UART_OPTIONS_START", "      # USB_UART_OPTIONS_END",
                            options, path)
     path.write_text(text, encoding="utf-8")
+
+
+def update_tested_devices(data):
+    devices = data.get("tested_devices")
+    if not isinstance(devices, list) or not devices:
+        raise SystemExit("Registry must contain a non-empty tested_devices array")
+
+    names = []
+    for device in devices:
+        if not isinstance(device, dict) or not device.get("name"):
+            raise SystemExit(f"Invalid tested device entry: {device}")
+        names.append(str(device["name"]).strip())
+    if any(not name for name in names) or len({name.casefold() for name in names}) != len(names):
+        raise SystemExit("Tested device names must be non-empty and unique")
+
+    for path in (INDEX_HU, INDEX_EN):
+        text = path.read_text(encoding="utf-8")
+        device_list = "<br>".join(esc(name) for name in names)
+        text = replace_between(text, "<!-- TESTED_DEVICES_START -->",
+                               "<!-- TESTED_DEVICES_END -->", [device_list], path)
+        path.write_text(text, encoding="utf-8")
+
+    for path, lang in ((README_HU, "hu"), (README_EN, "en")):
+        text = path.read_text(encoding="utf-8")
+        if lang == "hu":
+            rows = ["| Készülék | Tesztállapot |", "|---|---|"]
+            rows.extend(f"| {esc(name)} | Tesztelve |" for name in names)
+        else:
+            rows = ["| Device | Test status |", "|---|---|"]
+            rows.extend(f"| {esc(name)} | Tested |" for name in names)
+        text = replace_between(text, "<!-- TESTED_DEVICES_TABLE_START -->",
+                               "<!-- TESTED_DEVICES_TABLE_END -->", rows, path)
+        path.write_text(text, encoding="utf-8")
 
 def main():
     data = json.loads(REGISTRY.read_text(encoding="utf-8"))
@@ -135,7 +172,8 @@ def main():
     update_html(EN, adapters, "en")
     update_form(HU_FORM, adapters)
     update_form(EN_FORM, adapters)
-    print(f"Generated compatibility pages and issue forms for {len(adapters)} adapters; {len(by_vid_pid)} enabled in engine.")
+    update_tested_devices(data)
+    print(f"Generated compatibility pages, issue forms and tested-device lists; {len(by_vid_pid)} adapters enabled in engine.")
 
 if __name__ == "__main__":
     main()
