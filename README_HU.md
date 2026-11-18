@@ -131,15 +131,19 @@ A következő képek az eredeti Orfeusz Gateway rendszerről készült fénykép
 
 ## Képernyőképek
 
-Az alábbi képek az Orfeusz Gateway felületét, valamint a rádió és az USB–UART kapcsolat állapotjelzéseit mutatják be.
+Az alábbi aktuális alkalmazásképernyők a kapuállomás főbb állapotait és beállításait mutatják be.
 
-| USB–UART nincs csatlakoztatva | USB–UART csatlakoztatva / készenlét |
+| Vételi kapu | Nincs kapcsolat |
 |---|---|
-| ![USB–UART nincs csatlakoztatva](docs/screenshots/Screenshot_20261114_134559.jpg) | ![USB–UART csatlakoztatva](docs/screenshots/Screenshot_20261114_134649.jpg) |
+| ![Vételi kapu](images/Vetelezakapu.jpg) | ![Nincs kapcsolat](images/Nincskapcsolat.jpg) |
 
-| Rádió vétel | Rádió adás |
+| Egyéb menü | Csatlakozva |
 |---|---|
-| ![Rádió vétel](docs/screenshots/Screenshot_20261114_134721.jpg) | ![Rádió adás](docs/screenshots/Screenshot_20261114_134735.jpg) |
+| ![Egyéb menü](images/Egyebekmenü.jpg) | ![Csatlakozva](images/Csatlakozva.jpg) |
+
+| Beállítások | Adásban |
+|---|---|
+| ![Beállítások](images/Beállítások.jpg) | ![Adásban](images/Adásbanakapu.jpg) |
 
 ## Android-biztonsági figyelmeztetések és engedélyek
 
