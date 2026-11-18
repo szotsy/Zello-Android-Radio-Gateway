@@ -13,7 +13,8 @@ This checklist describes the repository's current release asset convention and t
 
 ## Source archive and GPL compliance
 
-For every release made under GPL-3.0-only, prepare a matching source archive named
+Starting with version 1.10.75, releases are made under GPL-3.0-only. For every
+GPL-3.0-only release, prepare a matching source archive named
 `Orfeusz.Gateway_Source_v<TAG>.zip`. The archive must contain the complete
 Corresponding Source needed to build and modify that APK, including at minimum:
 
