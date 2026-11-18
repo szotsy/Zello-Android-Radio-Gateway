@@ -29,7 +29,7 @@ The link above always downloads the installer from the latest stable release. Yo
 
 [View all releases and previous versions](https://github.com/szotsy/Zello-Android-Radio-Gateway/releases)
 
-> **Licence:** this project uses a custom restrictive licence and is not distributed under an OSI-approved open-source licence. Use and unchanged redistribution of the APK are permitted; modifying the source code or distributing modified versions requires prior written permission. See [LICENSE](LICENSE) for the Hungarian original and [LICENSE_EN.md](LICENSE_EN.md) for the English translation.
+> **Licence:** the source code is distributed under **GNU GPL-3.0-only**. You may use, modify and redistribute the code under the terms of that licence, including the source-code and notice requirements when distributing covered binaries. The official licence text is in [LICENSE](LICENSE); see the [Hungarian licensing guide](LICENC_HU.md), [third-party notices](THIRD_PARTY_LICENSES.md), and [trademark policy](TRADEMARK.md). The Orfeusz Gateway name and logo are not licensed by the GPL.
 
 
 ## Download and installation
