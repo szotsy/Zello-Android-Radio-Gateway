@@ -11,7 +11,10 @@
       "note_hu": "Igazolt adaptercsalád. A FT232RL az FT232R chipváltozatának jelölése; az Orfeusz ugyanazon USB-azonosítóval kezeli (VID: 0403, PID: 6001). A kompatibilitás a szükséges CTS/RTS jeleket kivezető adapterpanelre vonatkozik.",
       "note_en": "Verified adapter family. FT232RL is a part-number variant of the FT232R and is handled by Orfeusz under the same USB identity (VID: 0403, PID: 6001). Compatibility applies to adapter boards exposing the required CTS/RTS signals.",
       "app_supported": true,
-      "engine_supported": true
+      "engine_supported": true,
+      "id": "ftdi-ft232r",
+      "rts_output": true,
+      "cts_input": true
     },
     {
       "name": "CH340G",
@@ -22,7 +25,10 @@
       "note_hu": "Igazolt adapter. Egy WCH CH340G adapterrel az RTS/CTS és a PTT működése sikeresen tesztelve. Az eredmény a tesztelt adapterre vonatkozik; az adapterpanelek kialakítása eltérhet.",
       "note_en": "Verified adapter. RTS/CTS and PTT operation successfully tested with one WCH CH340G adapter. This result applies to the tested adapter; breakout-board implementations may differ.",
       "app_supported": true,
-      "engine_supported": true
+      "engine_supported": true,
+      "id": "wch-ch340g",
+      "rts_output": true,
+      "cts_input": true
     },
     {
       "name": "Silicon Labs CP2102 / CP2102N",
@@ -33,7 +39,10 @@
       "note_hu": "A CP2102/CP2102N adaptercsalád engedélyezve van az alkalmazás közös USB-UART engine-jében (VID: 10C4, PID: EA60). A tényleges adapterpanel RTS/CTS és PTT működése még nincs igazolva.",
       "note_en": "The CP2102/CP2102N adapter family is enabled in the application's common USB-UART engine (VID: 10C4, PID: EA60). Actual RTS/CTS and PTT operation has not yet been verified on a physical adapter board.",
       "app_supported": true,
-      "engine_supported": true
+      "engine_supported": true,
+      "id": "silabs-cp2102",
+      "rts_output": true,
+      "cts_input": true
     },
     {
       "name": "FTDI FT231X",
@@ -44,7 +53,10 @@
       "note_hu": "FTDI-család bővítése; tesztelés alatt. Az aktuális alkalmazás USB-engine-je még nem engedélyezi.",
       "note_en": "FTDI family expansion; testing in progress. The current application USB engine does not enable this adapter yet.",
       "app_supported": false,
-      "engine_supported": false
+      "engine_supported": false,
+      "id": "ftdi-ft231x",
+      "rts_output": false,
+      "cts_input": false
     },
     {
       "name": "WCH CH340C",
@@ -55,7 +67,10 @@
       "note_hu": "CH340 család bővítése; tesztelés alatt. Az aktuális alkalmazás USB-engine-je még nem engedélyezi.",
       "note_en": "CH340 family expansion; testing in progress. The current application USB engine does not enable this adapter yet.",
       "app_supported": false,
-      "engine_supported": false
+      "engine_supported": false,
+      "id": "wch-ch340c",
+      "rts_output": false,
+      "cts_input": false
     },
     {
       "name": "Prolific PL2303GC",
@@ -66,7 +81,10 @@
       "note_hu": "További gyártó bevonása; tesztelés alatt. Az aktuális alkalmazás USB-engine-je még nem engedélyezi.",
       "note_en": "Additional manufacturer; testing in progress. The current application USB engine does not enable this adapter yet.",
       "app_supported": false,
-      "engine_supported": false
+      "engine_supported": false,
+      "id": "prolific-pl2303gc",
+      "rts_output": false,
+      "cts_input": false
     }
   ],
   "tested_devices": [
