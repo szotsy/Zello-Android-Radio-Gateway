@@ -27,6 +27,132 @@
       "engine_supported": true,
       "rts_output": true,
       "cts_input": true
+    },
+    {
+      "id": "prolific-pl2303gc",
+      "display_name": "Prolific PL2303GC",
+      "vid": "067B",
+      "pid": "23A3",
+      "engine_supported": true,
+      "rts_output": false,
+      "cts_input": false
+    },
+    {
+      "id": "ftdi-ft2232h",
+      "display_name": "FTDI FT2232H",
+      "vid": "0403",
+      "pid": "6010",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "ftdi-ft4232h",
+      "display_name": "FTDI FT4232H",
+      "vid": "0403",
+      "pid": "6011",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "ftdi-ft232h",
+      "display_name": "FTDI FT232H",
+      "vid": "0403",
+      "pid": "6014",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "ftdi-ft23x",
+      "display_name": "FTDI FT230X / FT231X / FT234XD",
+      "vid": "0403",
+      "pid": "6015",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "wch-ch341a",
+      "display_name": "WCH CH341A / CH341T",
+      "vid": "1A86",
+      "pid": "5523",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "silabs-cp2105",
+      "display_name": "Silicon Labs CP2105",
+      "vid": "10C4",
+      "pid": "EA70",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "silabs-cp2108",
+      "display_name": "Silicon Labs CP2108",
+      "vid": "10C4",
+      "pid": "EA71",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "prolific-pl2303",
+      "display_name": "Prolific PL2303 / H / HXA / TA / RA",
+      "vid": "067B",
+      "pid": "2303",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "prolific-pl2303gb",
+      "display_name": "Prolific PL2303GB",
+      "vid": "067B",
+      "pid": "23B3",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "prolific-pl2303gt",
+      "display_name": "Prolific PL2303GT",
+      "vid": "067B",
+      "pid": "23C3",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "prolific-pl2303gl",
+      "display_name": "Prolific PL2303GL",
+      "vid": "067B",
+      "pid": "23D3",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "prolific-pl2303ge",
+      "display_name": "Prolific PL2303GE",
+      "vid": "067B",
+      "pid": "23E3",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
+    },
+    {
+      "id": "prolific-pl2303gs",
+      "display_name": "Prolific PL2303GS",
+      "vid": "067B",
+      "pid": "23F3",
+      "engine_supported": true,
+      "rts_output": true,
+      "cts_input": true
     }
   ]
 }
