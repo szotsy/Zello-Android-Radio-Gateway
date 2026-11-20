@@ -18,7 +18,7 @@ Android-based two-way Zello ↔ radio gateway application.
 
 ![Android](https://img.shields.io/badge/ANDROID-3D3D3D?style=for-the-badge&logo=android&logoColor=white) ![Zello](https://img.shields.io/badge/ZELLO-F36C21?style=for-the-badge&logoColor=white) ![Radio Gateway](https://img.shields.io/badge/RADIO_GATEWAY-171717?style=for-the-badge&logoColor=white) ![Version](https://img.shields.io/github/v/release/szotsy/Zello-Android-Radio-Gateway?display_name=tag&style=for-the-badge&label=VERSION&color=F36C21)
 
-**[📚 HU / EN documentation and knowledge base](wiki/README.md)** – Photos and screenshots will be added in a later update.
+**[📚 HU / EN documentation and knowledge base](wiki/README.md)**
 
 
 ## ⬇️ Orfeusz Gateway – Download APK
