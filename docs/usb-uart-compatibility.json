@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-11-17",
+  "last_updated": "2026-11-20",
   "adapters": [
     {
-      "name": "FTDI FT232R",
-      "chip": "FT232R",
+      "name": "FTDI FT232R / FT232RL",
+      "chip": "FT232R / FT232RL",
       "vid": "0403",
       "pid": "6001",
       "status": "verified",
-      "note_hu": "Igazolt adapter. VID: 0403, PID: 6001. A kompatibilitás a megfelelő CTS/RTS kivezetésekkel rendelkező adapterpanelre vonatkozik.",
-      "note_en": "Verified adapter. VID: 0403, PID: 6001. Compatibility applies to adapter boards with the required CTS/RTS pins exposed.",
+      "note_hu": "Igazolt adaptercsalád. A FT232RL az FT232R chipváltozatának jelölése; az Orfeusz ugyanazon USB-azonosítóval kezeli (VID: 0403, PID: 6001). A kompatibilitás a szükséges CTS/RTS jeleket kivezető adapterpanelre vonatkozik.",
+      "note_en": "Verified adapter family. FT232RL is a part-number variant of the FT232R and is handled by Orfeusz under the same USB identity (VID: 0403, PID: 6001). Compatibility applies to adapter boards exposing the required CTS/RTS signals.",
       "app_supported": true,
       "engine_supported": true
     },
