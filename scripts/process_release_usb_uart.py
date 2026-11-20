@@ -125,6 +125,19 @@ def main():
         else:
             # The APK is authoritative for current engine enablement; retain
             # the registry's independent physical-test status and notes.
+            # Older registry entries may have been listed as candidates with
+            # unknown VID/PID. If the APK now enables that adapter and supplies
+            # its USB identifiers, promote those identifiers into the registry.
+            manifest_vid = manifest_adapter.get("vid")
+            manifest_pid = manifest_adapter.get("pid")
+            if not item.get("vid") and manifest_vid:
+                item["vid"] = str(manifest_vid).upper().replace("0X", "")
+            if not item.get("pid") and manifest_pid:
+                item["pid"] = str(manifest_pid).upper().replace("0X", "")
+            if not item.get("vid") or not item.get("pid"):
+                raise SystemExit(
+                    f"Engine-enabled adapter {adapter_id} ({item.get('name', adapter_id)}) "
+                    "has no VID/PID in either registry or APK manifest")
             item["app_supported"] = True
             item["engine_supported"] = True
             if item.get("status") not in ("verified", "not_verified"):
