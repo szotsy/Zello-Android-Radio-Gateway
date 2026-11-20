@@ -35,6 +35,7 @@ jobs:
       - name: Read adapter manifest from the published APK
         env:
           RELEASE_TAG: ${{ inputs.tag }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/process_release_usb_uart.py
 
       - name: Regenerate outputs with newly discovered enabled adapters
