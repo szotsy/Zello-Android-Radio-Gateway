@@ -3,7 +3,7 @@
   "adapters": [
     {
       "id": "ftdi-ft232r",
-      "display_name": "FTDI FT232R",
+      "display_name": "FTDI FT232R / FT232RL",
       "vid": "0403",
       "pid": "6001",
       "engine_supported": true,
@@ -12,7 +12,7 @@
     },
     {
       "id": "wch-ch340g",
-      "display_name": "WCH CH340G",
+      "display_name": "CH340G",
       "vid": "1A86",
       "pid": "7523",
       "engine_supported": true,
@@ -21,7 +21,7 @@
     },
     {
       "id": "silabs-cp2102",
-      "display_name": "Silicon Labs CP2102/CP2102N",
+      "display_name": "Silicon Labs CP2102 / CP2102N",
       "vid": "10C4",
       "pid": "EA60",
       "engine_supported": true,
