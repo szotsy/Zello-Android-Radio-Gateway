@@ -4,7 +4,6 @@ on:
   push:
     branches: [main]
     paths:
-      - 'app/src/main/assets/usb-uart-adapters.json'
       - 'docs/usb-uart-compatibility.json'
       - 'scripts/sync_usb_uart_compatibility.py'
       - '.github/workflows/sync-usb-uart-compatibility.yml'
@@ -19,6 +18,8 @@ concurrency:
 
 jobs:
   generate:
+    # Release automation already regenerates its own outputs; skip its bot commit.
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
