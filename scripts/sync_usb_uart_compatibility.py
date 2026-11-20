@@ -160,7 +160,7 @@ def main():
         "schema_version": data.get("schema_version", 1),
         "adapters": manifest_adapters
     }
-    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     update_html(HU, adapters, "hu")
     update_html(EN, adapters, "en")
