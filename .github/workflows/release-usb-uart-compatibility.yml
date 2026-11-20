@@ -3,6 +3,12 @@ name: Update USB-UART list from published Release
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing published release tag to process (for example 1.10.82)"
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -27,6 +33,8 @@ jobs:
         run: python scripts/sync_usb_uart_compatibility.py
 
       - name: Read adapter manifest from the published APK
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
         run: python scripts/process_release_usb_uart.py
 
       - name: Commit release-derived compatibility pages
