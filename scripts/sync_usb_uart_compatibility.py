@@ -116,7 +116,7 @@ def main():
     manifest_path = ROOT / "app/src/main/assets/usb-uart-adapters.json"
     manifest_adapters = []
     ids = set()
-    vid_pids = set()
+    vid_pids = {}
     names = set()
     for adapter in adapters:
         adapter_id = adapter.get("id")
@@ -141,10 +141,7 @@ def main():
             if len(vid) != 4 or len(pid) != 4:
                 raise SystemExit(f"Invalid VID/PID for {name}: {vid}:{pid}")
             pair = (vid, pid)
-            if pair in vid_pids:
-                raise SystemExit(f"Duplicate enabled VID/PID: {vid}:{pid}")
-            vid_pids.add(pair)
-            manifest_adapters.append({
+            entry = {
                 "id": adapter_id,
                 "display_name": name,
                 "vid": vid,
@@ -152,7 +149,21 @@ def main():
                 "engine_supported": True,
                 "rts_output": adapter.get("rts_output") is True,
                 "cts_input": adapter.get("cts_input") is True
-            })
+            }
+            if pair in vid_pids:
+                # Multiple chip variants can expose the same USB VID/PID.
+                # Android identifies the connected device by VID/PID, so keep
+                # one runtime manifest entry while retaining every variant in
+                # the central compatibility registry and website tables.
+                previous = vid_pids[pair]
+                if (previous["rts_output"] != entry["rts_output"]
+                        or previous["cts_input"] != entry["cts_input"]):
+                    raise SystemExit(
+                        f"Conflicting RTS/CTS capabilities for shared VID/PID "
+                        f"{vid}:{pid}: {previous['display_name']} / {name}")
+            else:
+                vid_pids[pair] = entry
+                manifest_adapters.append(entry)
         elif adapter.get("engine_supported") is True or adapter.get("app_supported") is True:
             raise SystemExit(f"app_supported and engine_supported must agree for {name}")
 
