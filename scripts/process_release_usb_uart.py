@@ -28,7 +28,7 @@ def main():
     event = json.loads(Path(event_path).read_text(encoding="utf-8"))
     release = event.get("release") or {}
     if not release:
-        tag = os.environ.get("RELEASE_TAG") or (event.get("inputs") or {}).get("tag")
+        tag = os.environ.get("RELEASE_TAG") or (event.get("inputs") or {}).get("tag") or (json.loads(RELEASE_JSON.read_text(encoding="utf-8")).get("tag_name") if RELEASE_JSON.exists() else None)
         if not tag:
             raise SystemExit("No release payload or manual-dispatch tag was provided")
         api = f"https://api.github.com/repos/szotsy/Zello-Android-Radio-Gateway/releases/tags/{tag}"
