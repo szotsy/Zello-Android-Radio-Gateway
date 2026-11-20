@@ -62,13 +62,20 @@ def main():
     adapters = manifest.get("adapters")
     if not isinstance(adapters, list) or not adapters:
         raise SystemExit("APK adapter manifest is empty or invalid")
+    # The APK manifest may also contain candidate-only adapters that are
+    # intentionally disabled. They are not part of the release-supported list.
     ids = []
     for adapter in adapters:
-        if not adapter.get("id") or adapter.get("engine_supported") is not True:
-            raise SystemExit(f"Invalid or disabled adapter entry in APK manifest: {adapter}")
-        ids.append(adapter["id"])
+        if adapter.get("engine_supported") is not True:
+            continue
+        adapter_id = adapter.get("id")
+        if not adapter_id:
+            raise SystemExit(f"Enabled adapter entry is missing an id: {adapter}")
+        ids.append(adapter_id)
+    if not ids:
+        raise SystemExit("The APK contains no engine-enabled USB-UART adapters")
     if len(ids) != len(set(ids)):
-        raise SystemExit("Duplicate adapter IDs in APK manifest")
+        raise SystemExit("Duplicate enabled adapter IDs in APK manifest")
 
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     registry_by_id = {a["id"]: a for a in registry.get("adapters", [])}
