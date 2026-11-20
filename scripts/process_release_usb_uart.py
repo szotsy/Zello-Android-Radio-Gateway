@@ -37,9 +37,14 @@ def main():
         if not tag:
             raise SystemExit("No release payload or manual-dispatch tag was provided")
         api = f"https://api.github.com/repos/szotsy/Zello-Android-Radio-Gateway/releases/tags/{tag}"
-        req = urllib.request.Request(
-            api, headers={"User-Agent": "Orfeusz-Gateway-Release-Sync",
-                          "Accept": "application/vnd.github+json"})
+        headers = {
+            "User-Agent": "Orfeusz-Gateway-Release-Sync",
+            "Accept": "application/vnd.github+json",
+        }
+        token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+        if token:
+            headers["Authorization"] = f"Bearer {token}"
+        req = urllib.request.Request(api, headers=headers)
         with urllib.request.urlopen(req, timeout=30) as response:
             release = json.loads(response.read().decode("utf-8"))
     if not release or not release.get("published_at"):
