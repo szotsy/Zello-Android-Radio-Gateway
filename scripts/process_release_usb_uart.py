@@ -27,8 +27,16 @@ def main():
         raise SystemExit("GITHUB_EVENT_PATH is required")
     event = json.loads(Path(event_path).read_text(encoding="utf-8"))
     release = event.get("release") or {}
+    if not release:
+        tag = os.environ.get("RELEASE_TAG") or (event.get("inputs") or {}).get("tag")
+        if not tag:
+            raise SystemExit("No release payload or manual-dispatch tag was provided")
+        api = f"https://api.github.com/repos/szotsy/Zello-Android-Radio-Gateway/releases/tags/{tag}"
+        req = urllib.request.Request(api, headers={"User-Agent": "Orfeusz-Gateway-Release-Sync", "Accept": "application/vnd.github+json"})
+        with urllib.request.urlopen(req, timeout=30) as response:
+            release = json.loads(response.read().decode("utf-8"))
     if not release or not release.get("published_at"):
-        raise SystemExit("The event does not contain a published GitHub Release")
+        raise SystemExit("The event does not identify a published GitHub Release")
 
     apk_assets = [a for a in release.get("assets", [])
                   if a.get("name", "").lower().endswith(".apk")
