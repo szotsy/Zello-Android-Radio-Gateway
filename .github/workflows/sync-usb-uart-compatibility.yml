@@ -32,6 +32,12 @@ jobs:
       - name: Validate registry and generate pages and issue forms
         run: python scripts/sync_usb_uart_compatibility.py
 
+      - name: Refresh release-derived adapter list when a release exists
+        run: |
+          if [ -f docs/usb-uart-release.json ]; then
+            python scripts/process_release_usb_uart.py
+          fi
+
       - name: Commit generated compatibility pages, tested-device lists and issue forms
         run: |
           if git diff --quiet; then
