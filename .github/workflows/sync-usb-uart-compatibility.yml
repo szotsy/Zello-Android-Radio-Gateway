@@ -40,7 +40,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/usb-uart-compatibility.html docs/usb-uart-compatibility-en.html docs/index.html docs/index-en.html README.md README_HU.md .github/ISSUE_TEMPLATE/usb_uart_compatibility.yml .github/ISSUE_TEMPLATE/usb_uart_compatibility_en.yml
+          git add app/src/main/assets/usb-uart-adapters.json docs/usb-uart-compatibility.html docs/usb-uart-compatibility-en.html docs/index.html docs/index-en.html README.md README_HU.md .github/ISSUE_TEMPLATE/usb_uart_compatibility.yml .github/ISSUE_TEMPLATE/usb_uart_compatibility_en.yml
           git commit -m "Automate compatibility and tested-device documentation"
           git pull --rebase origin main
           git push
