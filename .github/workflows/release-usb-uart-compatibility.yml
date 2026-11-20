@@ -37,7 +37,10 @@ jobs:
           RELEASE_TAG: ${{ inputs.tag }}
         run: python scripts/process_release_usb_uart.py
 
-      - name: Commit release-derived compatibility pages
+      - name: Regenerate outputs with newly discovered enabled adapters
+        run: python scripts/sync_usb_uart_compatibility.py
+
+      - name: Commit release-derived compatibility data
         run: |
           if git diff --quiet; then
             echo "Release compatibility data is already up to date."
@@ -45,7 +48,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/usb-uart-release.json docs/usb-uart-compatibility.html docs/usb-uart-compatibility-en.html app/src/main/assets/usb-uart-adapters.json docs/index.html docs/index-en.html README.md README_HU.md .github/ISSUE_TEMPLATE/usb_uart_compatibility.yml .github/ISSUE_TEMPLATE/usb_uart_compatibility_en.yml
+          git add docs/usb-uart-compatibility.json docs/usb-uart-release.json docs/usb-uart-compatibility.html docs/usb-uart-compatibility-en.html app/src/main/assets/usb-uart-adapters.json docs/index.html docs/index-en.html README.md README_HU.md .github/ISSUE_TEMPLATE/usb_uart_compatibility.yml .github/ISSUE_TEMPLATE/usb_uart_compatibility_en.yml
           git commit -m "Update USB-UART compatibility from published release"
           git pull --rebase origin main
           git push
