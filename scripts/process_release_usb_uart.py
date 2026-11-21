@@ -3,6 +3,7 @@
 import html
 import json
 import os
+import time
 import urllib.request
 from io import BytesIO
 from pathlib import Path
@@ -28,33 +29,47 @@ def main():
     if not event_path:
         raise SystemExit("GITHUB_EVENT_PATH is required")
     event = json.loads(Path(event_path).read_text(encoding="utf-8"))
-    release = event.get("release") or {}
-    if not release:
-        tag = (os.environ.get("RELEASE_TAG")
-               or (event.get("inputs") or {}).get("tag")
-               or (json.loads(RELEASE_JSON.read_text(encoding="utf-8")).get("tag_name")
-                   if RELEASE_JSON.exists() else None))
-        if not tag:
-            raise SystemExit("No release payload or manual-dispatch tag was provided")
-        api = f"https://api.github.com/repos/szotsy/Zello-Android-Radio-Gateway/releases/tags/{tag}"
-        headers = {
-            "User-Agent": "Orfeusz-Gateway-Release-Sync",
-            "Accept": "application/vnd.github+json",
-        }
-        token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
-        if token:
-            headers["Authorization"] = f"Bearer {token}"
+    event_release = event.get("release") or {}
+    tag = (event_release.get("tag_name")
+           or os.environ.get("RELEASE_TAG")
+           or (event.get("inputs") or {}).get("tag")
+           or (json.loads(RELEASE_JSON.read_text(encoding="utf-8")).get("tag_name")
+               if RELEASE_JSON.exists() else None))
+    if not tag:
+        raise SystemExit("No release tag was provided by the event, input, or release metadata")
+
+    # The 'published' event can arrive before the release workflow finishes
+    # uploading its APK assets. Always refresh the release from the API and
+    # briefly retry until the actual APK asset is available.
+    api = f"https://api.github.com/repos/szotsy/Zello-Android-Radio-Gateway/releases/tags/{tag}"
+    headers = {
+        "User-Agent": "Orfeusz-Gateway-Release-Sync",
+        "Accept": "application/vnd.github+json",
+    }
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    release = None
+    apk_assets = []
+    for attempt in range(18):
         req = urllib.request.Request(api, headers=headers)
         with urllib.request.urlopen(req, timeout=30) as response:
             release = json.loads(response.read().decode("utf-8"))
-    if not release or not release.get("published_at"):
-        raise SystemExit("The event does not identify a published GitHub Release")
+        apk_assets = [a for a in release.get("assets", [])
+                      if a.get("name", "").lower().endswith(".apk")
+                      and not a.get("name", "").lower().endswith(".sha256.apk")]
+        if apk_assets:
+            break
+        if attempt < 17:
+            print(f"APK asset not uploaded for {tag} yet; retrying in 10 seconds "
+                  f"({attempt + 1}/18).")
+            time.sleep(10)
 
-    apk_assets = [a for a in release.get("assets", [])
-                  if a.get("name", "").lower().endswith(".apk")
-                  and not a.get("name", "").lower().endswith(".sha256.apk")]
+    if not release or not release.get("published_at"):
+        raise SystemExit(f"GitHub Release {tag} is not published or cannot be read")
     if not apk_assets:
-        raise SystemExit("No APK asset found in the published Release")
+        raise SystemExit(f"No APK asset found in published Release {tag} after 3 minutes")
     tag = release.get("tag_name", "")
     preferred = [a for a in apk_assets
                  if a.get("name") == f"Orfeusz.Gateway_v{tag}.apk"]
