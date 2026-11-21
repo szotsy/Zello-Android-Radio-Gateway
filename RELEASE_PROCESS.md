@@ -36,22 +36,19 @@ release build workflow builds from that archive.
    assets are present, correctly named, and correspond to the same source revision.
 5. Keep the source archive available alongside the binary for GPL recipients.
 
-## Automated stable download
+## Single APK release asset
 
-The `.github/workflows/latest-apk-alias.yml` workflow runs when a release is published. For stable releases it:
-
-- downloads the versioned APK asset;
-- checks that the file exists and is not empty;
-- calculates a SHA-256 checksum;
-- creates `Orfeusz.Gateway.apk` as a byte-for-byte copy;
-- verifies the copy and checksum;
-- uploads both `Orfeusz.Gateway.apk` and `Orfeusz.Gateway.apk.sha256` to the release.
+Each release contains exactly one signed APK, named `Orfeusz.Gateway.apk`,
+plus its matching `Orfeusz.Gateway.apk.sha256` checksum. The version is
+identified by the GitHub Release tag and release title; there is no duplicate
+versioned APK asset.
 
 The permanent direct download URL is:
 
 `https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/latest/download/Orfeusz.Gateway.apk`
 
-Prereleases are intentionally excluded from automatic stable-alias updates.
+The release workflow builds, signs, verifies and uploads this single APK
+directly. No second copy or alias workflow is required.
 
 ## Recovery / manual run
 
@@ -60,10 +57,10 @@ If the workflow fails after the release is published, inspect the failed Actions
 ## Final verification
 
 - Confirm the workflow completed successfully.
-- Open the release and verify that the versioned APK, stable alias and SHA-256 checksum are attached.
-- Download the stable URL and compare its size or SHA-256 value with the versioned release APK.
+- Open the release and verify that the single APK and its SHA-256 checksum are attached.
+- Download the stable URL and verify its SHA-256 checksum.
 - Confirm the release is not marked as a prerelease.
 
 ## Important
 
-The stable URL is an alias to the latest published stable GitHub Release; it does not mean that GitHub Pages or the application itself has been rebuilt. A release must contain the correctly named versioned APK before the workflow can publish the alias.
+The stable URL is an alias to the latest published stable GitHub Release; it does not mean that GitHub Pages or the application itself has been rebuilt. A release must contain the single stable-name APK and matching checksum.
