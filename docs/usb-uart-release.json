@@ -4,7 +4,7 @@
   "prerelease": true,
   "published_at": "2026-11-21T21:37:28Z",
   "html_url": "https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/tag/1.10.83",
-  "apk_asset": "Orfeusz.Gateway_v1.10.83.apk",
+  "apk_asset": "Orfeusz.Gateway.apk",
   "adapter_ids": [
     "ftdi-ft232r",
     "ftdi-ft2232h",
