@@ -71,8 +71,13 @@ def main():
     if not apk_assets:
         raise SystemExit(f"No APK asset found in published Release {tag} after 3 minutes")
     tag = release.get("tag_name", "")
+    # New releases publish one stable-name APK only. Prefer it, while
+    # retaining compatibility with older releases that used versioned APK names.
     preferred = [a for a in apk_assets
-                 if a.get("name") == f"Orfeusz.Gateway_v{tag}.apk"]
+                 if a.get("name") == "Orfeusz.Gateway.apk"]
+    if not preferred:
+        preferred = [a for a in apk_assets
+                     if a.get("name") == f"Orfeusz.Gateway_v{tag}.apk"]
     asset = (preferred or apk_assets)[0]
     request = urllib.request.Request(
         asset["browser_download_url"],
