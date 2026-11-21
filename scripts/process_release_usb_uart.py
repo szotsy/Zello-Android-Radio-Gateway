@@ -165,41 +165,20 @@ def main():
         for adapter_id in ids:
             a = registry_by_id[adapter_id]
             vidpid = f'{a.get("vid") or "?"}:{a.get("pid") or "?"}'
-            state = a.get("status", "not_verified")
-            if lang == "hu":
-                state_text = ("Igazolt" if state == "verified"
-                              else "Engine-ben engedélyezve · tesztelésre vár")
-            else:
-                state_text = ("Verified" if state == "verified"
-                              else "Engine enabled · awaiting physical test")
             cards.append(
                 f'<div class="engine-card"><strong>{esc(a["name"])}</strong>'
-                f'<small>VID:PID {esc(vidpid)} · RTS / CTS</small>'
-                f'<span class="state {"pending" if state != "verified" else ""}">{esc(state_text)}</span></div>'
+                f'<small>VID:PID {esc(vidpid)} · RTS / CTS</small></div>'
             )
-        kind = (("Előzetes kiadás" if lang == "hu" else "Pre-release")
-                if release_data["prerelease"]
-                else ("Stabil kiadás" if lang == "hu" else "Stable release"))
-        if lang == "hu":
-            heading = "A kiadásban engine-szinten engedélyezett adapterek"
-            intro = (f'A kiadás: <a href="{esc(release_data["html_url"])}" target="_blank" '
-                     f'rel="noopener">{esc(tag)}</a> · {kind} · publikálva: '
-                     f'{esc(release_data["published_at"])}. A lista az APK USB-UART '
-                     f'manifestjéből készült; az „Igazolt” státusz fizikai tesztet jelent.')
-        else:
-            heading = "Adapters enabled in the release engine"
-            intro = (f'Release: <a href="{esc(release_data["html_url"])}" target="_blank" '
-                     f'rel="noopener">{esc(tag)}</a> · {kind} · published: '
-                     f'{esc(release_data["published_at"])}. This list comes from the APK '
-                     f'USB-UART manifest; “Verified” indicates physical testing.')
-        block = (f'<section class="engine-supported"><h2>{heading}</h2><p>{intro}</p>'
+        heading = ("Támogatott UART adapterek" if lang == "hu"
+                   else "Supported UART adapters")
+        block = (f'<section class="engine-supported"><h2>{heading}</h2>'
                  f'<div class="engine-grid">{"".join(cards)}</div></section>')
         text = path.read_text(encoding="utf-8")
         if START not in text or END not in text:
             raise SystemExit(f"Release section markers missing in {path}")
         before, rest = text.split(START, 1)
         _, after = rest.split(END, 1)
-        path.write_text(before + START + "\n" + block + "\n" + END + after,
+        path.write_text(before + START + "\\n" + block + "\\n" + END + after,
                         encoding="utf-8")
     print(f'Imported {len(ids)} engine-enabled adapter(s) from {tag}; '
           f'{sum(registry_by_id[i].get("status") == "verified" for i in ids)} physically verified.')
