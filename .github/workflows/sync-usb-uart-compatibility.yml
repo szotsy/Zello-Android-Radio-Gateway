@@ -6,6 +6,7 @@ on:
     paths:
       - 'docs/usb-uart-compatibility.json'
       - 'scripts/sync_usb_uart_compatibility.py'
+      - 'scripts/process_release_usb_uart.py'
       - '.github/workflows/sync-usb-uart-compatibility.yml'
   workflow_dispatch:
 
