@@ -1,7 +1,7 @@
 {
   "tag_name": "1.10.82",
   "name": "Orfeusz Gateway 1.10.82 – Expanded USB-UART Support",
-  "prerelease": true,
+  "prerelease": false,
   "published_at": "2026-11-20T12:44:33Z",
   "html_url": "https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/tag/1.10.82",
   "apk_asset": "Orfeusz.Gateway_v1.10.82.apk",
