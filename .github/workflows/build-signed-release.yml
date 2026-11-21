@@ -37,7 +37,7 @@ jobs:
           fi
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
           echo "source=Orfeusz.Gateway_Source_v${TAG}.zip" >> "$GITHUB_OUTPUT"
-          echo "apk=Orfeusz.Gateway_v${TAG}.apk" >> "$GITHUB_OUTPUT"
+          echo "apk=Orfeusz.Gateway.apk" >> "$GITHUB_OUTPUT"
 
       # The current Android SDK command-line tools require JDK 17.
       - name: Set up Java 17 for Android SDK
@@ -145,16 +145,3 @@ jobs:
             "$RUNNER_TEMP/${{ steps.release.outputs.apk }}.sha256" \
             --repo "${{ github.repository }}" --clobber
 
-      # Publish the stable alias only after the signed APK has passed apksigner verification.
-      - name: Create and upload stable APK alias
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          cp "$RUNNER_TEMP/${{ steps.release.outputs.apk }}" "$RUNNER_TEMP/Orfeusz.Gateway.apk"
-          (cd "$RUNNER_TEMP" && sha256sum Orfeusz.Gateway.apk > Orfeusz.Gateway.apk.sha256)
-          cmp --silent "$RUNNER_TEMP/${{ steps.release.outputs.apk }}" "$RUNNER_TEMP/Orfeusz.Gateway.apk"
-          (cd "$RUNNER_TEMP" && sha256sum --check Orfeusz.Gateway.apk.sha256)
-          gh release upload "${{ steps.release.outputs.tag }}" \
-            "$RUNNER_TEMP/Orfeusz.Gateway.apk" \
-            "$RUNNER_TEMP/Orfeusz.Gateway.apk.sha256" \
-            --repo "${{ github.repository }}" --clobber
