@@ -1,3 +1,27 @@
 {
-  "tag_name": "1.10.83"
+  "tag_name": "1.10.83",
+  "name": "Diagnostic email improvements",
+  "prerelease": true,
+  "published_at": "2026-11-21T21:37:28Z",
+  "html_url": "https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/tag/1.10.83",
+  "apk_asset": "Orfeusz.Gateway_v1.10.83.apk",
+  "adapter_ids": [
+    "ftdi-ft232r",
+    "ftdi-ft2232h",
+    "ftdi-ft4232h",
+    "ftdi-ft232h",
+    "ftdi-ft23x",
+    "wch-ch340",
+    "wch-ch341a",
+    "silabs-cp210x",
+    "silabs-cp2105",
+    "silabs-cp2108",
+    "prolific-pl2303",
+    "prolific-pl2303gc",
+    "prolific-pl2303gb",
+    "prolific-pl2303gt",
+    "prolific-pl2303gl",
+    "prolific-pl2303ge",
+    "prolific-pl2303gs"
+  ]
 }
