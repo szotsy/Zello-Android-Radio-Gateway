@@ -3,6 +3,9 @@ name: Update USB-UART list from published Release
 on:
   release:
     types: [published]
+  push:
+    paths:
+      - 'docs/usb-uart-release.json'
   workflow_dispatch:
     inputs:
       tag:
