@@ -178,7 +178,7 @@ def main():
             raise SystemExit(f"Release section markers missing in {path}")
         before, rest = text.split(START, 1)
         _, after = rest.split(END, 1)
-        path.write_text(before + START + "\\n" + block + "\\n" + END + after,
+        path.write_text(before + START + "\n" + block + "\\n" + END + after,
                         encoding="utf-8")
     print(f'Imported {len(ids)} engine-enabled adapter(s) from {tag}; '
           f'{sum(registry_by_id[i].get("status") == "verified" for i in ids)} physically verified.')
