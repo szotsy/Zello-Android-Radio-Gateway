@@ -37,7 +37,7 @@ jobs:
           fi
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
           echo "source=Orfeusz.Gateway_Source_v${TAG}.zip" >> "$GITHUB_OUTPUT"
-          echo "apk=Orfeusz.Gateway.apk" >> "$GITHUB_OUTPUT"
+          echo "apk=Orfeusz.Gateway_v${TAG}.apk" >> "$GITHUB_OUTPUT"
 
       # The current Android SDK command-line tools require JDK 17.
       - name: Set up Java 17 for Android SDK
