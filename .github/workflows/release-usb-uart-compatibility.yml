@@ -1,9 +1,8 @@
 name: Update USB-UART list from published Release
 
 on:
-  # Run only after the signed-release workflow has finished uploading the APK.
-  # The release:published event races the APK build and was the cause of the
-  # recurring "no APK asset" failures.
+  # Wait for the signed APK workflow to finish. A release:published event
+  # fires before the APK upload and races the release build.
   workflow_run:
     workflows: ["Build signed Android release"]
     types: [completed]
@@ -29,8 +28,10 @@ jobs:
       (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Check out main branch for safe commit and push
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -48,7 +49,7 @@ jobs:
           if [[ -z "$TAG" ]]; then
             TAG="$BUILD_BRANCH"
           fi
-          if [[ ! "$TAG" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]; then
+          if [[ ! "$TAG" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
             echo "::error::Could not resolve a valid release tag (got: $TAG)."
             exit 1
           fi
@@ -76,5 +77,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/usb-uart-compatibility.json docs/usb-uart-release.json docs/usb-uart-compatibility.html docs/usb-uart-compatibility-en.html app/src/main/assets/usb-uart-adapters.json docs/index.html docs/index-en.html README.md README_HU.md .github/ISSUE_TEMPLATE/usb_uart_compatibility.yml .github/ISSUE_TEMPLATE/usb_uart_compatibility_en.yml
           git commit -m "Update USB-UART compatibility from published release"
-          git pull --rebase origin main
-          git push
+          git push origin HEAD:main
