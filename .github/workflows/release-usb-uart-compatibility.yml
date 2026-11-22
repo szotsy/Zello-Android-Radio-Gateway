@@ -1,20 +1,22 @@
 name: Update USB-UART list from published Release
 
 on:
-  release:
-    types: [published]
-  push:
-    paths:
-      - 'docs/usb-uart-release.json'
+  # Run only after the signed-release workflow has finished uploading the APK.
+  # The release:published event races the APK build and was the cause of the
+  # recurring "no APK asset" failures.
+  workflow_run:
+    workflows: ["Build signed Android release"]
+    types: [completed]
   workflow_dispatch:
     inputs:
       tag:
-        description: "Existing published release tag to process (for example 1.10.82)"
+        description: "Existing published release tag to process (for example 1.10.85)"
         required: true
         type: string
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: usb-uart-release-sync
@@ -22,6 +24,9 @@ concurrency:
 
 jobs:
   update-compatibility:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -32,12 +37,29 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Resolve release tag
+        id: release
+        env:
+          INPUT_TAG: ${{ inputs.tag }}
+          BUILD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+        shell: bash
+        run: |
+          TAG="$INPUT_TAG"
+          if [[ -z "$TAG" ]]; then
+            TAG="$BUILD_BRANCH"
+          fi
+          if [[ ! "$TAG" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]; then
+            echo "::error::Could not resolve a valid release tag (got: $TAG)."
+            exit 1
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
       - name: Regenerate central-registry outputs
         run: python scripts/sync_usb_uart_compatibility.py
 
       - name: Read adapter manifest from the published APK
         env:
-          RELEASE_TAG: ${{ inputs.tag }}
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/process_release_usb_uart.py
 
