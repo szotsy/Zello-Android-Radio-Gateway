@@ -1,10 +1,10 @@
 {
-  "tag_name": "1.10.87",
-  "name": "ORFEUSZ GATEWAY 1.10.87 – HOST SAVER",
+  "tag_name": "1.10.88",
+  "name": "Orfeusz Gateway 1.10.88 – Host KeepR",
   "prerelease": true,
-  "published_at": "2026-11-24T08:02:37Z",
-  "html_url": "https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/tag/1.10.87",
-  "apk_asset": "Orfeusz.Gateway_v1.10.87.apk",
+  "published_at": "2026-11-24T08:36:00Z",
+  "html_url": "https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/tag/1.10.88",
+  "apk_asset": "Orfeusz.Gateway_v1.10.88.apk",
   "adapter_ids": [
     "ftdi-ft232r",
     "ftdi-ft2232h",
