@@ -41,7 +41,7 @@ jobs:
 
       # The current Android SDK command-line tools require JDK 17.
       - name: Set up Java 17 for Android SDK
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
@@ -94,11 +94,14 @@ jobs:
           fi
 
           echo "PROJECT_DIR=$PROJECT_DIR" >> "$GITHUB_ENV"
-          NOTES="source/project/RELEASE_NOTES_${{ steps.release.outputs.tag }}.txt"
-          if [[ -s "$NOTES" ]]; then
+
+          # Release notes may be at the project root or inside a top-level
+          # source-folder created by the ZIP archive. Locate them recursively.
+          NOTES="$(find source/project -type f -name "RELEASE_NOTES_${{ steps.release.outputs.tag }}.txt" -print -quit)"
+          if [[ -n "$NOTES" && -s "$NOTES" ]]; then
             gh release edit "${{ steps.release.outputs.tag }}" --repo "${GITHUB_REPOSITORY}" --notes-file "$NOTES"
           else
-            echo "::warning::Release notes file not found: $NOTES"
+            echo "::warning::Release notes file not found in extracted source archive for tag ${{ steps.release.outputs.tag }}."
           fi
 
       - name: Prepare signing keystore
@@ -144,4 +147,3 @@ jobs:
             "$RUNNER_TEMP/${{ steps.release.outputs.apk }}" \
             "$RUNNER_TEMP/${{ steps.release.outputs.apk }}.sha256" \
             --repo "${{ github.repository }}" --clobber
-
