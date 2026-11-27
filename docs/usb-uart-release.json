@@ -1,10 +1,10 @@
 {
-  "tag_name": "1.10.89",
-  "name": "Orfeusz Gateway 1.10.89 – UI 2.0",
+  "tag_name": "1.10.90",
+  "name": "Orfeusz Gateway 1.10.90 – DTMF Microphone Probe Test",
   "prerelease": true,
-  "published_at": "2026-11-25T08:05:45Z",
-  "html_url": "https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/tag/1.10.89",
-  "apk_asset": "Orfeusz.Gateway_v1.10.89.apk",
+  "published_at": "2026-11-27T10:58:15Z",
+  "html_url": "https://github.com/szotsy/Zello-Android-Radio-Gateway/releases/tag/1.10.90",
+  "apk_asset": "Orfeusz.Gateway_v1.10.90.apk",
   "adapter_ids": [
     "ftdi-ft232r",
     "ftdi-ft2232h",
